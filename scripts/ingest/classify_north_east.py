@@ -25,21 +25,35 @@ PLACE_IDS = {
     "tyne and wear": ("place:tyne-and-wear", "Tyne and Wear"),
 }
 
-ORG_PLACE_HINTS = {
-    "tynesoft": ("place:blaydon", "Blaydon", "organisation based in North East"),
-    "microvalue": ("place:blaydon", "Blaydon", "organisation based in North East"),
-    "micro value": ("place:blaydon", "Blaydon", "organisation based in North East"),
-    "zeppelin": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "organisation based in North East"),
-    "zeppelin games": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "organisation based in North East"),
-    "reflections": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "organisation based in North East"),
-    "icon software": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "reported connection requiring verification"),
-    "audiogenic": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "external publisher of North East-authored work"),
-    "asl": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "external publisher of North East-authored work"),
+ORG_REVIEW_HINTS = {
+    "tynesoft": ("place:blaydon", "Blaydon", "publisher only - North East attribution awaiting review"),
+    "microvalue": ("place:blaydon", "Blaydon", "publisher only - North East attribution awaiting review"),
+    "micro value": ("place:blaydon", "Blaydon", "publisher only - North East attribution awaiting review"),
+    "zeppelin": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - North East attribution awaiting review"),
+    "zeppelin games": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - North East attribution awaiting review"),
+    "reflections": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - North East attribution awaiting review"),
+    "icon software": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - North East attribution awaiting review"),
+    "audiogenic": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - external publisher attribution awaiting review"),
+    "asl": ("place:newcastle-upon-tyne", "Newcastle upon Tyne", "publisher only - external publisher attribution awaiting review"),
 }
 
 
 def _contains(text: str, term: str) -> bool:
     return re.search(rf"(?<![a-z0-9]){re.escape(term.lower())}(?![a-z0-9])", text.lower()) is not None
+
+
+def _has_explicit_org_place_evidence(text: str, organisation: str, place: str) -> bool:
+    lowered = text.lower()
+    org_matches = list(re.finditer(rf"(?<![a-z0-9]){re.escape(organisation.lower())}(?![a-z0-9])", lowered))
+    place_matches = list(re.finditer(rf"(?<![a-z0-9]){re.escape(place.lower())}(?![a-z0-9])", lowered))
+    location_terms = re.compile(r"\b(?:based|located|situated|office|studio|team|from)\b")
+    for org_match in org_matches:
+        for place_match in place_matches:
+            start = max(0, min(org_match.start(), place_match.start()) - 80)
+            end = min(len(lowered), max(org_match.end(), place_match.end()) + 80)
+            if location_terms.search(lowered[start:end]):
+                return True
+    return False
 
 
 def _load_seeds(path: Path = DEFAULT_SEEDS) -> dict[str, list[str]]:
@@ -70,11 +84,19 @@ def classify_records(records: list[dict[str, Any]], seeds: dict[str, list[str]])
         status = "candidate"
         confidence = "low"
         visibility = "candidate"
-        if first_org and first_org.lower() in ORG_PLACE_HINTS:
-            place_id, place_name, connection_type = ORG_PLACE_HINTS[first_org.lower()]
-            status = "strongly supported" if first_org.lower() in {"tynesoft", "microvalue", "micro value", "zeppelin", "zeppelin games", "reflections"} else "probable"
-            confidence = "high" if status == "strongly supported" else "medium"
-            visibility = "public" if status == "strongly supported" else "probable"
+        if first_org and first_org.lower() in ORG_REVIEW_HINTS:
+            place_id, place_name, connection_type = ORG_REVIEW_HINTS[first_org.lower()]
+            explicit_place = next((place for place in matched_places if _has_explicit_org_place_evidence(haystack, first_org, place)), "")
+            if explicit_place:
+                place_id, place_name = PLACE_IDS.get(explicit_place.lower(), (stable_id("place", explicit_place), explicit_place))
+                connection_type = "organisation based in North East"
+                status = "strongly supported"
+                confidence = "high"
+                visibility = "public"
+            else:
+                status = "probable"
+                confidence = "medium"
+                visibility = "probable"
         elif matched_places:
             place_id, place_name = PLACE_IDS.get(matched_places[0].lower(), (stable_id("place", matched_places[0]), matched_places[0]))
         entity_name = first_org or (matched_people[0] if matched_people else record.get("title", "candidate"))
@@ -95,7 +117,10 @@ def classify_records(records: list[dict[str, Any]], seeds: dict[str, list[str]])
             "status": status,
             "confidence": confidence,
             "explanatory_text": (
-                f"{entity_name} matched an organisation seed with archive metadata support."
+                f"{entity_name} and {place_name} appear with explicit location wording in the archive metadata."
+                if first_org and status == "strongly supported"
+                else
+                f"{entity_name} appears in archive index metadata. This record is treated as publisher or label evidence only; the North East attribution still needs record-level source inspection."
                 if first_org and status != "candidate"
                 else "Keyword match only; requires source inspection before public inclusion."
             ),
@@ -162,7 +187,7 @@ def write_reports(connections: list[dict[str, Any]]) -> None:
         ("manual-review-queue.csv", lambda row: row["status"] in {"candidate", "probable", "unresolved", "disputed"}),
     ]:
         with (REPORTS_DIR / file_name).open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fieldnames)
+            writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
             writer.writeheader()
             for row in connections:
                 if predicate(row):

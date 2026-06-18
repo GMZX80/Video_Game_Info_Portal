@@ -59,6 +59,7 @@
 
     const details = createElement('dl', 'profile-details');
     [
+      ['Record label', item.record_label],
       ['Connection', item.connection_type],
       ['Place', item.place],
       ['Date/source', item.date],
@@ -93,6 +94,7 @@
       item.place,
       item.status,
       item.badge,
+      item.record_label,
       item.source_magazine,
       item.issue,
       item.why_included,

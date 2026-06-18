@@ -30,6 +30,9 @@ jobs:
       - name: Build datastore from committed records
         run: python -m scripts.build_all --skip-fetch
 
+      - name: Build clean Pages artefact
+        run: python -m scripts.build_dist
+
       - name: Validate generated files are current
         run: git diff --exit-code -- assets/data/generated reports research/entity-resolution-queue.csv data/curated
 

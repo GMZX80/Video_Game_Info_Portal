@@ -86856,5 +86856,10 @@
       ],
       "title_variants": []
     }
-  ]
+  ],
+  "record_scope": {
+    "developer_status": "Attribution awaiting review",
+    "note": "Game names in this index are title records generated from magazine/archive indexes. They are not complete release histories unless linked to platform-specific release evidence.",
+    "public_record_label": "Magazine index entry"
+  }
 }

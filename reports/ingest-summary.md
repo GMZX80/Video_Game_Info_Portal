@@ -14,6 +14,6 @@ Canonical source items: 9775
 Canonical games: 7896
 Canonical releases: 248
 North East candidates: 11
-Verified/strongly supported North East connections: 75
+Verified/strongly supported North East connections: 0
 
 Images, scans, complete article text, complete listings and long quotations were not copied.
