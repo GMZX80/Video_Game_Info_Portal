@@ -1,0 +1,42 @@
+name: Validate datastore and static site
+
+on:
+  pull_request:
+  push:
+    branches: [main, codex/magazine-evidence-datastore]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run Python tests
+        run: python -m pytest -q
+
+      - name: Build datastore from committed records
+        run: python -m scripts.build_all --skip-fetch
+
+      - name: Validate generated files are current
+        run: git diff --exit-code -- assets/data/generated reports research/entity-resolution-queue.csv data/curated
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Validate static site
+        run: node tools/validate-site.mjs

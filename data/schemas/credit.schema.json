@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["credit_id","role","role_as_printed","source_id","confidence"],"properties":{"credit_id":{"type":"string","pattern":"^credit:"},"role":{"type":"string"},"role_as_printed":{"type":"string"},"source_id":{"type":"string"},"confidence":{"type":"string"}},"additionalProperties":true}
