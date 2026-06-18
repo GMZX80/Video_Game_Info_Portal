@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero compact-page-hero">
+  <div class="narrative-wrap">
+    <p class="eyebrow"><span>Search</span> · compact public index</p>
+    <h1>Search the narrative layer.</h1>
+    <p class="hero-deck">This searches curated public pages, not the full magazine datastore.</p>
+  </div>
+</section>
+<section class="narrative-band">
+  <div class="narrative-wrap search-panel">
+    <label for="narrative-search">Search by title, person, studio, game, place, magazine or evidence status</label>
+    <input id="narrative-search" type="search" data-search-index="{{ asset_prefix }}assets/data/generated/narrative-search-index.json" autocomplete="off">
+    <div id="narrative-search-results" class="story-grid" aria-live="polite"></div>
+  </div>
+</section>
+{% endblock %}

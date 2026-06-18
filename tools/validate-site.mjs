@@ -36,7 +36,8 @@ const generatedJsonFiles = [
   'assets/data/generated/releases-index.json',
   'assets/data/generated/timeline-events.json',
   'assets/data/generated/evidence-index.json',
-  'assets/data/generated/search-index.json'
+  'assets/data/generated/search-index.json',
+  'assets/data/generated/narrative-search-index.json'
 ];
 const researchFiles = [
   'research/editorial-method.md',
@@ -97,6 +98,7 @@ const northEastCollectionData = generatedJson['assets/data/generated/north-east-
 const generatedSourceItemsData = generatedJson['assets/data/generated/source-items-index.json'];
 const generatedGamesData = generatedJson['assets/data/generated/games-index.json'];
 const generatedReleasesData = generatedJson['assets/data/generated/releases-index.json'];
+const narrativeSearchData = generatedJson['assets/data/generated/narrative-search-index.json'];
 const researchSourcesData = researchJson['data/sources.json'];
 const tynesoftPeopleData = researchJson['data/people.json'];
 const photoGameConnectionsData = researchJson['data/photo-to-game-connections.json'];
@@ -168,6 +170,20 @@ const collectTextFiles = (dir) => {
     return [];
   });
 };
+const collectDistFiles = () => {
+  const distRoot = path.join(root, 'dist');
+  if (!fs.existsSync(distRoot)) return [];
+  const walk = (dir) => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    return entries.flatMap((entry) => {
+      const absolute = path.join(dir, entry.name);
+      if (entry.isDirectory()) return walk(absolute);
+      return [path.relative(distRoot, absolute).split(path.sep).join('/')];
+    });
+  };
+  return walk(distRoot).sort();
+};
+const readDist = (file) => fs.readFileSync(path.join(root, 'dist', file), 'utf8');
 
 pass(includes(html, 'Newcastle') && includes(html, 'Video Game Technology Lab'), 'hero title is missing');
 pass(includes(html, 'Phase 0') && includes(html, 'From Play to Pay'), 'hero phase label is missing');
@@ -538,6 +554,10 @@ pass(generatedSourceItemsData.label_rules?.review === 'Reviewed release', 'sourc
 pass(/Publisher only/.test(generatedSourceItemsData.field_label_rules?.printed_company || ''), 'source-item public label rules must distinguish publisher-only fields');
 pass(generatedGamesData.record_scope?.public_record_label === 'Magazine index entry', 'games index must expose its magazine-index scope');
 pass((generatedReleasesData.releases || []).every((release) => release.public_record_label === 'Platform-specific release'), 'release index must label platform-specific releases');
+pass(Array.isArray(narrativeSearchData.items), 'narrative search index is missing items');
+pass((narrativeSearchData.items || []).length >= 9 && (narrativeSearchData.items || []).length < 100, 'narrative search index must stay compact and story-led');
+pass((narrativeSearchData.items || []).some((item) => item.route === 'stories/code-through-the-letterbox/'), 'narrative search index is missing the exemplar story');
+pass((narrativeSearchData.items || []).every((item) => item.title && item.standfirst && item.route && item.evidence_status), 'narrative search index item is incomplete');
 const publicStatuses = new Set(['verified', 'strongly supported']);
 for (const item of northEastCollectionData.confirmed || []) {
   pass(Boolean(item.name && item.entity_type && item.connection_type && item.why_included && item.source_url), `confirmed North East item is incomplete: ${item.id || item.name}`);
@@ -561,6 +581,75 @@ pass(includes(workflow, 'enablement: true'), 'GitHub Pages workflow should enabl
 pass(includes(workflow, 'python -m scripts.build_all --skip-fetch'), 'GitHub Pages workflow must build canonical public data before deploy');
 pass(includes(workflow, 'python -m scripts.build_dist'), 'GitHub Pages workflow must build clean dist before deploy');
 pass(includes(workflow, 'path: dist'), 'GitHub Pages workflow must upload only dist');
+
+const distFiles = collectDistFiles();
+if (distFiles.length > 0) {
+  const distFileSet = new Set(distFiles);
+  const requiredDistFiles = [
+    '.nojekyll',
+    'index.html',
+    'north-east-collection.html',
+    'phase-0/index.html',
+    'stories/index.html',
+    'stories/code-through-the-letterbox/index.html',
+    'people/index.html',
+    'people/gary-partis/index.html',
+    'studios/index.html',
+    'studios/tynesoft/index.html',
+    'games/index.html',
+    'games/oxo/index.html',
+    'games/doctor-who-and-the-mines-of-terror/index.html',
+    'games/super-gran/index.html',
+    'places/index.html',
+    'places/blaydon/index.html',
+    'magazines/index.html',
+    'magazines/sinclair-user/index.html',
+    'timeline/index.html',
+    'lineages/index.html',
+    'collections/index.html',
+    'collections/north-east-collection/index.html',
+    'research/index.html',
+    'research/corrections/index.html',
+    'contribute/index.html',
+    'talk/index.html',
+    'search/index.html',
+    'assets/css/site.css',
+    'assets/js/site.js',
+    'assets/js/narrative.js',
+    'assets/js/north-east-collection.js',
+    'assets/data/generated/north-east-collection.json',
+    'assets/data/generated/narrative-search-index.json',
+    'assets/images/favicon.svg',
+    'assets/images/newcastle-crt-hero.webp'
+  ];
+  for (const requiredFile of requiredDistFiles) {
+    pass(distFileSet.has(requiredFile), `dist is missing required public artefact: ${requiredFile}`);
+  }
+
+  for (const fileName of distFiles) {
+    const topLevel = fileName.split('/', 1)[0];
+    pass(!['.cache', 'build', 'data', 'reports', 'scripts', 'tests'].includes(topLevel), `dist includes blocked source path: ${fileName}`);
+    if (topLevel === 'research') {
+      pass(['research/index.html', 'research/corrections/index.html'].includes(fileName), `dist includes raw research path: ${fileName}`);
+    }
+    pass(!/\.(?:sqlite|db)$/i.test(fileName), `dist includes database file: ${fileName}`);
+  }
+
+  const distText = distFiles
+    .filter((fileName) => /\.(?:css|csv|html|js|json|md|txt|yml)$/i.test(fileName))
+    .map((fileName) => readDist(fileName))
+    .join('\n');
+  pass(!/(?:href|src)=["']\/assets\//.test(distText), 'dist contains root-relative /assets/ URL');
+  pass(!/fetch\(["']\/assets\//.test(distText), 'dist contains root-relative /assets/ fetch');
+  pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(distText), 'dist leaks private Google Drive material');
+  pass(!/student submission|student marks|assessment feedback|exam record/i.test(distText), 'dist leaks student/admin material');
+  pass(includesAll(readDist('index.html'), ['Before the studios, there was a network.', 'Story', 'Explore', 'Evidence', 'Talk']), 'generated narrative homepage is incomplete');
+  pass(includesAll(readDist('stories/code-through-the-letterbox/index.html'), ['Code Through the Letterbox', 'Evidence within reach', 'evidence-drawer']), 'generated exemplar story lacks evidence drawer');
+  pass(includesAll(readDist('games/oxo/index.html'), ['Full narrative', 'Platform-specific release']), 'tier 1 game page lacks public record labels');
+  pass(includesAll(readDist('games/doctor-who-and-the-mines-of-terror/index.html'), ['Enriched profile', 'Verified contributor credit']), 'tier 2 game page lacks public record labels');
+  pass(includesAll(readDist('games/super-gran/index.html'), ['Index-only record', 'Magazine index entry']), 'tier 3 game page lacks public record labels');
+  pass(includes(readDist('talk/index.html'), 'named developer career histories and photograph identifications remain under active verification'), 'Talk route lacks human-history status notice');
+}
 
 if (failures.length) {
   console.error('Site validation failed:');

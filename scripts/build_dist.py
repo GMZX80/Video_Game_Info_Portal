@@ -5,13 +5,13 @@ import shutil
 from pathlib import Path
 
 from scripts.ingest.common import GENERATED_DIR, ROOT
+from scripts.build_narrative_site import build_narrative_site
 
 DIST_DIR = ROOT / "dist"
 REPORT_PATH = ROOT / "reports" / "pages-artifact-review.md"
 
 PUBLIC_FILES = [
     ".nojekyll",
-    "index.html",
     "north-east-collection.html",
 ]
 
@@ -26,10 +26,14 @@ BLOCKED_TOP_LEVEL = {
     ".cache",
     "build",
     "data",
-    "research",
     "reports",
     "scripts",
     "tests",
+}
+
+ALLOWED_PUBLIC_RESEARCH_ROUTES = {
+    "research/index.html",
+    "research/corrections/index.html",
 }
 
 
@@ -57,10 +61,36 @@ def _validate_dist(dist_dir: Path) -> list[str]:
         ".nojekyll",
         "index.html",
         "north-east-collection.html",
+        "phase-0/index.html",
+        "stories/index.html",
+        "stories/code-through-the-letterbox/index.html",
+        "people/index.html",
+        "people/gary-partis/index.html",
+        "studios/index.html",
+        "studios/tynesoft/index.html",
+        "games/index.html",
+        "games/oxo/index.html",
+        "games/doctor-who-and-the-mines-of-terror/index.html",
+        "games/super-gran/index.html",
+        "places/index.html",
+        "places/blaydon/index.html",
+        "magazines/index.html",
+        "magazines/sinclair-user/index.html",
+        "timeline/index.html",
+        "lineages/index.html",
+        "collections/index.html",
+        "collections/north-east-collection/index.html",
+        "research/index.html",
+        "research/corrections/index.html",
+        "contribute/index.html",
+        "talk/index.html",
+        "search/index.html",
         "assets/css/site.css",
         "assets/js/site.js",
+        "assets/js/narrative.js",
         "assets/js/north-east-collection.js",
         "assets/data/generated/north-east-collection.json",
+        "assets/data/generated/narrative-search-index.json",
         "assets/images/favicon.svg",
         "assets/images/newcastle-crt-hero.webp",
     ]:
@@ -71,6 +101,8 @@ def _validate_dist(dist_dir: Path) -> list[str]:
         top_level = file_name.split("/", 1)[0]
         if top_level in BLOCKED_TOP_LEVEL:
             failures.append(f"blocked source path was copied into dist: {file_name}")
+        if top_level == "research" and file_name not in ALLOWED_PUBLIC_RESEARCH_ROUTES:
+            failures.append(f"raw research path was copied into dist: {file_name}")
         if file_name.endswith(".sqlite") or file_name.endswith(".db"):
             failures.append(f"database file was copied into dist: {file_name}")
 
@@ -104,7 +136,7 @@ def _write_report(dist_dir: Path, failures: list[str]) -> None:
         "",
         f"- `index.html`: {'yes' if 'index.html' in files else 'no'}",
         f"- `north-east-collection.html`: {'yes' if 'north-east-collection.html' in files else 'no'}",
-        f"- required CSS and JavaScript: {'yes' if {'assets/css/site.css', 'assets/js/site.js', 'assets/js/north-east-collection.js'}.issubset(set(files)) else 'no'}",
+        f"- required CSS and JavaScript: {'yes' if {'assets/css/site.css', 'assets/js/site.js', 'assets/js/narrative.js', 'assets/js/north-east-collection.js'}.issubset(set(files)) else 'no'}",
         f"- generated public JSON: {'yes' if all(file_name.replace('assets/data/generated/', '') in {path.name for path in GENERATED_DIR.glob('*.json')} for file_name in files if file_name.startswith('assets/data/generated/')) and bool(generated) else 'no'}",
         f"- required images: {'yes' if any(file_name.startswith('assets/images/') for file_name in files) else 'no'}",
         f"- `.nojekyll`: {'yes' if '.nojekyll' in files else 'no'}",
@@ -134,6 +166,8 @@ def build_dist(dist_dir: Path = DIST_DIR) -> list[str]:
         _copy_file(ROOT / file_name, dist_dir / file_name)
     for dir_name in PUBLIC_DIRS:
         _copy_dir(ROOT / dir_name, dist_dir / dir_name)
+
+    build_narrative_site(dist_dir)
 
     failures = _validate_dist(dist_dir)
     _write_report(dist_dir, failures)

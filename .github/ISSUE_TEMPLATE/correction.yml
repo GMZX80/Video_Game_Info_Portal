@@ -1,0 +1,41 @@
+name: Correction
+description: Report a factual, attribution, source or rights correction.
+title: "Correction: "
+labels: ["correction", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Corrections enter review first and are never auto-published."
+  - type: input
+    id: page
+    attributes:
+      label: Public page or route
+      description: Which page needs correction?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change?
+      description: Describe the current wording and the proposed correction.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide source links, publication details or records supporting the correction.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Typo or formatting
+        - Factual correction
+        - Attribution correction
+        - Rights or permission correction
+        - Disputed interpretation
+    validations:
+      required: true

@@ -1,0 +1,18 @@
+{% macro card(record, asset_prefix='') -%}
+<article class="story-card">
+  <p class="card-kicker">{{ record.metadata.content_level }}</p>
+  <h3><a href="{{ asset_prefix }}{{ record.url }}">{{ record.metadata.title }}</a></h3>
+  <p>{{ record.metadata.standfirst }}</p>
+  {% if record.metadata.public_record_labels %}
+    <ul class="record-label-list compact" aria-label="Public record labels">
+      {% for label in record.metadata.public_record_labels %}
+        <li>{{ label }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <dl class="mini-meta">
+    <div><dt>Status</dt><dd>{{ record.metadata.fact_check_status }}</dd></div>
+    <div><dt>Updated</dt><dd>{{ record.metadata.update_date }}</dd></div>
+  </dl>
+</article>
+{%- endmacro %}

@@ -1,0 +1,44 @@
+name: Photograph identification
+description: Submit a cautious photograph identification lead.
+title: "Photo ID lead: "
+labels: ["photo-identification", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Photo identifications require evidence and review. Do not use facial analysis. Submissions never auto-publish."
+  - type: input
+    id: photo
+    attributes:
+      label: Photograph or page
+    validations:
+      required: true
+  - type: input
+    id: position
+    attributes:
+      label: Position or annotation number
+      description: Use the public annotation number where available.
+  - type: input
+    id: proposed-name
+    attributes:
+      label: Proposed identification
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Identification evidence
+      description: Explain how you know. First-hand testimony, caption evidence or independent sources are preferred.
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      options:
+        - First-hand confirmation
+        - Source caption
+        - Independent corroboration
+        - Recollection needing corroboration
+        - Uncertain lead
+    validations:
+      required: true

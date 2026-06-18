@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% from "_cards.html" import card %}
+{% block content %}
+<section class="narrative-hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="narrative-hero-inner">
+    <p class="eyebrow"><span>Phase 0</span> · story-led public history</p>
+    <h1>Before the studios, there was a network.</h1>
+    <p class="hero-deck">A human-first history of North East game-making, British home computing and magazine evidence. The database is still here, but it no longer has to introduce itself first.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="stories/code-through-the-letterbox/">Read the first story <span aria-hidden="true">↓</span></a>
+      <a class="button button-ghost" href="research/">See the evidence rules</a>
+    </div>
+  </div>
+</section>
+
+<section class="narrative-band story-band">
+  <div class="narrative-wrap split-feature">
+    <div>
+      <p class="section-kicker">Featured story</p>
+      <h2>Code Through the Letterbox</h2>
+      <p>Printed listings made code mobile. They were distribution, lesson, installation and debugging practice, and they help explain how players could become authors before a local studio map existed.</p>
+      <a class="text-link" href="stories/code-through-the-letterbox/">Read the story</a>
+    </div>
+    <div class="object-panel">
+      <span class="object-label">BASIC listing</span>
+      <pre><code>10 REM CODE TRAVELS ON PAPER
+20 PRINT "TYPE IT IN"
+30 GOTO 20</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="narrative-band">
+  <div class="narrative-wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="section-kicker">Explore</p>
+        <h2>People, studios and games with their evidence level visible.</h2>
+      </div>
+      <p>The first slice is intentionally small: one person, one studio, three game tiers and a collection entry.</p>
+    </div>
+    <div class="story-grid">
+      {% for section in ["people", "studios", "games", "collections"] %}
+        {% for item in groups.get(section, [])[:3] %}
+          {{ card(item, asset_prefix) }}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="narrative-band evidence-band">
+  <div class="narrative-wrap split-feature">
+    <div>
+      <p class="section-kicker">Evidence</p>
+      <h2>Confirmed, probable and candidate stay separate.</h2>
+      <p>The North East collection currently exposes {{ collection_counts.confirmed|length }} confirmed, {{ collection_counts.probable|length }} probable and {{ collection_counts.candidates|length }} candidate records. Publisher-only records are not developer claims.</p>
+    </div>
+    <div class="mode-panel-grid">
+      <a href="people/">Explore people</a>
+      <a href="studios/">Explore studios</a>
+      <a href="games/">Explore games</a>
+      <a href="talk/">Open Talk mode</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

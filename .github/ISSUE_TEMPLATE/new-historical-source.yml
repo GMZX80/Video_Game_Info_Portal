@@ -1,0 +1,38 @@
+name: New historical source
+description: Submit a magazine, archive, company or oral-history source lead.
+title: "Source lead: "
+labels: ["source-lead", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Source leads enter review first and are never auto-published."
+  - type: input
+    id: source-title
+    attributes:
+      label: Source title
+    validations:
+      required: true
+  - type: input
+    id: publication
+    attributes:
+      label: Publication or archive
+  - type: input
+    id: date
+    attributes:
+      label: Date or issue
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Why this source matters
+      description: Explain the person, studio, game, place or claim it supports.
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Rights and access notes
+      description: Do not paste full copyrighted articles, scans or listings.
