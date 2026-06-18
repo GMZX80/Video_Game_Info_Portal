@@ -17,7 +17,8 @@ const jsonFiles = [
   'assets/data/games.json',
   'assets/data/events.json',
   'assets/data/relationships.json',
-  'assets/data/claims.json'
+  'assets/data/claims.json',
+  'assets/data/photos.json'
 ];
 const researchJsonFiles = [
   'data/sources.json',
@@ -73,6 +74,7 @@ const gamesData = json['assets/data/games.json'];
 const eventsData = json['assets/data/events.json'];
 const relationshipsData = json['assets/data/relationships.json'];
 const claimsData = json['assets/data/claims.json'];
+const photosData = json['assets/data/photos.json'];
 const researchSourcesData = researchJson['data/sources.json'];
 const tynesoftPeopleData = researchJson['data/people.json'];
 const photoGameConnectionsData = researchJson['data/photo-to-game-connections.json'];
@@ -189,7 +191,7 @@ pass(includesAll(html, ['software distribution', 'programming lesson', 'installa
 pass(includesAll(html, ['program', 'working game', 'cassette master', 'duplication', 'packaging and artwork', 'magazine advertising and reviews', 'mail order or retail', 'ports and licences', 'support, salaries, deadlines, and company risk']), 'businessification chain is incomplete');
 
 pass(includesAll(html, ['Blaydon', 'North East', 'educational software', 'games and publishing', 'cassette duplication', 'artwork', 'retail', 'licences', 'reviews', 'multiple incompatible 8-bit computers']), 'Tynesoft case study is incomplete');
-pass(includes(html, 'names, dates, and detailed provenance are still being researched'), 'Tynesoft photo provenance warning must be explicit');
+pass(includes(html, 'Some identities are still under verification') || includes(html, 'names, dates, and detailed provenance are still being researched'), 'Tynesoft photo provenance warning must be explicit');
 
 for (const file of researchFiles) {
   pass(fs.existsSync(path.join(root, file)), `research file is missing: ${file}`);
@@ -213,7 +215,7 @@ const photoRows = parseCsv(read('research/photo-identification/tynesoft-photos.c
 const researchClaimRows = parseCsv(read('research/claims-register.csv'));
 const validPhotoStatuses = new Set(['Verified', 'Strongly supported', 'Probable', 'Unconfirmed', 'Disputed']);
 const validResearchConfidence = new Set(['Verified', 'Strongly supported', 'Probable', 'Unconfirmed', 'Disputed']);
-const validEvidenceLabels = new Set(['Confirmed', 'Well supported', 'First-person recollection', 'Approximate', 'Disputed', 'Open question']);
+const validEvidenceLabels = new Set(['Confirmed', 'Well supported', 'First-person recollection', 'Approximate', 'Disputed', 'Open question', 'Provisional']);
 const validStairwayTypes = new Set([
   'Magazine scan',
   'Interview',
@@ -222,6 +224,21 @@ const validStairwayTypes = new Set([
   'Game review',
   'Technical article'
 ]);
+
+pass(Array.isArray(photosData.photos) && photosData.photos.length >= 2, 'public photo data must retain both Tynesoft photographs');
+for (const photo of photosData.photos || []) {
+  pass(Boolean(photo.id && photo.image && photo.caption && photo.evidence && photo.public_identification_status), `public photo record is incomplete: ${photo.id || photo.image}`);
+  pass(fs.existsSync(path.join(root, photo.image)), `public photo image is missing: ${photo.image}`);
+  pass(validEvidenceLabels.has(photo.evidence), `invalid public photo evidence label: ${photo.id}`);
+  pass(Array.isArray(photo.public_identifications), `public photo identifications must be an array: ${photo.id}`);
+  if (photo.evidence !== 'Verified') {
+    pass(photo.public_identifications.length === 0, `provisional photo must not expose definitive public identifications: ${photo.id}`);
+    pass(/pending|under verification|provisional/i.test(photo.public_identification_status), `provisional photo status must be explicit: ${photo.id}`);
+  }
+  for (const sourceId of photo.sources || []) {
+    pass(Boolean(sourcesData.sources?.some((source) => source.id === sourceId)), `public photo references missing source ${sourceId}: ${photo.id}`);
+  }
+}
 
 pass(hasHeader('research/stairway-catalogue.csv', [
   'source_id',
@@ -259,8 +276,8 @@ for (const row of photoRows) {
   pass(Boolean(row.photo_id && row.image_filename), `photo row missing id or image filename: ${row.photo_id}`);
   pass(fs.existsSync(path.join(root, row.image_filename)), `photo image file missing: ${row.image_filename}`);
   pass(validPhotoStatuses.has(row.verification_status), `invalid photo verification status for ${row.photo_id}`);
-  pass(row.identified_people === 'none', `photo must not identify people without evidence: ${row.photo_id}`);
-  pass(row.identification_confidence === 'none', `photo identification confidence must remain none until evidence exists: ${row.photo_id}`);
+  pass(/^none(?: verified)?/i.test(row.identified_people), `photo must not present definitive identities without verification: ${row.photo_id}`);
+  pass(/provisional|caption|none|low|medium/i.test(row.identification_confidence), `photo identification confidence must be cautious until verification exists: ${row.photo_id}`);
   if (row.sha256 && fs.existsSync(path.join(root, row.image_filename))) {
     pass(row.sha256 === sha256(row.image_filename), `photo SHA-256 does not match file: ${row.photo_id}`);
   }
@@ -289,7 +306,7 @@ for (const file of researchFiles.filter((file) => file.startsWith('research/oral
   pass(includesAll(text, ['Claim | Evidence type | Corroborating source | Verification status']), `oral-history audit table is missing: ${file}`);
   pass(!/established fact/i.test(text) || includes(text, 'not established'), `oral-history file may overstate testimony: ${file}`);
 }
-pass(includes(read('research/oral-history/phil-scott.md'), 'primary testimony not yet located'), 'Phil Scott testimony audit must record missing primary testimony');
+pass(includes(read('research/oral-history/phil-scott.md'), 'unpublished first-hand testimony reported'), 'Phil Scott testimony audit must record private testimony handling');
 pass(includes(read('research/timeline-audit.md'), '1983.4') && includes(read('research/timeline-audit.md'), 'mid 1983 or c. 1983'), 'timeline audit must record decimal-date replacement guidance');
 pass(includesAll(read('research/provenance-pass-report.md'), [
   'Identified Tynesoft Photographs',
@@ -348,9 +365,19 @@ const tynesoftEmployeeClaims = (tynesoftPeopleData.people || []).filter((person)
 pass(tynesoftEmployeeClaims.length === 0, 'Tynesoft people database must not infer employment from credits');
 
 pass(Array.isArray(photoGameConnectionsData.connections), 'photo-to-game connections must be an array');
+pass(Array.isArray(photoGameConnectionsData.source_caption_leads), 'source-caption photo leads must be an array');
 pass(Array.isArray(photoGameConnectionsData.blocked_connections), 'blocked photo-to-game connections must be an array');
 pass(photoGameConnectionsData.connections.length === 0, 'photo-to-game connections must remain empty until people are identified');
 pass((photoGameConnectionsData.blocked_connections || []).length >= 2, 'blocked photo-to-game records must explain both Tynesoft photos');
+const researchPeopleIds = new Set((tynesoftPeopleData.people || []).map((person) => person.id));
+for (const lead of photoGameConnectionsData.source_caption_leads || []) {
+  pass(Boolean(lead.photo_id && lead.caption_source && lead.status && lead.public_use), `source-caption lead is incomplete: ${lead.photo_id}`);
+  pass(Array.isArray(lead.people), `source-caption lead people must be an array: ${lead.photo_id}`);
+  for (const personId of lead.people || []) {
+    pass(researchPeopleIds.has(personId), `source-caption lead references missing person: ${personId}`);
+  }
+  pass(/do not publish|not publish|attributed/i.test(lead.public_use), `source-caption lead must warn against definitive publication: ${lead.photo_id}`);
+}
 
 const internalUrls = [...html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)]
   .map(([, url]) => url)

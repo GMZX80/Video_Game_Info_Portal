@@ -1,17 +1,44 @@
 {
   "schema_version": "phase0-photo-game-connections-v1",
-  "scope": "Only supported links between identified people in Tynesoft photographs and game credits should appear here.",
+  "scope": "Only verified links between identified people in Tynesoft photographs and game credits should appear in connections. Source-caption leads remain separate and are not public definitive identifications.",
   "connections": [],
-  "blocked_connections": [
+  "source_caption_leads": [
     {
       "photo_id": "photo-tynesoft-team-group",
-      "reason": "No people in the image have been identified by caption, named witness or multiple independent corroboration.",
-      "status": "Unconfirmed"
+      "caption_source": "stairway-tynesoft-boys-club",
+      "people": [
+        "michael-landreth",
+        "gary-james-gray",
+        "bruce-nesbit",
+        "paul-drummond",
+        "phil-scott",
+        "gary-partis",
+        "david-lloyd",
+        "michael-hedley",
+        "steve-tall",
+        "chris-robson-dave-mann"
+      ],
+      "status": "Probable",
+      "public_use": "Caption attributed to Kevin Blake; do not publish as definitive left-to-right identification until independently corroborated."
     },
     {
       "photo_id": "photo-tynesoft-team-wide",
-      "reason": "No people in the image have been identified by caption, named witness or multiple independent corroboration.",
-      "status": "Unconfirmed"
+      "caption_source": "stairway-tynesoft-boys-club",
+      "people": ["brian-jobling", "julian-jameson"],
+      "status": "Probable",
+      "public_use": "Partial caption attributed to Kevin Blake; do not publish as definitive face labels until independently corroborated."
+    }
+  ],
+  "blocked_connections": [
+    {
+      "photo_id": "photo-tynesoft-team-group",
+      "reason": "The image now has a source-attributed Kevin Blake caption, but no full left-to-right public caption meets the one-primary-source-or-two-independent-first-hand-testimonies threshold.",
+      "status": "Probable"
+    },
+    {
+      "photo_id": "photo-tynesoft-team-wide",
+      "reason": "The image now has partial source-attributed Kevin Blake identifications, but most face-position pairings remain below the public definitive threshold.",
+      "status": "Probable"
     }
   ]
 }

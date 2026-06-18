@@ -9,7 +9,8 @@
     games: 'assets/data/games.json',
     events: 'assets/data/events.json',
     relationships: 'assets/data/relationships.json',
-    claims: 'assets/data/claims.json'
+    claims: 'assets/data/claims.json',
+    photos: 'assets/data/photos.json'
   };
 
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -580,6 +581,34 @@
     });
   }
 
+  function initialisePhotos(data, lookups) {
+    const figures = $$('[data-photo-id]');
+    if (!figures.length) return;
+    const photosById = new Map(asArray(data.photos).map((photo) => [photo.id, photo]));
+
+    figures.forEach((figure) => {
+      const photo = photosById.get(figure.dataset.photoId);
+      if (!photo) return;
+      const image = $('img', figure);
+      const caption = $('[data-photo-caption]', figure);
+      if (image) {
+        image.alt = photo.alt || image.alt;
+        if (photo.image && image.getAttribute('src') !== photo.image) image.src = photo.image;
+      }
+      if (!caption) return;
+
+      const meta = createElement('div', 'photo-caption-meta');
+      meta.appendChild(evidenceBadge(photo.evidence || 'Provisional'));
+      meta.appendChild(createElement('span', '', photo.source_label || 'Source not confirmed'));
+      meta.appendChild(createElement('span', '', photo.publication_date || 'date not confirmed'));
+
+      const body = createElement('p', '', photo.caption || 'Photograph provenance under review.');
+      const status = createElement('p', 'photo-status', photo.public_identification_status || 'Identification status under review.');
+      caption.replaceChildren(meta, body, status);
+      caption.appendChild(sourceLinks(photo.sources, lookups));
+    });
+  }
+
   function initialiseComparison(data) {
     const table = $('#comparison-table');
     if (!table) return;
@@ -603,7 +632,7 @@
     const groups = [
       ['Confirmed / well supported', (claim) => ['Confirmed', 'Well supported'].includes(claim.evidence)],
       ['First-person testimony', (claim) => claim.evidence === 'First-person recollection'],
-      ['Approximate or open', (claim) => ['Approximate', 'Open question', 'Disputed'].includes(claim.evidence)]
+      ['Approximate, provisional or open', (claim) => ['Approximate', 'Open question', 'Disputed', 'Provisional'].includes(claim.evidence)]
     ];
     groups.forEach(([title, predicate]) => {
       const card = createElement('article', 'research-card');
@@ -866,6 +895,7 @@
       initialiseLineage(data, lookups);
       initialiseProfiles(data, lookups);
       initialisePeople(data, lookups);
+      initialisePhotos(data, lookups);
       initialiseComparison(data);
       initialiseResearchStatus(data, lookups);
       initialiseSources(data);

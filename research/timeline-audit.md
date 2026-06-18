@@ -23,11 +23,11 @@ SVG coordinate values in the HTML also resemble dates. Values such as `1930.0`, 
 | 1985.2 | ICON SOFTWARE -> AUDIOGENIC/ASL | early 1985 or mid-1980s | Needs citation | Kevin Blake portfolio; Gary Partis profile; supplied poster | Keep as uncertain relationship, not legal succession. |
 | 1989.6 | GARY PARTIS AT/FOR TYNESOFT | mid 1989 or c. 1989 | Needs citation | Supplied poster only for Tynesoft link; strong sources exist for Gary Partis elsewhere | Rephrase as "Gary Partis title-credit/author lead" until Tynesoft evidence is found. |
 | 1983.4 | TYNESOFT MICROVALUE | mid 1983 or c. 1983 | Needs citation | Centre for Computing History; Stairway Tynesoft index; supplied poster | Verify legal formation, premises, directors, MicroValue relationship and closure date. |
-| 1987.8 | ZEPPELIN GAMES MERIT STUDIOS | late 1987 | Needs citation | Companies House supports later name chain; supplied poster supplies origin link | Do not imply Tynesoft legal succession. |
+| 1987.8 | ZEPPELIN GAMES MERIT STUDIOS | 30 September 1987 for Zeppelin Games Limited incorporation | Confirmed for incorporation | Companies House Eutechnyx record | Do not imply Tynesoft legal succession; this confirms the Zeppelin/Merit/Eutechnyx legal name chain only. |
 | 1997.5 | EUTECHNYX ZEROLIGHT | mid 1997 | Needs correction | Companies House supports Eutechnyx record; ZeroLight relation not evidenced in this pass | Separate Eutechnyx legal chain from later ZeroLight claim until sourced. |
-| 1984.3 | REFLECTIONS -> UBISOFT | early 1984 or mid-1980s | Needs correction | A&B Computing Reflections profile supports 1987 context; modern press supports later Ubisoft form | Replace early date with source-backed Reflections formation/title chronology. Keep Ubisoft as later acquisition/epilogue. |
-| 1993.2 | RAGE SOFTWARE / RAGE NEWCASTLE | early 1993 | Needs citation | Peter Johnson self-authored update mentions later Rage Newcastle; supplied poster | Need trade press/company records for Newcastle office and dates. |
-| 1999.3 | DARKBLACK VENOM GAMES | early 1999 | Needs citation | Kevin Blake portfolio supports later Darkblack work; supplied poster for Venom | Separate Darkblack from Venom unless a relationship source is found. |
+| 1984.3 | REFLECTIONS -> UBISOFT | 1984 for Reflections founding/work; Ubisoft is a later corporate phase | Confirmed for broad 1984/40-plus-year Newcastle lineage; acquisition detail still separate | Ubisoft Reflections official page; A&B Computing Reflections profile | Keep Reflections early story separate from later Ubisoft acquisition/name continuity. |
+| 1993.2 | RAGE SOFTWARE / RAGE NEWCASTLE | early 1990s | Needs citation | Peter Johnson self-authored update; MobyGames Peter Johnson and Rocky/Rage Newcastle leads | Need official/trade-press records for Newcastle studio setup and dates. |
+| 1999.3 | DARKBLACK VENOM GAMES | late 1990s / early 2000s split into separate leads | Needs correction | Kevin Blake portfolio supports later Darkblack work; MobyGames Venom page supports Venom/Rage team-continuity lead | Separate Darkblack from Venom unless a relationship source is found. |
 | 1994.8 | OPTIMUS -> IGUANA UK -> | late 1994 | Needs citation | Supplied poster only | Replace with official records and title credits before public lineage. |
 | 1996.8 | PITBULL SYNDICATE | late 1996 | Needs citation | Supplied poster; Game Developer supports later Epic/Pitbull bridge | Verify formation, office moves and acquisition sequence. |
 | 2005.4 | MIDWAY STUDIOS - NEWCASTLE | mid 2005 | Needs citation | Supplied poster only in current public data | Need official Midway/Pitbull acquisition source. |
@@ -46,12 +46,12 @@ SVG coordinate values in the HTML also resemble dates. Values such as `1930.0`, 
 1. Replace every visible decimal label with readable language.
 2. Separate legal continuity from staff/founder heritage and publishing/commissioning.
 3. Downgrade any solid lineage whose only source is the supplied poster.
-4. Add contemporary sources for Reflections, Peter Johnson and Dave Croft where already located in the Stairway catalogue.
+4. Add official/secondary source upgrades now located for Reflections, Zeppelin/Eutechnyx, David Lloyd/Dave Croft, Icon/Audiogenic and Rage/Venom.
 5. Keep modern companies as an epilogue unless directly connected by sourced staff movement, acquisition or office continuity.
 
 ## Rejected Or Not Yet Publishable
 
-- Any face identification from the two Tynesoft photographs without caption, witness testimony or multiple independent sources.
+- Any definitive public face identification from the two Tynesoft photographs without one stronger primary source or two independent first-hand testimonies for the same face-position pairing.
 - Any claim that Tynesoft legally became Zeppelin, Flair or another later company.
 - Any claim that Gary Partis, Kevin Blake, Dave Croft, Jason Sobell, Steve Tall, Julian Jameson/Jamieson, Bruce Nesbit/Nesbitt or Mike Landreth were Tynesoft employees unless employment evidence is located.
 - Any direct Ron Beaton/Cumron/Tynesoft connection until identity and role are confirmed.

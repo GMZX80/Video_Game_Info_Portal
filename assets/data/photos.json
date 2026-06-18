@@ -1,0 +1,34 @@
+{
+  "photos": [
+    {
+      "id": "photo-tynesoft-team-group",
+      "image": "assets/images/tynesoft-team-group.webp",
+      "alt": "Group photograph associated with Tynesoft staff; individual public identifications remain under verification",
+      "title": "Tynesoft staff group photograph",
+      "caption": "Tynesoft staff group photograph, caption attributed to Kevin Blake on Stairway to Hell. Blake says he believes he took the source photograph in 1987; individual labels remain provisional until independently corroborated.",
+      "evidence": "Provisional",
+      "publication": "Tynesoft Boys Club, Part One",
+      "publication_date": "Winter 2000",
+      "source_label": "Kevin Blake / Stairway to Hell",
+      "source_url": "https://www.stairwaytohell.com/articles/KBlake.html",
+      "public_identification_status": "Caption attributed to source; further corroboration pending.",
+      "public_identifications": [],
+      "sources": ["stairway-tynesoft-boys-club"]
+    },
+    {
+      "id": "photo-tynesoft-team-wide",
+      "image": "assets/images/tynesoft-team-wide.webp",
+      "alt": "Wide group photograph associated with Tynesoft staff; individual public identifications remain under verification",
+      "title": "Tynesoft staff group photograph",
+      "caption": "Second Tynesoft staff group photograph reproduced in Kevin Blake's Stairway to Hell article. The article names a few positions, but the site does not publish definitive face labels until the evidence threshold is met.",
+      "evidence": "Provisional",
+      "publication": "Tynesoft Boys Club, Part One",
+      "publication_date": "Winter 2000",
+      "source_label": "Kevin Blake / Stairway to Hell",
+      "source_url": "https://www.stairwaytohell.com/articles/KBlake.html",
+      "public_identification_status": "Partial caption attributed to source; further corroboration pending.",
+      "public_identifications": [],
+      "sources": ["stairway-tynesoft-boys-club"]
+    }
+  ]
+}

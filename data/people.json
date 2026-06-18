@@ -125,12 +125,21 @@
           "sources": ["supplied-lineage-poster"]
         }
       ],
-      "photo_connections": [],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Gary Partis",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
       "sources": [
         "stairway-gpartis-profile",
         "stairway-gpartis-commercial-software",
         "stairway-gpartis-interview-2007",
-        "bbcmicro-doctor-who"
+        "bbcmicro-doctor-who",
+        "stairway-tynesoft-boys-club"
       ],
       "confidence": "Probable"
     },
@@ -239,7 +248,15 @@
           "sources": ["stairway-kblake-portfolio"]
         }
       ],
-      "photo_connections": [],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Kevin Blake",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Photographer/caption author rather than pictured person in current source-caption set."
+        }
+      ],
       "sources": [
         "stairway-kblake-portfolio",
         "stairway-kblake-mini-profile",
@@ -301,19 +318,24 @@
       "confidence": "Probable"
     },
     {
-      "id": "dave-croft",
-      "full_name": "Dave Croft",
-      "aliases": [],
+      "id": "david-lloyd",
+      "full_name": "David Lloyd",
+      "aliases": ["David P. Croft", "David Croft", "Dave Croft"],
       "companies": [
         {
+          "name": "Icon Software",
+          "relationship": "Author/contributor lead",
+          "status": "Probable"
+        },
+        {
           "name": "Tynesoft",
-          "relationship": "Credited/contributor on Tynesoft titles",
-          "status": "Strongly supported",
-          "notes": "Employment not established."
+          "relationship": "Credited contributor and development-manager lead",
+          "status": "Probable",
+          "notes": "MobyGames gives a Tynesoft biography and Kevin Blake's article includes a David Croft follow-up; retain as probable until primary employment records are found."
         }
       ],
       "roles": ["Contributor"],
-      "platforms": ["BBC Micro", "Acorn Electron"],
+      "platforms": ["BBC Micro", "Acorn Electron", "DOS"],
       "games": [
         {
           "title": "Winter Olympics",
@@ -357,10 +379,24 @@
           "label": "A&B Computing mini-profile lists Tynesoft sports titles",
           "status": "Strongly supported",
           "sources": ["stairway-dcroft-mini-profile"]
+        },
+        {
+          "date": "1980s-1990s",
+          "label": "MobyGames biography normalises David Lloyd / Dave Croft aliases and describes Icon then Tynesoft work",
+          "status": "Probable",
+          "sources": ["mobygames-david-lloyd"]
         }
       ],
-      "photo_connections": [],
-      "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio"],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Dave Croft",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio", "stairway-tynesoft-boys-club", "mobygames-david-lloyd"],
       "confidence": "Strongly supported"
     },
     {
@@ -528,13 +564,23 @@
           "sources": ["mobygames-red-alert-credits", "igdb-red-alert-credits"]
         }
       ],
-      "photo_connections": [],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Steve Tall",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
       "sources": [
         "hol-beverly-hills-cop",
         "hol-circus-games",
         "mobygames-red-alert-credits",
         "igdb-red-alert-credits",
-        "mobygames-steve-tall"
+        "mobygames-steve-tall",
+        "mobygames-tiberian-sun",
+        "stairway-tynesoft-boys-club"
       ],
       "confidence": "Probable"
     },
@@ -569,8 +615,16 @@
           "sources": ["hol-beverly-hills-cop"]
         }
       ],
-      "photo_connections": [],
-      "sources": ["hol-beverly-hills-cop"],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-wide",
+          "caption_name": "Julian Jameson",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["hol-beverly-hills-cop", "mobygames-jools-jameson", "stairway-tynesoft-boys-club"],
       "confidence": "Probable"
     },
     {
@@ -630,9 +684,19 @@
           ]
         }
       ],
-      "photo_connections": [],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Dave Mann aka Chris Robson",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
       "sources": [
         "stairway-author-index",
+        "stairway-tynesoft-boys-club",
+        "mobygames-david-mann",
         "hol-beverly-hills-cop",
         "hol-summer-olympiad",
         "hol-circus-games",
@@ -671,14 +735,22 @@
           "sources": ["hol-circus-games"]
         }
       ],
-      "photo_connections": [],
-      "sources": ["hol-circus-games"],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Bruce Nesbitt",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Use Nesbit as normalised spelling from MobyGames; do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["hol-circus-games", "mobygames-bruce-nesbit", "mobygames-z", "mobygames-steel-soldiers", "stairway-tynesoft-boys-club"],
       "confidence": "Probable"
     },
     {
       "id": "michael-landreth",
       "full_name": "Michael Landreth",
-      "aliases": ["Mike Landreth", "Michael J. Landreth"],
+      "aliases": ["Mike Landreth", "Michael J. Landreth", "Mike Landruff", "Mikbox"],
       "companies": [
         {
           "name": "Tynesoft",
@@ -720,13 +792,222 @@
           "sources": ["mobygames-circus-games-bbc"]
         }
       ],
-      "photo_connections": [],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Mike Landruff aka Mikbox",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Treat Landruff as a caption variant; do not publish as definitive face ID without second corroboration."
+        }
+      ],
       "sources": [
         "mobygames-circus-games-bbc",
         "mobygames-circus-games",
         "lemon64-summer-challenge"
       ],
       "confidence": "Strongly supported"
+    },
+    {
+      "id": "michael-hedley",
+      "full_name": "Michael Hedley",
+      "aliases": ["Mick Hedley", "M. Hedley"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "16-bit specialist and title-credit lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Flair Software",
+          "relationship": "Later career lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Rage",
+          "relationship": "Later career lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Venom Games / Ubisoft Reflections",
+          "relationship": "Later career lead",
+          "status": "Probable"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Commodore 64", "Amiga", "Atari ST", "PlayStation 2"],
+      "games": [
+        {
+          "title": "Circus Games",
+          "role": "Tynesoft-era title-credit lead",
+          "platforms": ["Commodore 64", "Amiga", "Atari ST"],
+          "sources": ["mobygames-michael-hedley", "mobygames-circus-games"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Rocky",
+          "role": "Later Rage/Venom-era career lead",
+          "platforms": ["PlayStation 2", "Xbox"],
+          "sources": ["mobygames-michael-hedley", "mobygames-rocky-ps2"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s-1990s",
+          "label": "Kevin Blake caption and MobyGames career data connect Hedley to Tynesoft, Flair and Rage/Venom-era work",
+          "status": "Probable",
+          "sources": ["stairway-tynesoft-boys-club", "mobygames-michael-hedley"]
+        }
+      ],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Mike Hedley",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["stairway-tynesoft-boys-club", "mobygames-michael-hedley", "mobygames-circus-games", "mobygames-rocky-ps2"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "philip-nixon",
+      "full_name": "Philip Nixon",
+      "aliases": ["Phil Nixon", "Phillip Nixon", "Flip"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Artist/title-credit lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Flair Software",
+          "relationship": "Later career lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Rage / Ubisoft-related later credits",
+          "relationship": "Later career lead",
+          "status": "Probable"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga", "DOS", "Jaguar", "PlayStation 2", "Xbox 360"],
+      "games": [
+        {
+          "title": "Oscar",
+          "role": "Flair-era art/credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["mobygames-philip-nixon", "mobygames-oscar-amiga"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Rocky",
+          "role": "Rage-era credit lead",
+          "platforms": ["PlayStation 2", "Xbox"],
+          "sources": ["mobygames-philip-nixon", "mobygames-rocky-ps2"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s-2000s",
+          "label": "Secondary credit data supports a Tynesoft/Flair/Rage-to-later-studios career lead",
+          "status": "Probable",
+          "sources": ["mobygames-philip-nixon"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["mobygames-philip-nixon", "mobygames-oscar-amiga", "mobygames-rocky-ps2"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "gary-james-gray",
+      "full_name": "Gary James Gray",
+      "aliases": ["Gary Grey", "Gazza"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "16-bit programmer and title-credit lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Audiogenic / Codemasters / Darkblack",
+          "relationship": "Later career lead from source-caption testimony",
+          "status": "Probable"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga", "Atari ST", "DOS"],
+      "games": [
+        {
+          "title": "Superman: The Man of Steel",
+          "role": "Tynesoft-era title-credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["mobygames-superman-amiga"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s-1990s",
+          "label": "Kevin Blake caption links Gary Grey/Gazza to Tynesoft, Audiogenic, Codemasters and Darkblack",
+          "status": "Probable",
+          "sources": ["stairway-tynesoft-boys-club"]
+        }
+      ],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Gary Grey aka Gazza",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["stairway-tynesoft-boys-club", "mobygames-superman-amiga"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "paul-drummond",
+      "full_name": "Paul Drummond",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Artist/source-caption lead",
+          "status": "Probable"
+        },
+        {
+          "name": "Flair Software",
+          "relationship": "Later career lead from source-caption testimony",
+          "status": "Probable"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga"],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "late 1980s-1990s",
+          "label": "Kevin Blake caption links Paul Drummond to Tynesoft and later Flair/Simon the Sorcerer work",
+          "status": "Probable",
+          "sources": ["stairway-tynesoft-boys-club"]
+        }
+      ],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Paul Drummond",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["stairway-tynesoft-boys-club"],
+      "confidence": "Probable"
     },
     {
       "id": "phil-scott",
@@ -737,7 +1018,7 @@
           "name": "Tynesoft",
           "relationship": "Graphics/programming career lead",
           "status": "Probable",
-          "notes": "Secondary database lead only; direct testimony or title credits needed."
+          "notes": "Secondary database and source-caption lead; private testimony exists outside the public repository."
         },
         {
           "name": "Flair Software",
@@ -759,10 +1040,24 @@
           "label": "Secondary database describes Tynesoft start and later Flair/Rage movement",
           "status": "Probable",
           "sources": ["mobygames-phil-scott"]
+        },
+        {
+          "date": "June 2026",
+          "label": "Private first-hand testimony reported by project owner; not quoted or stored in repository",
+          "status": "Probable",
+          "sources": ["private-phil-scott-testimony"]
         }
       ],
-      "photo_connections": [],
-      "sources": ["mobygames-phil-scott"],
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-group",
+          "caption_name": "Phil Scott",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["mobygames-phil-scott", "stairway-tynesoft-boys-club", "private-phil-scott-testimony"],
       "confidence": "Probable"
     },
     {
@@ -772,13 +1067,13 @@
       "companies": [
         {
           "name": "Tynesoft",
-          "relationship": "Lineage lead only",
-          "status": "Unconfirmed"
+          "relationship": "Source-caption/photo and staff-heritage lead only",
+          "status": "Probable"
         },
         {
           "name": "Zeppelin Games",
           "relationship": "Founder/staff heritage lead",
-          "status": "Unconfirmed"
+          "status": "Probable"
         }
       ],
       "roles": ["Founder", "Contributor"],
@@ -787,14 +1082,22 @@
       "career_timeline": [
         {
           "date": "late 1980s",
-          "label": "Reported Tynesoft-to-Zeppelin heritage lead",
-          "status": "Unconfirmed",
-          "sources": ["supplied-lineage-poster", "companies-house-eutechnyx"]
+          "label": "Kevin Blake caption links Brian Jobling to Tynesoft photo context and Zeppelin/Eutechnyx recollection",
+          "status": "Probable",
+          "sources": ["stairway-tynesoft-boys-club", "companies-house-eutechnyx"]
         }
       ],
-      "photo_connections": [],
-      "sources": ["supplied-lineage-poster", "companies-house-eutechnyx"],
-      "confidence": "Unconfirmed"
+      "photo_connections": [
+        {
+          "photo_id": "photo-tynesoft-team-wide",
+          "caption_name": "Brian Jobling",
+          "caption_source": "stairway-tynesoft-boys-club",
+          "status": "Probable",
+          "public_use": "Do not publish as definitive face ID without second corroboration."
+        }
+      ],
+      "sources": ["stairway-tynesoft-boys-club", "companies-house-eutechnyx"],
+      "confidence": "Probable"
     },
     {
       "id": "martin-edmondson",

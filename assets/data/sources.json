@@ -306,6 +306,20 @@
       "notes": "Supports Tynesoft catalogue breadth; individual facts need corroboration."
     },
     {
+      "id": "stairway-tynesoft-boys-club",
+      "title": "Tynesoft Boys Club Part One",
+      "author": "Kevin Blake",
+      "publication": "Stairway to Hell",
+      "date": "Winter 2000",
+      "url": "https://www.stairwaytohell.com/articles/KBlake.html",
+      "type": "First-person retrospective article",
+      "contemporaneity": "retrospective",
+      "geography": "Tynesoft and North East professional network",
+      "rights": "Link and paraphrase only; do not republish long passages or allegations",
+      "accessed": "2026-06-18",
+      "notes": "Supports public-safe provenance for the two Tynesoft staff photographs and source-attributed captions; not enough alone for definitive public face identification."
+    },
+    {
       "id": "cch-tynesoft",
       "title": "Tynesoft software collection",
       "author": "Centre for Computing History",

@@ -11,6 +11,15 @@
       "notes": "Use only as a lead list until corroborated."
     },
     {
+      "id": "private-phil-scott-testimony",
+      "title": "Phil Scott private first-hand testimony lead",
+      "type": "Unpublished first-hand testimony lead",
+      "url": null,
+      "access": "private source held outside repository",
+      "rights": "Do not quote or republish without explicit permission",
+      "notes": "June 2026 testimony reported by project owner; records corroboration value only and does not store private message text or channel details."
+    },
+    {
       "id": "companies-house-eutechnyx",
       "title": "Eutechnyx Limited company overview",
       "type": "Official company record",
@@ -252,6 +261,195 @@
       "access": "public web",
       "rights": "Link and paraphrase only",
       "notes": "Secondary career credit list."
+    },
+    {
+      "id": "mobygames-tynesoft",
+      "title": "Tynesoft Computer Software company page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/company/4615/tynesoft-computer-software/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary source for Tynesoft founding year, company description, credited game span and frequent collaborators."
+    },
+    {
+      "id": "mobygames-icon-software",
+      "title": "Icon Software Ltd company page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/company/20557/icon-software-ltd/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary source for Gosforth location, BBC Micro title focus and reported Audiogenic sale."
+    },
+    {
+      "id": "ubisoft-reflections-official",
+      "title": "Ubisoft Reflections Newcastle location page",
+      "type": "Official company page",
+      "url": "https://www.ubisoft.com/en-us/company/careers/locations/newcastle-upon%20tyne/ubisoft-reflections",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Official current source for Newcastle location and 40-plus-year studio claim."
+    },
+    {
+      "id": "companies-house-filematch",
+      "title": "Filematch Limited company overview",
+      "type": "Official company record",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02482682",
+      "access": "public web",
+      "rights": "Public record",
+      "notes": "Official company record referenced by the update report; use only where exact company relationship has been checked."
+    },
+    {
+      "id": "mobygames-david-lloyd",
+      "title": "David Lloyd person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/264090/david-lloyd/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary authority for David Lloyd / David Croft / Dave Croft alias normalisation and Tynesoft/Icon career leads."
+    },
+    {
+      "id": "mobygames-michael-hedley",
+      "title": "Michael Hedley person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/214427/michael-hedley/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career and credit source for Michael Hedley."
+    },
+    {
+      "id": "mobygames-philip-nixon",
+      "title": "Philip Nixon person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/18991/philip-nixon/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career and alias source for Philip Nixon / Phil Nixon / Flip."
+    },
+    {
+      "id": "mobygames-bruce-nesbit",
+      "title": "Bruce Nesbit person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/1898/bruce-nesbit/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career and credit source; resolves spelling to Nesbit while retaining Nesbitt as source-caption variant."
+    },
+    {
+      "id": "mobygames-jools-jameson",
+      "title": "Jools Jameson person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/53021/jools-jameson/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career and alias source for Julian/Jools Jameson."
+    },
+    {
+      "id": "mobygames-david-mann",
+      "title": "David Mann person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/715545/david-mann/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career source for David Mann / Dave Mann and Chris Robson alias leads."
+    },
+    {
+      "id": "mobygames-peter-johnson",
+      "title": "Peter Johnson person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/15939/peter-johnson/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career source for Peter Johnson and Rage Newcastle/Venom leads."
+    },
+    {
+      "id": "mobygames-venom-games",
+      "title": "Venom Games company page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/company/5557/venom-games/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary source for Venom Games origin from Rage Newcastle team."
+    },
+    {
+      "id": "mobygames-tiberian-sun",
+      "title": "Command & Conquer: Tiberian Sun",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/589/command-conquer-tiberian-sun/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Steve Tall later Westwood credit lead."
+    },
+    {
+      "id": "mobygames-z",
+      "title": "Z",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/346/z/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Bruce Nesbit / Bitmap Brothers career lead."
+    },
+    {
+      "id": "mobygames-steel-soldiers",
+      "title": "Steel Soldiers",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/3022/steel-soldiers/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Bruce Nesbit later career lead."
+    },
+    {
+      "id": "mobygames-oscar-amiga",
+      "title": "Oscar Amiga credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/6076/oscar/credits/amiga/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Flair-era credit leads."
+    },
+    {
+      "id": "mobygames-trolls",
+      "title": "Trolls",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/trolls",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Phil Scott / Philip Nixon Flair-era credit leads."
+    },
+    {
+      "id": "mobygames-rocky-ps2",
+      "title": "Rocky PlayStation 2 credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/7741/rocky/credits/ps2/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Rage Newcastle / Peter Johnson / Philip Nixon career leads."
+    },
+    {
+      "id": "mobygames-beverly-hills-cop-dos",
+      "title": "Beverly Hills Cop DOS credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/19728/beverly-hills-cop/credits/dos/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary title-credit source for Tynesoft/David Lloyd/Gary Partis leads."
+    },
+    {
+      "id": "mobygames-superman-amiga",
+      "title": "Superman: The Man of Steel Amiga credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/49700/superman-the-man-of-steel/credits/amiga/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Tynesoft title-credit leads."
+    },
+    {
+      "id": "mobygames-elvira-dos",
+      "title": "Elvira DOS credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/4050/elvira/credits/dos/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary support for Michael Landreth later credit lead."
     },
     {
       "id": "hol-beverly-hills-cop",

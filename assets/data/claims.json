@@ -99,6 +99,20 @@
       "sources": ["stairway-kevin-blake-portfolio", "stairway-tynesoft-games"]
     },
     {
+      "id": "claim-tynesoft-photo-provenance",
+      "subject_id": "tynesoft",
+      "claim": "The Tynesoft staff photographs now have source-attributed provenance through Kevin Blake's Stairway to Hell article, but definitive public face labels remain under verification.",
+      "start_date": "1987",
+      "end_date": "2000",
+      "precision": "approximate",
+      "place": "Blaydon / Stairway to Hell archive",
+      "evidence": "Provisional",
+      "status": "public with caveat",
+      "contradiction_notes": "Source captions are testimony, not a fully corroborated public left-to-right identification.",
+      "public_location": "Tynesoft photo captions",
+      "sources": ["stairway-tynesoft-boys-club"]
+    },
+    {
       "id": "claim-washington-club",
       "subject_id": "washington",
       "claim": "A retrospective account recalls a Washington Galleries computer club and later Oxclose Community Centre as meeting places for early programmers.",
