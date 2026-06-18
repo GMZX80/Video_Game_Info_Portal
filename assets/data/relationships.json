@@ -1,0 +1,246 @@
+{
+  "relationships": [
+    {
+      "id": "rel-courtney-founded-tynesoft",
+      "from": "colin-courtney",
+      "to": "tynesoft",
+      "type": "founded",
+      "display_style": "solid",
+      "date": "c. 1983",
+      "label": "reported founder/director lead",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-scott-founded-tynesoft",
+      "from": "trevor-scott",
+      "to": "tynesoft",
+      "type": "founded",
+      "display_style": "solid",
+      "date": "c. 1983",
+      "label": "reported founder/director lead",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-microvalue-label",
+      "from": "microvalue",
+      "to": "tynesoft",
+      "type": "label owned by",
+      "display_style": "solid",
+      "date": "late 1980s",
+      "label": "budget-label relationship",
+      "evidence": "Approximate",
+      "sources": ["stairway-tynesoft-games", "supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-icon-audiogenic",
+      "from": "icon-software",
+      "to": "audiogenic-asl",
+      "type": "uncertain relationship",
+      "display_style": "dashed",
+      "date": "mid-1980s",
+      "label": "rights/assets/staff relationship not yet settled",
+      "evidence": "Open question",
+      "sources": ["stairway-kevin-blake-portfolio", "supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-gary-micropower",
+      "from": "gary-partis",
+      "to": "micro-power",
+      "type": "freelancer worked for",
+      "display_style": "dashed",
+      "date": "1983-1985",
+      "label": "author/publisher relationship",
+      "evidence": "Well supported",
+      "sources": ["stairway-gary-partis-profile", "bbcmicro-doctor-who"]
+    },
+    {
+      "id": "rel-gary-audiogenic",
+      "from": "gary-partis",
+      "to": "audiogenic-asl",
+      "type": "commissioned by",
+      "display_style": "publication",
+      "date": "1987",
+      "label": "exclusive contract reported in contemporary profile",
+      "evidence": "First-person recollection",
+      "sources": ["stairway-gary-partis-profile"]
+    },
+    {
+      "id": "rel-kevin-icon",
+      "from": "kevin-blake",
+      "to": "icon-software",
+      "type": "freelancer worked for",
+      "display_style": "dashed",
+      "date": "1984-1985",
+      "label": "portfolio-listed work",
+      "evidence": "First-person recollection",
+      "sources": ["stairway-kevin-blake-portfolio"]
+    },
+    {
+      "id": "rel-kevin-tynesoft",
+      "from": "kevin-blake",
+      "to": "tynesoft",
+      "type": "freelancer worked for",
+      "display_style": "dashed",
+      "date": "1980s",
+      "label": "self-employed Tynesoft work",
+      "evidence": "First-person recollection",
+      "sources": ["stairway-kevin-blake-portfolio"]
+    },
+    {
+      "id": "rel-dave-tynesoft",
+      "from": "dave-croft",
+      "to": "tynesoft",
+      "type": "freelancer worked for",
+      "display_style": "dashed",
+      "date": "1980s",
+      "label": "co-author on Tynesoft sports work",
+      "evidence": "First-person recollection",
+      "sources": ["stairway-kevin-blake-portfolio"]
+    },
+    {
+      "id": "rel-reflections-superior",
+      "from": "reflections",
+      "to": "superior-software",
+      "type": "published by",
+      "display_style": "publication",
+      "date": "1986-1987",
+      "label": "early Reflections titles published through Superior",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-peterjohnson-superior",
+      "from": "peter-johnson",
+      "to": "superior-software",
+      "type": "published by",
+      "display_style": "publication",
+      "date": "1980s",
+      "label": "publisher relationship lead",
+      "evidence": "Open question",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-tynesoft-zeppelin",
+      "from": "tynesoft",
+      "to": "zeppelin-games",
+      "type": "staff heritage",
+      "display_style": "dashed",
+      "date": "late 1980s",
+      "label": "reported person/skills movement, not legal continuity",
+      "evidence": "Approximate",
+      "sources": ["companies-house-eutechnyx", "supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-zeppelin-eutechnyx",
+      "from": "zeppelin-games",
+      "to": "eutechnyx",
+      "type": "renamed",
+      "display_style": "solid",
+      "date": "1990s",
+      "label": "legal name-chain to Eutechnyx",
+      "evidence": "Confirmed",
+      "sources": ["companies-house-eutechnyx"]
+    },
+    {
+      "id": "rel-tynesoft-flair",
+      "from": "tynesoft",
+      "to": "flair-software",
+      "type": "staff heritage",
+      "display_style": "dashed",
+      "date": "early 1990s",
+      "label": "post-closure staff/founder heritage",
+      "evidence": "First-person recollection",
+      "sources": ["stairway-kevin-blake-portfolio", "supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-reflections-ubisoft",
+      "from": "reflections",
+      "to": "ubisoft-reflections",
+      "type": "acquired",
+      "display_style": "solid",
+      "date": "2006",
+      "label": "later acquisition/name continuity",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster", "invest-newcastle-2019"]
+    },
+    {
+      "id": "rel-optimus-iguana",
+      "from": "optimus",
+      "to": "iguana-uk",
+      "type": "uncertain relationship",
+      "display_style": "dashed",
+      "date": "1990s",
+      "label": "Teesside relationship lead",
+      "evidence": "Open question",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-iguana-acclaim",
+      "from": "iguana-uk",
+      "to": "acclaim-teesside",
+      "type": "renamed",
+      "display_style": "solid",
+      "date": "late 1990s",
+      "label": "reported Acclaim Teesside line",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-pitbull-midway",
+      "from": "pitbull-syndicate",
+      "to": "midway-newcastle",
+      "type": "acquired",
+      "display_style": "solid",
+      "date": "2005",
+      "label": "later acquisition line",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-midway-atomhawk",
+      "from": "midway-newcastle",
+      "to": "atomhawk",
+      "type": "staff heritage",
+      "display_style": "dashed",
+      "date": "2009",
+      "label": "closure seeding new design company",
+      "evidence": "Approximate",
+      "sources": ["invest-newcastle-2019", "supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-ccp-sumo",
+      "from": "ccp-newcastle",
+      "to": "sumo-newcastle",
+      "type": "acquired",
+      "display_style": "solid",
+      "date": "2018",
+      "label": "later studio acquisition lead",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    },
+    {
+      "id": "rel-coatsink-thunderful",
+      "from": "coatsink",
+      "to": "coatsink",
+      "type": "acquired",
+      "display_style": "solid",
+      "date": "2020",
+      "label": "Thunderful acquisition; self-node shown as external ownership note",
+      "evidence": "Well supported",
+      "sources": ["thunderful-coatsink"]
+    },
+    {
+      "id": "rel-rage-venom",
+      "from": "rage-newcastle",
+      "to": "venom-games",
+      "type": "staff heritage",
+      "display_style": "dashed",
+      "date": "2000s",
+      "label": "later staff-flow lead",
+      "evidence": "Approximate",
+      "sources": ["supplied-lineage-poster"]
+    }
+  ]
+}

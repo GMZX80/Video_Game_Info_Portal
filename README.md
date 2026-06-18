@@ -11,8 +11,9 @@ Phase 0 follows the chain of developments that made the later laboratory possibl
 - the arrival of affordable programmable computers in British homes and schools;
 - Clive Sinclair, the ZX80, ZX81 and ZX Spectrum;
 - BASIC, Z80 machine code and software distributed through printed listings;
-- the transformation of bedroom coding into a commercial games industry;
-- Tynesoft and the emergence of a North East development community.
+- the transformation of bedroom coding, schools, clubs and freelance work into commercial games production;
+- Tynesoft, Icon/Audiogenic, Reflections, Teesside and the emergence of a North East development network;
+- later lineages as a short bridge into the Game Technology Lab story.
 
 The intended public site is:
 
@@ -22,7 +23,7 @@ The intended public site is:
 
 This repository is both a public history and the source material for a one-hour talk. It is designed to grow phase by phase while preserving citations, image provenance, talk cues and interactive demonstrations.
 
-Current status: **Phase 0, draft 0.1**.
+Current status: **Phase 0, draft 0.2**.
 
 ## Repository structure
 
@@ -31,11 +32,17 @@ Current status: **Phase 0, draft 0.1**.
 ├── index.html                 # Phase 0 public page
 ├── assets/
 │   ├── css/site.css           # CRT-inspired visual system
-│   ├── js/data.js             # Timeline and source data
-│   ├── js/site.js             # Timeline, talk mode and demonstrations
+│   ├── data/                  # Sources, claims, places, organisations, people, games, events and relationships
+│   ├── js/site.js             # JSON loading, timeline, map, lineage view, talk mode and demonstrations
 │   └── images/                # Project and archival images
 ├── docs/
 │   └── US3728480-brown-box-patent.pdf
+├── research/
+│   ├── editorial-method.md
+│   ├── north-east-source-register.csv
+│   ├── north-east-claims-register.csv
+│   ├── unresolved-questions.md
+│   └── incoming/supplied-north-east-timeline.html
 ├── tools/
 │   └── validate-site.mjs      # Static content, asset and workflow checks
 ├── DEPLOY.md                  # GitHub Pages publishing instructions
@@ -64,8 +71,9 @@ The script checks required Phase 0 content, relative internal asset paths, timel
 
 ## Interaction
 
-- Filter the historical timeline by origins, home computers, code culture, business and the North East.
-- Select an event to see its display, access and commercial significance, sources and talk cue.
+- Filter the historical timeline by global origins, UK context, North East, sub-region, company, people, games, technology, business, confirmed and uncertain material.
+- Select an event to see its act, evidence status, detail and sources.
+- Explore the schematic regional map, organisation profiles, people/practice section, relationship view and national comparison table.
 - Use the Spectrum-inspired type-in demonstration to run, break and deliberately damage a short BASIC listing.
 - Select stages in the publishing pipeline to explore how code becomes a commercial product.
 - Switch to **Talk mode** for larger presentation-oriented typography. The `T` key also toggles the mode.
@@ -75,7 +83,7 @@ The script checks required Phase 0 content, relative internal asset paths, timel
 
 The opening patent argument draws particularly on Graham Morgan and Jeffrey K. Lee’s Newcastle University technical report, *Controversy in Video Game Invention: The Infallible Pioneer Patents*, together with Graham Morgan’s CSC3224 teaching archive.
 
-The public page includes a full source catalogue. Material taken from private teaching documents is labelled as author archive material rather than given a public link.
+The public page includes a full source catalogue. Material taken from private teaching documents is labelled as author archive material rather than given a public link. The `research/` directory records source provenance, claim status and unresolved historical questions.
 
 ## Image provenance
 
