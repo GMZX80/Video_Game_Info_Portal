@@ -1,0 +1,338 @@
+{
+  "schema_version": "phase0-research-sources-v1",
+  "sources": [
+    {
+      "id": "supplied-lineage-poster",
+      "title": "North East England Games: studio lineages, staff flows and acquisitions",
+      "type": "Incoming research lead",
+      "url": null,
+      "access": "local supplied file",
+      "rights": "Do not republish as authoritative source",
+      "notes": "Use only as a lead list until corroborated."
+    },
+    {
+      "id": "companies-house-eutechnyx",
+      "title": "Eutechnyx Limited company overview",
+      "type": "Official company record",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02172322",
+      "access": "public web",
+      "rights": "Public record",
+      "notes": "Supports later company name-chain checks where the record itself matches."
+    },
+    {
+      "id": "bbcmicro-doctor-who",
+      "title": "Doctor Who and the Mines of Terror",
+      "type": "Games archive",
+      "url": "https://bbcmicro.co.uk/game.php?id=473",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Gary Partis title credit context."
+    },
+    {
+      "id": "stardot-vindaloo-club",
+      "title": "Vindaloo - success at last!",
+      "type": "Forum recollection",
+      "url": "https://stardot.org.uk/forums/viewtopic.php?t=19964",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective recollection; treat as testimony/research lead."
+    },
+    {
+      "id": "stairway-author-index",
+      "title": "Stairway to Hell author index",
+      "type": "Archive index",
+      "url": "https://www.stairwaytohell.com/authors/thumb.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Useful for aliases and author-page discovery; not sufficient alone for employment claims."
+    },
+    {
+      "id": "stairway-gpartis-profile",
+      "title": "Gary Partis profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/gpartis/PRO-GPartis.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, March 1987."
+    },
+    {
+      "id": "stairway-gpartis-commercial-software",
+      "title": "Gary Partis on writing commercial software",
+      "type": "Technical article",
+      "url": "https://www.stairwaytohell.com/authors/gpartis/MUJAN88-Partis.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Micro User, January 1988."
+    },
+    {
+      "id": "stairway-gpartis-interview-2007",
+      "title": "Gary Partis 2007 interview",
+      "type": "Interview",
+      "url": "https://www.stairwaytohell.com/authors/gpartis/SG-Partis.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective interview."
+    },
+    {
+      "id": "stairway-gpartis-photos",
+      "title": "Gary Partis miscellaneous photos",
+      "type": "Retrospective recollection",
+      "url": "https://www.stairwaytohell.com/authors/gpartis/PIC-GPartis.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Contains captions for Gary Partis/Peter Scott photos; not evidence for unrelated Tynesoft group-photo identification."
+    },
+    {
+      "id": "stairway-kblake-portfolio",
+      "title": "Kevin Blake software portfolio 1984-2000",
+      "type": "Retrospective recollection",
+      "url": "https://www.stairwaytohell.com/authors/kblake/POR-KBlake.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "First-person portfolio."
+    },
+    {
+      "id": "stairway-kblake-mini-profile",
+      "title": "Kevin Blake mini-profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/kblake/MPR-KBlake.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, February 1987."
+    },
+    {
+      "id": "stairway-kblake-spy-vs-spy",
+      "title": "Spy vs Spy: I must have been mad",
+      "type": "Technical article",
+      "url": "https://www.stairwaytohell.com/authors/kblake/EUJAN88-SpyVsSpy.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Electron User, January 1988."
+    },
+    {
+      "id": "stairway-tynesoft-boys-club",
+      "title": "Tynesoft Boys Club Part One",
+      "type": "Retrospective recollection",
+      "url": "https://www.stairwaytohell.com/articles/KBlake.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Kevin Blake recollection; treat wider claims as testimony unless corroborated."
+    },
+    {
+      "id": "stairway-pscott-profile",
+      "title": "Peter Scott profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/pscott/PRO-PScott.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, April 1987."
+    },
+    {
+      "id": "stairway-pscott-conversions",
+      "title": "The conversions caper",
+      "type": "Technical article",
+      "url": "https://www.stairwaytohell.com/authors/pscott/MUJUL90-PeterScott.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Micro User, July 1990."
+    },
+    {
+      "id": "stairway-pscott-omega-orb",
+      "title": "Diary of a Game: Omega Orb",
+      "type": "Technical article",
+      "url": "https://www.stairwaytohell.com/authors/pscott/AB-DiaryOfAGame-OmegaOrb.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "First-person development diary; original issue/date still needs confirmation."
+    },
+    {
+      "id": "stairway-pscott-interview-2007",
+      "title": "Peter Scott 2007 interview",
+      "type": "Interview",
+      "url": "https://www.stairwaytohell.com/authors/pscott/SG-PeterScott.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective interview."
+    },
+    {
+      "id": "stairway-jsobell-profile",
+      "title": "Jason Sobell profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/jsobell/PRO-JSobell.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective profile, March 2001."
+    },
+    {
+      "id": "stairway-jsobell-portfolio",
+      "title": "Jason Sobell software portfolio",
+      "type": "Retrospective recollection",
+      "url": "https://www.stairwaytohell.com/authors/jsobell/POR-JSobell.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective portfolio, March 2001."
+    },
+    {
+      "id": "stairway-jsobell-interview-2007",
+      "title": "Jason Sobell 2007 interview",
+      "type": "Interview",
+      "url": "https://www.stairwaytohell.com/authors/jsobell/SG-Sobell.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective interview."
+    },
+    {
+      "id": "stairway-dcroft-mini-profile",
+      "title": "Dave Croft mini-profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/dcroft/MPR-DCroft.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, February 1987."
+    },
+    {
+      "id": "stairway-edmondson-chamberlain-profile",
+      "title": "Martin Edmondson and Nicholas Chamberlain profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/edmondsonchamberlain/PRO-EdmondsonChamberlain.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, October 1987."
+    },
+    {
+      "id": "stairway-pjohnson-profile",
+      "title": "Peter Johnson profile",
+      "type": "Profile",
+      "url": "https://www.stairwaytohell.com/authors/pjohnson/PRO-PJohnson.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "A&B Computing, August 1987."
+    },
+    {
+      "id": "stairway-pjohnson-update",
+      "title": "Peter Johnson profile update",
+      "type": "Retrospective recollection",
+      "url": "https://www.stairwaytohell.com/authors/pjohnson/PUP-PJohnson.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Self-authored update, June 2001."
+    },
+    {
+      "id": "stairway-pjohnson-interview-2007",
+      "title": "Peter Johnson 2007 interview",
+      "type": "Interview",
+      "url": "https://www.stairwaytohell.com/authors/pjohnson/SG-PJohnson.html",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Retrospective interview."
+    },
+    {
+      "id": "mobygames-red-alert-credits",
+      "title": "Command & Conquer: Red Alert DOS credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/485/command-conquer-red-alert/credits/dos/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Steve Tall lead game programmer credit."
+    },
+    {
+      "id": "igdb-red-alert-credits",
+      "title": "Command & Conquer: Red Alert credits",
+      "type": "Game credits database",
+      "url": "https://www.igdb.com/games/command-conquer-red-alert/credits",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Corroborates Steve Tall credit."
+    },
+    {
+      "id": "mobygames-steve-tall",
+      "title": "Steve Tall person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/1738/steve-tall/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career credit list."
+    },
+    {
+      "id": "hol-beverly-hills-cop",
+      "title": "Beverly Hills Cop",
+      "type": "Amiga credits archive",
+      "url": "https://amiga.abime.net/99",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Tynesoft Amiga credit leads."
+    },
+    {
+      "id": "hol-circus-games",
+      "title": "Circus Games",
+      "type": "Amiga credits archive",
+      "url": "https://amiga.abime.net/3025",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Tynesoft Amiga credit leads."
+    },
+    {
+      "id": "hol-summer-olympiad",
+      "title": "Summer Olympiad",
+      "type": "Amiga credits archive",
+      "url": "https://amiga.abime.net/2175",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Chris Robson/Dave Mann credit lead."
+    },
+    {
+      "id": "hol-winter-olympiad-88",
+      "title": "Winter Olympiad 88",
+      "type": "Amiga credits archive",
+      "url": "https://amiga.abime.net/1732",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Chris Robson/Dave Mann credit lead."
+    },
+    {
+      "id": "mobygames-circus-games-bbc",
+      "title": "Circus Games BBC Micro credits",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/21984/circus-games/credits/bbc-micro/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Mike Landreth credit."
+    },
+    {
+      "id": "mobygames-circus-games",
+      "title": "Circus Games",
+      "type": "Game credits database",
+      "url": "https://www.mobygames.com/game/21984/circus-games/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports additional Circus Games credit leads."
+    },
+    {
+      "id": "lemon64-summer-challenge",
+      "title": "Summer Challenge",
+      "type": "Game credits database",
+      "url": "https://www.lemon64.com/game/summer-challenge",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Supports Michael J. Landreth graphics credit lead."
+    },
+    {
+      "id": "mobygames-phil-scott",
+      "title": "Phil Scott person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/54278/phil-scott/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Secondary career lead; not direct testimony."
+    },
+    {
+      "id": "mobygames-cumron-ashtiani",
+      "title": "Cumron Ashtiani person page",
+      "type": "Credits database",
+      "url": "https://www.mobygames.com/person/78756/cumron-ashtiani/",
+      "access": "public web",
+      "rights": "Link and paraphrase only",
+      "notes": "Later regional lead; does not establish Tynesoft relationship."
+    }
+  ]
+}

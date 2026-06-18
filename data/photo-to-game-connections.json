@@ -1,0 +1,17 @@
+{
+  "schema_version": "phase0-photo-game-connections-v1",
+  "scope": "Only supported links between identified people in Tynesoft photographs and game credits should appear here.",
+  "connections": [],
+  "blocked_connections": [
+    {
+      "photo_id": "photo-tynesoft-team-group",
+      "reason": "No people in the image have been identified by caption, named witness or multiple independent corroboration.",
+      "status": "Unconfirmed"
+    },
+    {
+      "photo_id": "photo-tynesoft-team-wide",
+      "reason": "No people in the image have been identified by caption, named witness or multiple independent corroboration.",
+      "status": "Unconfirmed"
+    }
+  ]
+}

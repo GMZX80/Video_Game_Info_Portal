@@ -1,0 +1,883 @@
+{
+  "schema_version": "phase0-tynesoft-people-v1",
+  "scope": "Research database for Tynesoft, Tynesoft-connected authors and future The Tynesoft Generation work. This file is not public narrative copy.",
+  "confidence_labels": [
+    "Verified",
+    "Strongly supported",
+    "Probable",
+    "Unconfirmed",
+    "Disputed"
+  ],
+  "role_labels": [
+    "Founder",
+    "Director",
+    "Employee",
+    "Freelancer",
+    "Contractor",
+    "Contributor",
+    "Author credited on Tynesoft titles"
+  ],
+  "people": [
+    {
+      "id": "colin-courtney",
+      "full_name": "Colin Courtney",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Founder/director lead",
+          "status": "Unconfirmed",
+          "notes": "Current support is the supplied lineage poster only; official company records or contemporary press are required."
+        }
+      ],
+      "roles": ["Founder", "Director"],
+      "platforms": [],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "c. 1983",
+          "label": "Reported Tynesoft founding/director lead",
+          "status": "Unconfirmed",
+          "sources": ["supplied-lineage-poster"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["supplied-lineage-poster"],
+      "confidence": "Unconfirmed"
+    },
+    {
+      "id": "trevor-scott",
+      "full_name": "Trevor Scott",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Founder/director lead",
+          "status": "Unconfirmed",
+          "notes": "Current support is the supplied lineage poster only; official company records or contemporary press are required."
+        }
+      ],
+      "roles": ["Founder", "Director"],
+      "platforms": [],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "c. 1983",
+          "label": "Reported Tynesoft founding/director lead",
+          "status": "Unconfirmed",
+          "sources": ["supplied-lineage-poster"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["supplied-lineage-poster"],
+      "confidence": "Unconfirmed"
+    },
+    {
+      "id": "gary-partis",
+      "full_name": "Gary Partis",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Author credited on Tynesoft titles",
+          "status": "Probable",
+          "notes": "Do not describe as employee unless employment evidence is added."
+        },
+        {
+          "name": "Micro Power",
+          "relationship": "Freelance/author-publisher relationship",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Audiogenic/ASL",
+          "relationship": "Commissioned/contracted author relationship",
+          "status": "Strongly supported"
+        }
+      ],
+      "roles": ["Contributor", "Author credited on Tynesoft titles"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [
+        {
+          "title": "Doctor Who and the Mines of Terror",
+          "role": "Programmer/author credit",
+          "platforms": ["BBC Micro"],
+          "sources": ["stairway-gpartis-profile", "bbcmicro-doctor-who"],
+          "confidence": "Strongly supported"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "1983-1985",
+          "label": "BBC Micro work and Micro Power/Superior orbit",
+          "status": "Strongly supported",
+          "sources": ["stairway-gpartis-profile", "bbcmicro-doctor-who"]
+        },
+        {
+          "date": "1987",
+          "label": "A&B Computing profile discusses Audiogenic contract context",
+          "status": "Strongly supported",
+          "sources": ["stairway-gpartis-profile"]
+        },
+        {
+          "date": "1989",
+          "label": "Reported at/for Tynesoft on supplied timeline",
+          "status": "Unconfirmed",
+          "sources": ["supplied-lineage-poster"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-gpartis-profile",
+        "stairway-gpartis-commercial-software",
+        "stairway-gpartis-interview-2007",
+        "bbcmicro-doctor-who"
+      ],
+      "confidence": "Probable"
+    },
+    {
+      "id": "kevin-blake",
+      "full_name": "Kevin Blake",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Icon Software",
+          "relationship": "Freelancer/contributor",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Audiogenic/ASL",
+          "relationship": "Freelancer/contributor",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Tynesoft",
+          "relationship": "Self-employed author/contributor",
+          "status": "Strongly supported",
+          "notes": "First-person portfolio explicitly distinguishes this from Tynesoft employment."
+        },
+        {
+          "name": "Flair Software",
+          "relationship": "Later work after Tynesoft closure",
+          "status": "Probable"
+        },
+        {
+          "name": "Darkblack",
+          "relationship": "Later work",
+          "status": "Probable"
+        }
+      ],
+      "roles": ["Freelancer", "Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron", "Commodore 64", "Amiga"],
+      "games": [
+        {
+          "title": "Space Caverns",
+          "role": "Co-author with Jason Sobell",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Caveman Capers",
+          "role": "Author/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Frankenstein 2000",
+          "role": "Author/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Winter Olympics",
+          "role": "Co-author/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio", "stairway-dcroft-mini-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Ian Botham's Test Match",
+          "role": "Co-author/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio", "stairway-dcroft-mini-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Commonwealth Games",
+          "role": "Co-author/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio", "stairway-dcroft-mini-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Spy vs Spy",
+          "role": "Conversion/programming work",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-spy-vs-spy"],
+          "confidence": "Strongly supported"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "1984-1985",
+          "label": "Icon Software and early title work",
+          "status": "Strongly supported",
+          "sources": ["stairway-kblake-portfolio"]
+        },
+        {
+          "date": "1986-1988",
+          "label": "Audiogenic and Tynesoft title work as a self-employed author",
+          "status": "Strongly supported",
+          "sources": ["stairway-kblake-portfolio", "stairway-kblake-mini-profile"]
+        },
+        {
+          "date": "early 1990s",
+          "label": "Post-Tynesoft work around Flair Software and ID Ltd",
+          "status": "Probable",
+          "sources": ["stairway-kblake-portfolio"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-kblake-portfolio",
+        "stairway-kblake-mini-profile",
+        "stairway-kblake-spy-vs-spy",
+        "stairway-tynesoft-boys-club"
+      ],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "jason-sobell",
+      "full_name": "Jason Sobell",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Icon Software",
+          "relationship": "Collaborator/contributor",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Tynesoft",
+          "relationship": "Tynesoft connection not proven as employment",
+          "status": "Unconfirmed"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [
+        {
+          "title": "Space Caverns",
+          "role": "Co-author with Kevin Blake",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-kblake-portfolio", "stairway-jsobell-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Vindaloo",
+          "role": "Reported author/contributor lead",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-jsobell-portfolio", "stardot-vindaloo-club"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "mid-1980s",
+          "label": "Icon/Audiogenic and Washington club network recollections",
+          "status": "Probable",
+          "sources": ["stairway-jsobell-profile", "stairway-jsobell-portfolio", "stardot-vindaloo-club"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-jsobell-profile",
+        "stairway-jsobell-portfolio",
+        "stairway-jsobell-interview-2007",
+        "stairway-kblake-portfolio",
+        "stardot-vindaloo-club"
+      ],
+      "confidence": "Probable"
+    },
+    {
+      "id": "dave-croft",
+      "full_name": "Dave Croft",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor on Tynesoft titles",
+          "status": "Strongly supported",
+          "notes": "Employment not established."
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [
+        {
+          "title": "Winter Olympics",
+          "role": "Credited/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Ian Botham's Test Match",
+          "role": "Credited/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Commonwealth Games",
+          "role": "Credited/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "US Drag Racing",
+          "role": "Credited/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-dcroft-mini-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Goal!",
+          "role": "Credited/contributor",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-dcroft-mini-profile"],
+          "confidence": "Strongly supported"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "1987",
+          "label": "A&B Computing mini-profile lists Tynesoft sports titles",
+          "status": "Strongly supported",
+          "sources": ["stairway-dcroft-mini-profile"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["stairway-dcroft-mini-profile", "stairway-kblake-portfolio"],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "peter-scott",
+      "full_name": "Peter Scott",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Audiogenic/ASL",
+          "relationship": "Programmer",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Tynesoft",
+          "relationship": "Lineage lead only",
+          "status": "Unconfirmed"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron", "ZX Spectrum", "Commodore 64"],
+      "games": [
+        {
+          "title": "Hunkidory",
+          "role": "Programmer/title credit lead",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-pscott-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Last of the Free",
+          "role": "Programmer/title credit lead",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-pscott-profile"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "ThunderStruck",
+          "role": "Programmer/title credit lead",
+          "platforms": ["BBC Micro", "Acorn Electron"],
+          "sources": ["stairway-pscott-profile"],
+          "confidence": "Strongly supported"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "1987",
+          "label": "A&B Computing profile places Peter Scott in ASL/Audiogenic context",
+          "status": "Strongly supported",
+          "sources": ["stairway-pscott-profile"]
+        },
+        {
+          "date": "1990",
+          "label": "First-person technical article on conversion work",
+          "status": "Strongly supported",
+          "sources": ["stairway-pscott-conversions"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-pscott-profile",
+        "stairway-pscott-conversions",
+        "stairway-pscott-interview-2007"
+      ],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "peter-johnson",
+      "full_name": "Peter Johnson",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Superior Software",
+          "relationship": "Published/commissioned author context",
+          "status": "Strongly supported"
+        },
+        {
+          "name": "Rage Newcastle",
+          "relationship": "Later studio-head role claimed in self-authored profile update",
+          "status": "Probable"
+        },
+        {
+          "name": "Tynesoft",
+          "relationship": "Lineage lead only",
+          "status": "Unconfirmed"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "1987",
+          "label": "A&B Computing profile in Superior Software orbit",
+          "status": "Strongly supported",
+          "sources": ["stairway-pjohnson-profile"]
+        },
+        {
+          "date": "1990s-2001",
+          "label": "Self-authored update mentions later Rage Newcastle leadership",
+          "status": "Probable",
+          "sources": ["stairway-pjohnson-update"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-pjohnson-profile",
+        "stairway-pjohnson-update",
+        "stairway-pjohnson-interview-2007"
+      ],
+      "confidence": "Probable"
+    },
+    {
+      "id": "steve-tall",
+      "full_name": "Steve Tall",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor on Tynesoft-era titles",
+          "status": "Probable",
+          "notes": "Employment not established."
+        },
+        {
+          "name": "Westwood Studios",
+          "relationship": "Lead game programmer credit",
+          "status": "Strongly supported"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga", "DOS"],
+      "games": [
+        {
+          "title": "Beverly Hills Cop",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-beverly-hills-cop"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Circus Games",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-circus-games"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Command & Conquer: Red Alert",
+          "role": "Lead game programmer",
+          "platforms": ["DOS"],
+          "sources": ["mobygames-red-alert-credits", "igdb-red-alert-credits"],
+          "confidence": "Strongly supported"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s",
+          "label": "Tynesoft-era Amiga title credits",
+          "status": "Probable",
+          "sources": ["hol-beverly-hills-cop", "hol-circus-games"]
+        },
+        {
+          "date": "1996",
+          "label": "Lead programmer credit on Command & Conquer: Red Alert",
+          "status": "Strongly supported",
+          "sources": ["mobygames-red-alert-credits", "igdb-red-alert-credits"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "hol-beverly-hills-cop",
+        "hol-circus-games",
+        "mobygames-red-alert-credits",
+        "igdb-red-alert-credits",
+        "mobygames-steve-tall"
+      ],
+      "confidence": "Probable"
+    },
+    {
+      "id": "julian-jameson",
+      "full_name": "Julian Jameson",
+      "aliases": ["Julian Jamieson", "Jools"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor lead",
+          "status": "Probable",
+          "notes": "Surname spelling requires direct confirmation."
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga"],
+      "games": [
+        {
+          "title": "Beverly Hills Cop",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-beverly-hills-cop"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s",
+          "label": "Beverly Hills Cop Amiga credit lead",
+          "status": "Probable",
+          "sources": ["hol-beverly-hills-cop"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["hol-beverly-hills-cop"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "chris-robson-dave-mann",
+      "full_name": "Chris Robson",
+      "aliases": ["Dave Mann"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor lead",
+          "status": "Probable",
+          "notes": "Employment not established; alias comes from archive index/credit listings."
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga"],
+      "games": [
+        {
+          "title": "Beverly Hills Cop",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-beverly-hills-cop"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Summer Olympiad",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-summer-olympiad"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Circus Games",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-circus-games"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Winter Olympiad 88",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-winter-olympiad-88"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s",
+          "label": "Multiple Tynesoft Amiga credit leads under Chris Robson/Dave Mann",
+          "status": "Probable",
+          "sources": [
+            "hol-beverly-hills-cop",
+            "hol-summer-olympiad",
+            "hol-circus-games",
+            "hol-winter-olympiad-88"
+          ]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "stairway-author-index",
+        "hol-beverly-hills-cop",
+        "hol-summer-olympiad",
+        "hol-circus-games",
+        "hol-winter-olympiad-88"
+      ],
+      "confidence": "Probable"
+    },
+    {
+      "id": "bruce-nesbit",
+      "full_name": "Bruce Nesbit",
+      "aliases": ["Bruce Nesbitt"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor lead",
+          "status": "Probable",
+          "notes": "Surname spelling requires direct confirmation."
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["Amiga"],
+      "games": [
+        {
+          "title": "Circus Games",
+          "role": "Amiga version credit lead",
+          "platforms": ["Amiga"],
+          "sources": ["hol-circus-games"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "late 1980s",
+          "label": "Circus Games Amiga credit lead",
+          "status": "Probable",
+          "sources": ["hol-circus-games"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["hol-circus-games"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "michael-landreth",
+      "full_name": "Michael Landreth",
+      "aliases": ["Mike Landreth", "Michael J. Landreth"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Credited/contributor lead",
+          "status": "Strongly supported",
+          "notes": "Employment not established."
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": ["BBC Micro", "Commodore 64"],
+      "games": [
+        {
+          "title": "Circus Games",
+          "role": "BBC Micro credit as Mike Landreth",
+          "platforms": ["BBC Micro"],
+          "sources": ["mobygames-circus-games-bbc"],
+          "confidence": "Strongly supported"
+        },
+        {
+          "title": "Circus Games",
+          "role": "C64 art credit lead",
+          "platforms": ["Commodore 64"],
+          "sources": ["mobygames-circus-games"],
+          "confidence": "Probable"
+        },
+        {
+          "title": "Summer Challenge",
+          "role": "Graphics credit lead",
+          "platforms": ["Commodore 64"],
+          "sources": ["lemon64-summer-challenge"],
+          "confidence": "Probable"
+        }
+      ],
+      "career_timeline": [
+        {
+          "date": "1988",
+          "label": "Circus Games BBC Micro credit as Mike Landreth",
+          "status": "Strongly supported",
+          "sources": ["mobygames-circus-games-bbc"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": [
+        "mobygames-circus-games-bbc",
+        "mobygames-circus-games",
+        "lemon64-summer-challenge"
+      ],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "phil-scott",
+      "full_name": "Phil Scott",
+      "aliases": ["Philip Scott"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Graphics/programming career lead",
+          "status": "Probable",
+          "notes": "Secondary database lead only; direct testimony or title credits needed."
+        },
+        {
+          "name": "Flair Software",
+          "relationship": "Later career lead",
+          "status": "Unconfirmed"
+        },
+        {
+          "name": "Rage",
+          "relationship": "Later career lead",
+          "status": "Unconfirmed"
+        }
+      ],
+      "roles": ["Contributor"],
+      "platforms": [],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "1980s-1990s",
+          "label": "Secondary database describes Tynesoft start and later Flair/Rage movement",
+          "status": "Probable",
+          "sources": ["mobygames-phil-scott"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["mobygames-phil-scott"],
+      "confidence": "Probable"
+    },
+    {
+      "id": "brian-jobling",
+      "full_name": "Brian Jobling",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "Lineage lead only",
+          "status": "Unconfirmed"
+        },
+        {
+          "name": "Zeppelin Games",
+          "relationship": "Founder/staff heritage lead",
+          "status": "Unconfirmed"
+        }
+      ],
+      "roles": ["Founder", "Contributor"],
+      "platforms": [],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "late 1980s",
+          "label": "Reported Tynesoft-to-Zeppelin heritage lead",
+          "status": "Unconfirmed",
+          "sources": ["supplied-lineage-poster", "companies-house-eutechnyx"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["supplied-lineage-poster", "companies-house-eutechnyx"],
+      "confidence": "Unconfirmed"
+    },
+    {
+      "id": "martin-edmondson",
+      "full_name": "Martin Edmondson",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Reflections",
+          "relationship": "Co-founder/programmer",
+          "status": "Strongly supported"
+        }
+      ],
+      "roles": ["Founder", "Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "1987",
+          "label": "A&B Computing profile with Nicholas Chamberlain for early Reflections",
+          "status": "Strongly supported",
+          "sources": ["stairway-edmondson-chamberlain-profile"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["stairway-edmondson-chamberlain-profile"],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "nicholas-chamberlain",
+      "full_name": "Nicholas Chamberlain",
+      "aliases": [],
+      "companies": [
+        {
+          "name": "Reflections",
+          "relationship": "Co-founder/programmer",
+          "status": "Strongly supported"
+        }
+      ],
+      "roles": ["Founder", "Contributor"],
+      "platforms": ["BBC Micro", "Acorn Electron"],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "1987",
+          "label": "A&B Computing profile with Martin Edmondson for early Reflections",
+          "status": "Strongly supported",
+          "sources": ["stairway-edmondson-chamberlain-profile"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["stairway-edmondson-chamberlain-profile"],
+      "confidence": "Strongly supported"
+    },
+    {
+      "id": "ron-beaton-cumron",
+      "full_name": "Ron Beaton / Cumron",
+      "aliases": ["Cumron Ashtiani", "Ron Ashtiani"],
+      "companies": [
+        {
+          "name": "Tynesoft",
+          "relationship": "No corroborated relationship",
+          "status": "Unconfirmed"
+        },
+        {
+          "name": "Atomhawk",
+          "relationship": "Later regional industry lead",
+          "status": "Probable"
+        }
+      ],
+      "roles": [],
+      "platforms": [],
+      "games": [],
+      "career_timeline": [
+        {
+          "date": "2009",
+          "label": "Cumron Ashtiani associated with Atomhawk foundation in secondary/public profile material",
+          "status": "Probable",
+          "sources": ["mobygames-cumron-ashtiani"]
+        }
+      ],
+      "photo_connections": [],
+      "sources": ["mobygames-cumron-ashtiani"],
+      "confidence": "Unconfirmed"
+    }
+  ]
+}
