@@ -1,0 +1,84 @@
+name: Refresh detailed archive metadata
+
+on:
+  push:
+    branches: [codex/magazine-evidence-datastore]
+    paths:
+      - .github/deep-archive-request
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: Maximum pages per archive; zero means no limit
+        required: false
+        default: '1200'
+      include_catalogues:
+        description: Include Stairway BBC and Electron HTML catalogues
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detailed-archive-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout research branch
+        uses: actions/checkout@v5
+        with:
+          ref: codex/magazine-evidence-datastore
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run parser tests before crawling
+        run: python -m pytest -q
+
+      - name: Capture detailed Sinclair User and Stairway metadata
+        env:
+          MAX_PAGES: ${{ inputs.max_pages || '1200' }}
+          INCLUDE_CATALOGUES: ${{ inputs.include_catalogues || 'true' }}
+        run: |
+          args=(--max-pages "$MAX_PAGES")
+          if [ "$INCLUDE_CATALOGUES" = "true" ]; then
+            args+=(--include-catalogues)
+          fi
+          python -m scripts.ingest.run_detailed "${args[@]}"
+
+      - name: Build clean Pages artefact
+        run: python -m scripts.build_dist
+
+      - name: Validate static site
+        run: node tools/validate-site.mjs
+
+      - name: Commit refreshed metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/raw/source-page-inventory.jsonl \
+            data/raw/sinclair-user \
+            data/raw/stairway \
+            data/curated \
+            assets/data/generated \
+            reports \
+            research/entity-resolution-queue.csv
+          if git diff --cached --quiet; then
+            echo "No metadata changes to commit."
+            exit 0
+          fi
+          git commit -m "Refresh detailed Sinclair User and Stairway metadata"
+          git push origin HEAD:codex/magazine-evidence-datastore
