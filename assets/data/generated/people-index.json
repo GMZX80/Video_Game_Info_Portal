@@ -1,3 +1,5058 @@
 {
-  "people": []
+  "people": [
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "1982 EMAP was publishing computer magazines. It was decided to ditch the rather scarce garden centre operators and pursue home microcomputer owners as the ZX-81 was rapidly turning the field into a mass market.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:1982-emap-was-publishing-computer-magazines-it-was-decided-to-ditch-the-rather-scarce-garden-centre-operators-and-pursue-home-microcomputer-owners-as-the-zx-81-was-rapidly-turning-the-field-into-a-mass-market",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:032:https-sinclairuser-com-032-micront-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "A&B Computing",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:a-and-b-computing",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-dcroft-mpr-dcroft-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "A Baines",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:a-baines",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:golf-two:mar83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "A Wilkinson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:a-wilkinson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:runner:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Acornsoft's offices at some point. If they",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:acornsofts-offices-at-some-point-if-they",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:that-it-had-passed-by-acornsofts-offices-at-some-point-if-they"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Adam Dangoor",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:adam-dangoor",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dodger:aug83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "adding a number of parameters to f$, for instance LET f$=\"code,32000,200,32000\", the start and length of the code can be specified - the last figure is optional and is the auto-run address. Basic can have a line number added in the same way. Data is handled differently as only dimensioned arrays can be saved; one of the tracks has to be specified as to where the data is saved.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:adding-a-number-of-parameters-to-f-for-instance-let-f-code-32000-200-32000-the-start-and-length-of-the-code-can-be-specified-the-last-figure-is-optional-and-is-the-auto-run-address-basic-can-have-a-line-number-added-in-the-same-way-data-is-handled-differently-as-only-dimensioned-arrays-can-be-saved-one-of-the-tracks-has-to-be-specified-as-to-where-the-data-is-saved",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:035:https-sinclairuser-com-035-massstr-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Adrian Skilling",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:adrian-skilling",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:power-paint:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Adrian Tucker",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:adrian-tucker",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:earth-defence:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "AG Griffiths",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ag-griffiths",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:walk-tall:jan86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "AL Kirkham",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:al-kirkham",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dominoes:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Alan Pratt",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:alan-pratt",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:menumaster:jan85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Alexander McKehnie",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:alexander-mckehnie",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:lazer-bars-laser-attack:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Allan Hoiberg",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:allan-hoiberg",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:calendar-eight-days-a-week:aug86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Allister Brimble",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:allister-brimble",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:crazy-patterns:feb87"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Alyson Bailey",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:alyson-bailey",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:nimo-learning-to-program:sep82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andre Sihera",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:andre-sihera",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:lazerchess"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:adventures-by-andrew-hayes"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Bird",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-bird",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:a-day-at-the-races:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Cartwright",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-cartwright",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dungeon-danny:mar86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Clark",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-clark",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cybor:feb86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Hayes",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-hayes",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:adventures-by-andrew-hayes"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Jackson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-jackson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:morse-sos-distress:dec86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Andrew Price",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:andrew-price",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:patience:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "ANSWERING a few fairly straightforward software questions and then finishing with a reasonably lengthy machine code routine for those who like that type of thing, I have tried this month to provide something of interest to everyone. Peter Bankes asks:",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:answering-a-few-fairly-straightforward-software-questions-and-then-finishing-with-a-reasonably-lengthy-machine-code-routine-for-those-who-like-that-type-of-thing-i-have-tried-this-month-to-provide-something-of-interest-to-everyone-peter-bankes-asks",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:014:https-sinclairuser-com-014-helplne-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Anthony Magrath",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:anthony-magrath",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tripods:feb86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Anthony Silas",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:anthony-silas",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:battleship-galastica:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "AR Bright",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ar-bright",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:solitaire:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ari Vidar Johanssen",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ari-vidar-johanssen",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fires:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Arthur Douglass",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:arthur-douglass",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fancy-border:apr83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Arthur Lindon",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:arthur-lindon",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:letter-move:mar84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Atarisoft",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:atarisoft",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:due-to-be-released-by-atarisoft"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Audiogenic",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:audiogenic",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-lostandfound-alt-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Barry Rawlinson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:barry-rawlinson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:infant-iq-test:may84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Barry Webber",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:barry-webber",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cherry-swipe:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Benjamin Regis",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:benjamin-regis",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:sweet-game-the:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Bill Davison, Mark Broomfield",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:bill-davison-mark-broomfield",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:attribute-aid:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Bill Lythgoe",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:bill-lythgoe",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cardioids-and-nephroids:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Bruce Smith",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:bruce-smith",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:missile:oct82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Bug-Byte before",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:bug-byte-before",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:jump-style-game-which-was-to-be-published-by-bug-byte-before"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "bytes? If you’re having problems with programming, whether they",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:bytes-if-youre-having-problems-with-programming-whether-they",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:088:https-sinclairuser-com-088-tapeload-theory-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "C Clarke",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:c-clarke",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:rocks:oct85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "C Moore",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:c-moore",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:display-text:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "C Murray",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:c-murray",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:orthius:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "C Stock",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:c-stock",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:raging-bull-seeing-red:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "C Thimbleby, B Knight",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:c-thimbleby-b-knight",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:rail-rescue:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Carl Gray",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:carl-gray",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:counting-cats:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Carl Kropacz",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:carl-kropacz",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:show-jumper:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Caroline Mitchell, John Mitchell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:caroline-mitchell-john-mitchell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:whippets:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Chris Duncan",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:chris-duncan",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:shazma-plasma:may84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Chris Roberts were very good in 1983 but are",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:chris-roberts-were-very-good-in-1983-but-are",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:graphics-by-chris-roberts-were-very-good-in-1983-but-are"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Chris Thomas",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:chris-thomas",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:definer-udg-designer:aug86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Christmas and he describes it",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:christmas-and-he-describes-it",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:warmongers-it-should-be-out-by-christmas-and-he-describes-it"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Christopher Leigh",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:christopher-leigh",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spectrum-chess-improving-on-the-manual:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Christopher Smith",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:christopher-smith",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spectrum-colour-72-colours:jun84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "CJ Howard",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:cj-howard",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bun-fight:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "contrast, the Government seems to be doing all it can to discourage our industry from growing. Despite the financial support it has been willing to give to companies to develop their products, it has refused to adopt a buy British policy for micros in Government departments and imposes a 17 percent levy on imports of electronic components used by the British industry in making its machines, whereas the duty on completed machines is only between six and eight percent.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:contrast-the-government-seems-to-be-doing-all-it-can-to-discourage-our-industry-from-growing-despite-the-financial-support-it-has-been-willing-to-give-to-companies-to-develop-their-products-it-has-refused-to-adopt-a-buy-british-policy-for-micros-in-government-departments-and-imposes-a-17-percent-levy-on-imports-of-electronic-components-used-by-the-british-industry-in-making-its-machines-whereas-the-duty-on-completed-machines-is-only-between-six-and-eight-percent",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:011:https-sinclairuser-com-011-sincvoy-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Craig Mitchell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:craig-mitchell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:house-that-jack-built-the:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Barton",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-barton",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:mortgage:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Cunningham",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-cunningham",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:devils-disks:oct85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Frampton",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-frampton",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:aliens-alien-defence:oct82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Humphries",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-humphries",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:hot-dogs:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D L HASLAM",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-l-haslam",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:of-khoronz-by-d-l-haslam"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Noonan",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-noonan",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:radioactive-decay-simulation:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Scott",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-scott",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:grid-plotter:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "D Titman",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:d-titman",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:128k-ram-disc:aug86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Daniel Bowen",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:daniel-bowen",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:i-by-daniel-bowen"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Danny Nicholas",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:danny-nicholas",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:soft-collection-by-danny-nicholas"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Danny Perri",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:danny-perri",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:death-run:may83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Darren Lee",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:darren-lee",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:snake-charmer:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Darren Sargent",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:darren-sargent",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:character-set:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Dave Banham",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:dave-banham",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:tempest"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Dave Croft",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:dave-croft",
+      "professional_roles": [
+        "Profile subject"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-dcroft-mpr-dcroft-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Dave Trebilcock",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:dave-trebilcock",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:circle-patterns:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Batey",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-batey",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dark-forest:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Bond",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-bond",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:sequence:may84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Braben & Ian Bell",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-braben-and-ian-bell",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:ii-by-david-braben-and-ian-bell-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Bradley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-bradley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:pyramid:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Bye",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-bye",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:comlogs:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Courier-Dutton",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-courier-dutton",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:airplane:annual84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Elliot",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-elliot",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:destroyers-ii-by-david-elliot-micropower"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Fryett",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-fryett",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dead-eyed-dick:sep85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Goodchild",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-goodchild",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:text-modes:aug86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Hambly",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-hambly",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:find-the-rabbit-sinclair-wizardry:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Hookham",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-hookham",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:attack:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David MacKenzie",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-mackenzie",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:morse-code:feb85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Maxwell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-maxwell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:deletion-routine:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Myles",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-myles",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:target:aug85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Nunn",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-nunn",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:space-age-characters:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David P",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-p",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:micropower"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Shaw",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-shaw",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:boxing:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Titterington",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-titterington",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:scribe:jul85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "David Ward",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:david-ward",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:high-score:sep85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "DE Haynes",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:de-haynes",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ten-green-bottles:mar84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Denis McCarthy",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:denis-mccarthy",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:word-puzzle:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Dick Greening",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:dick-greening",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:early-version-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Dirk Gray",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:dirk-gray",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:save-it:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "DL Webster",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:dl-webster",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:boggle:nov86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "DO Wright",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:do-wright",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:survival:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Donald Hughes",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:donald-hughes",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dungeon-of-despair-putting-the-brains-into-monster-heads:jun83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Eric Cowsill",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:eric-cowsill",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:basic-monitor-program:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Eric Verlind",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:eric-verlind",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:catchman-steel-frenzy:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "FAIR MEANS",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:fair-means",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-bbc-sthcollection-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Fair Means or Foul",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:fair-means-or-foul",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-electron-missing-homepage-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "for EPROM",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:for-eprom",
+      "professional_roles": [
+        "Programmer"
+      ],
+      "sources": [
+        "source-item:sinclair-user:007:https-sinclairuser-com-007-hardwre-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Frank Gasking.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:frank-gasking",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-relatedlinks-html:games-for-the-commodore-64-maintained-by-frank-gasking"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Frank Oliver",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:frank-oliver",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:easy-draw:jan85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Frederic Dambly",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:frederic-dambly",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:kaleidoscope-titles:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Frederic Huynh",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:frederic-huynh",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:doremi-the-sound-of-music:may85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "FW Manders",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:fw-manders",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:code-setter-code-breaker:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "G Hadjimichalakis",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:g-hadjimichalakis",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:treasure-finder-treasure-hunt:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Garry Lancaster",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:garry-lancaster",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:washing-line:jan86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Gary and Audiogenic's Product Manager",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:gary-and-audiogenics-product-manager",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:3-oclock-one-morning-by-gary-and-audiogenics-product-manager"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Gary Partis",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:gary-partis",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:all-because-or-zorbicus-by-gary-partis-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "GH Allen",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:gh-allen",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:black-hole-search:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Gil Jaysmith & Richard Broadhurst",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:gil-jaysmith-and-richard-broadhurst",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:or-jelton-by-gil-jaysmith-and-richard-broadhurst"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "GR Stevens",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:gr-stevens",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:rainbow-riot:feb83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Graham Bower",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:graham-bower",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:gecko:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Gremlin.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:gremlin",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:game-star-clash-published-by-gremlin"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Guy Morgan",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:guy-morgan",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:golf-club:may85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "H Hansen",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:h-hansen",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:laser-tower:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Hamish Barr",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:hamish-barr",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:password:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Henry Braun",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:henry-braun",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:slime:jan85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Henry Howarth",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:henry-howarth",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:034:https-sinclairuser-com-034-zxword-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Howard Dowthwaite",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:howard-dowthwaite",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fire-trap:feb83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "HR Davies",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:hr-davies",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:body-blow:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "I Richards",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:i-richards",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:character-enlarger:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Cattel",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-cattel",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:axe-hero:nov86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Sinclair. It provides an easy introduction to machine code but does not offer so much in terms of content as the Melbourne House issues.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-sinclair-it-provides-an-easy-introduction-to-machine-code-but-does-not-offer-so-much-in-terms-of-content-as-the-melbourne-house-issues",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:014:https-sinclairuser-com-014-books-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Stewart",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-stewart",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cats-spectrumtalk-primer:sep82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Webster",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-webster",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:hop-by-ian-webster-bug-byte"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Webster & Frazer Middleton",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-webster-and-frazer-middleton",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:garden-by-ian-webster-and-frazer-middleton-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ian Wombwell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ian-wombwell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spider-attack-space-spiders:jun84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "increasing the size of the screen to that of a portable television, it would probably be possible to have a computer which looked just the same as a small set with a keyboard.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:increasing-the-size-of-the-screen-to-that-of-a-portable-television-it-would-probably-be-possible-to-have-a-computer-which-looked-just-the-same-as-a-small-set-with-a-keyboard",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:016:https-sinclairuser-com-016-sincvoy-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "ities vary as to which hardware to support in their schools. The Inner London Education Authority, for example, like many others, decided to standardise on the RML machines at primary and secondary level. There are obvious reasons for standardisation, as support systems can develop software and maintenance for all machines in the schools. Other authorities, such as Grampian Regional Council, chose to support the Spectrum at primary level.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:ities-vary-as-to-which-hardware-to-support-in-their-schools-the-inner-london-education-authority-for-example-like-many-others-decided-to-standardise-on-the-rml-machines-at-primary-and-secondary-level-there-are-obvious-reasons-for-standardisation-as-support-systems-can-develop-software-and-maintenance-for-all-machines-in-the-schools-other-authorities-such-as-grampian-regional-council-chose-to-support-the-spectrum-at-primary-level",
+      "professional_roles": [
+        "Author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:027:https-sinclairuser-com-027-eductn-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Bourne",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-bourne",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spirals:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Dury",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-dury",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:escape-from-the-underworld:may86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Gorman",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-gorman",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:elfin-way:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Mayers",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-mayers",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:stunt-ride:mar83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J McAllister",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-mcallister",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:artificial-intelligence:apr-jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Neil",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-neil",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:hermit:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Smith",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-smith",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:pete-the-party-goer:aug83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "J Wadie",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:j-wadie",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:stellar-fighter:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "JA Slater",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ja-slater",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tape-header:jul83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "JA Watson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ja-watson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:telephone-call-calculator:mar84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jack Knight",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jack-knight",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:shades-of-success:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jacob Wittrock",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jacob-wittrock",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:character:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "James",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:james",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:widow-by-james-watson-dudleysoft"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "James Beauchamp",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:james-beauchamp",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:harmonic-horror:jan86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "James Spencer",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:james-spencer",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:pattern-designer-patterns:may86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "James Watson/Dudleysoft",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:james-watson-dudleysoft",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:widow-by-james-watson-dudleysoft"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Janson Allen",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:janson-allen",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:houdini:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jason Butler",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jason-butler",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:overload:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jason Moody",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jason-moody",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:c5-challenge:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jason Sobell",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:jason-sobell",
+      "professional_roles": [
+        "Profile subject"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-jsobell-por-jsobell-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "JB Souter",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jb-souter",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:microdrive-utility-system-easy-access:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "JE Hutchinson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:je-hutchinson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fire-kracker:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jeff Lawson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jeff-lawson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ql-screen-dump-getting-into-the-picture:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "JM Kelly",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jm-kelly",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:function-fit:oct85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Joe Myers",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:joe-myers",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:retrogue"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Duffy",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-duffy",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:shoot-the-rapids:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Grove",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-grove",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:and-the-weevils-by-john-grove-acornsoft"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Hunton",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-hunton",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:3d-words:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Pitcher",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-pitcher",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:isotopes:aug85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Plunkett",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-plunkett",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:sound-routine:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "John Wood",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:john-wood",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:slop-slap-halls-of-slime:apr86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jon Ellis",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jon-ellis",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:characters-zx-condenser:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jonathan Ashburner",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jonathan-ashburner",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:gas-bill:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jonathan Currey",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jonathan-currey",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:sparx:jun84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Jonathan Hatcher",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:jonathan-hatcher",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:infinite-scroll:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Joseph Donnelly",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:joseph-donnelly",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:nuclear-waste:feb83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Juan Richardson that",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:juan-richardson-that",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:comes-a-fun-little-machine-code-game-by-juan-richardson-that"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Julian Bushell.\"",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:julian-bushell",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:and-i-firmly-believe-that-they-have-been-duped-by-julian-bushell"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "K Brown",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:k-brown",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:seed-catcher:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "K Hart",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:k-hart",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:pontoon:jan83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "K Jefford",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:k-jefford",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ghoti:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Karen Cruickshank",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:karen-cruickshank",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cashflow:annual84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Keith Williams",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:keith-williams",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:trace-adding-commands-to-spectrum-basic:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ken Rylett",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ken-rylett",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:brick-bucket:jan83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Kevin Blake",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:kevin-blake",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-articles-kblake-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Kevin Edwards",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:kevin-edwards",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:n-b"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "KP Holloway",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:kp-holloway",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bomber-boris:may85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Kristofer Gamstedt",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:kristofer-gamstedt",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:snake:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Lea Pearson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:lea-pearson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:filer-the:sep86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "LM Cook",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:lm-cook",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:touch-line-plan-32:jan85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "LN Langley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ln-langley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:shopkeeper:aug85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "M Beaton",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:m-beaton",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:ii-adapted-by-m-beaton"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "M. Edmondson & N. Chamberlain",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:m-edmondson-and-n-chamberlain",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:round-by-m-edmondson-and-n-chamberlain"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "M Gordon Kerr",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:m-gordon-kerr",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:wizard-the:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "M Thurston",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:m-thurston",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:character-generator:oct82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Malcolm Ross",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:malcolm-ross",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tanker:may84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mandarin",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:mandarin",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:it-was-indeed-released-by-mandarin"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mandarin Software. However, I've scanned through",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:mandarin-software-however-ive-scanned-through",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:it-was-released-by-mandarin-software-however-ive-scanned-through"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Marc Poulaud",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:marc-poulaud",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:shape-design-utility-designer:oct83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Marjan Klenovsek",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:marjan-klenovsek",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:program-protector:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Hinchcliffe",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-hinchcliffe",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:gunfight-gunfighter:may85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Hubbuck",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-hubbuck",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:jaws:mar84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Jarrard",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-jarrard",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:picture-transformation-plotting-the-right-changes:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Lawrence",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-lawrence",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:word-processor:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Pickford",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-pickford",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:noughts-and-crosses:mar87"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Rigby",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-rigby",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:line-graph:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Rogers",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-rogers",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:just-been-reinstated-by-mark-rogers"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Williams",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-williams",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:city-lander:jan83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Winn",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-winn",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:et:apr83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mark Young",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mark-young",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:missile-strike:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Martin Edmondson",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:martin-edmondson",
+      "professional_roles": [
+        "Profile subject"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-edmondsonchamberlain-pro-edmondsonchamberlain-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Martin Kirkwood",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:martin-kirkwood",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fireman-big-heat-the:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Martin Richards",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:martin-richards",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spirograph:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "MASIK' on the cover art (MAtthew S + SI Kilvington).",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:masik-on-the-cover-art-matthew-s-si-kilvington",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:produced-by-masik-on-the-cover-art-matthew-s-si-kilvington"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Melvyn",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:melvyn",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:shove-it"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Melvyn Garcia",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:melvyn-garcia",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:n-break-by-melvyn-garcia"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Michael Hopkins",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:michael-hopkins",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spot-the-numbers-psychiatrist:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Michael Housley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:michael-housley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:rifle-range:jul85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Michael Jakobsen. It",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:michael-jakobsen-it",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:the-popular-arcade-adventure-written-by-michael-jakobsen-it"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Michael Smith",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:michael-smith",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:font-designer-back-to-font:dec86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Michelle Presslie",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:michelle-presslie",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:black-swan:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Micro User",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:micro-user",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:or-dictator-by-stuart-cheshire-a-k-a-delos-d-harriman-go-dax"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Micro User or A&B Computing over what he was",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:micro-user-or-a-and-b-computing-over-what-he-was",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:questioned-by-micro-user-or-a-and-b-computing-over-what-he-was"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Micropower, but the existence of this version indicates",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:micropower-but-the-existence-of-this-version-indicates",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:weevils-by-micropower-but-the-existence-of-this-version-indicates"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Miguel Pontes Garcia",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:miguel-pontes-garcia",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:refuelling:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mike Rapps",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mike-rapps",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:animation:aug-nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mike Sever",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mike-sever",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:countdown-brainbox:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Mike Wyatt",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:mike-wyatt",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:rescue-by-mike-wyatt"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Miles Sampson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:miles-sampson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bowling-green:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "MJA Turner",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:mja-turner",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:builder:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "N Higson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:n-higson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:lightbulb:jun84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Neil Bates",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:neil-bates",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:kingfisher:dec85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Neil Martin",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:neil-martin",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:princess-in-the-dungeon:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Neil Sampson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:neil-sampson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:qool-graphics:jan85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Nicholas Chamberlain",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:nicholas-chamberlain",
+      "professional_roles": [
+        "Profile subject"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-edmondsonchamberlain-pro-edmondsonchamberlain-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Nicholas Lloyd",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:nicholas-lloyd",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:computafile:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Nicholas Lock",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:nicholas-lock",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:starship:sep82"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Nick Wilkinson. A",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:nick-wilkinson-a",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:shanghai-by-nick-wilkinson-a"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "NJ Kemp",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:nj-kemp",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:saucer:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "now Costa was working as a an engineer for British Aerospace, and a number of his colleagues at work were also excited by the new machine. \"We had bets on which one would arrive first. Mine was last. There were about half a dozen of us, and we swapped programs at work.\"",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:now-costa-was-working-as-a-an-engineer-for-british-aerospace-and-a-number-of-his-colleagues-at-work-were-also-excited-by-the-new-machine-we-had-bets-on-which-one-would-arrive-first-mine-was-last-there-were-about-half-a-dozen-of-us-and-we-swapped-programs-at-work",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:032:https-sinclairuser-com-032-htsquad-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "NT Morgan",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:nt-morgan",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:stocks-and-shares-bulls-and-bears:feb85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "O Seaman",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:o-seaman",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:damien:dec84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ocean",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:ocean",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:that-magazines-back-cover-was-regularly-staked-out-by-ocean"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Orlando",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:orlando",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:ii-by-orlando"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Orlando (Firebird)",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:orlando-firebird",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-electron-dfs-homepage-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Orlando. Since the rest",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:orlando-since-the-rest",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:of-which-was-a-version-of-tempest-by-orlando-since-the-rest"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Owen Lloyd",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:owen-lloyd",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:beacon-adventure:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "P Watson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:p-watson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:defender:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "PA Charter",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:pa-charter",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:maze-chase-ghosts:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "passing on his entire collection of BBC software - if it were",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:passing-on-his-entire-collection-of-bbc-software-if-it-were",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-misc-credits-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Austin;",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-austin",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:080:https-sinclairuser-com-080-worst-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Aylin",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-aylin",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:graphic-designer-user-defined-graphics:jun83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Bailey",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-bailey",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:electro-man-in-revenge-of-the-bugs:jul85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Caris",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-caris",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:diver:aug84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Haigh",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-haigh",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:goes-jumping-by-paul-haigh-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Hanlon",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-hanlon",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tree-builder:dec86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Munro",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-munro",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:light-show:oct85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Proctor",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-proctor",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:it-was-written-by-paul-proctor"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Shave",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-shave",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:of-gems-by-paul-shave-mrm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Paul Spencer",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:paul-spencer",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bell-ringer:jun84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "PC Forrister",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:pc-forrister",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:data-file:feb83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "PD Appleby",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:pd-appleby",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:galactic-raiders:mar84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-lostandfound-homepage-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Bernstein",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-bernstein",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:invadigits:aug83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Catherall",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-catherall",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:vanity:jun85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Cooke",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-cooke",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:artificial-intelligence:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Gillet with graphics by Martin Kelsey, this",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-gillet-with-graphics-by-martin-kelsey-this",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:ago-coded-by-peter-gillet-with-graphics-by-martin-kelsey-this"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Gillett",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-gillett",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:bobble-by-peter-gillett-firebird"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Johnson",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-johnson",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:castles-by-peter-johnson-atarisoft"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Scott",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-scott",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:by-gary-partis-revised-by-peter-scott-audiogenic"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Scott using elements of his cancelled project,",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-scott-using-elements-of-his-cancelled-project",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:coded-by-peter-scott-using-elements-of-his-cancelled-project"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Peter Stiles",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:peter-stiles",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ferry:jul83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Phil Willcox",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:phil-willcox",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:blaster:nov85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Bayliss",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-bayliss",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:conversion:jul84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Cole",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-cole",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:snake:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Harper",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-harper",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ski-run:annual84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Laflin",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-laflin",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tower-of-doors:jan86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Meade",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-meade",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:telephone:aug83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip S Newby",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-s-newby",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:inferno:apr85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Smith",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-smith",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:ql-characters:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Taglione",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-taglione",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:variable-lister:feb83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Philip Todhunter",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:philip-todhunter",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:golden-maggot-the:oct85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Phillip Williams",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:phillip-williams",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:fives:apr83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "PJ Wilcox",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:pj-wilcox",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:three-blind-mice:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "R Clark",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:r-clark",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:biorhythms:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "R Tutton",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:r-tutton",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:mexican-gunner:jun83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "RD Hartley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:rd-hartley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:laser-spectrum-laser:mar83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Redvers Stringer",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:redvers-stringer",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:smiler:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Rich Talbot-Watkins & Matt Godbolt",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:rich-talbot-watkins-and-matt-godbolt",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:demo-by-rich-talbot-watkins-and-matt-godbolt"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Richard",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:richard",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:a-shoot-em-up-written-by-richard"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Richard Bennett",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:richard-bennett",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:adventurer:jan86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Richard Greenwell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:richard-greenwell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:stretch:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Richard Hartill",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:richard-hartill",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:hunt-the-hurkle:nov85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Robert Crowe",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:robert-crowe",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:the"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Robert Henson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:robert-henson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:donald-duck:feb84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Robert Horsfall",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:robert-horsfall",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cassette-oscilloscope:jun83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Robert Osborn",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:robert-osborn",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cleaner:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Robert Shipley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:robert-shipley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:sound-effects-the-machine-code-way:jan84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Roger Frost",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:roger-frost",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:notemaker:jul83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ron Merson",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:ron-merson",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:pit-by-ron-merson-durell"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Ross Henderson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ross-henderson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:boomer:apr83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Rowena Weg",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:rowena-weg",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:chase-the:apr83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "RP Banks",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:rp-banks",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bonio:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "s",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s",
+      "professional_roles": [
+        "Programmer"
+      ],
+      "sources": [
+        "source-item:sinclair-user:047:https-sinclairuser-com-047-command-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "S are going further afield to find uses for the 48K Spectrum. Hilton Computer Services has just launched an 'expert' system, called",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-are-going-further-afield-to-find-uses-for-the-48k-spectrum-hilton-computer-services-has-just-launched-an-expert-system-called",
+      "professional_roles": [
+        "Programmer"
+      ],
+      "sources": [
+        "source-item:sinclair-user:014:https-sinclairuser-com-014-softwre-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "s are starting to use sophisticated techniques to achieve three-dimensional effects on the computer screen which seem more life-like than the two-dimensional space-battle games.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-are-starting-to-use-sophisticated-techniques-to-achieve-three-dimensional-effects-on-the-computer-screen-which-seem-more-life-like-than-the-two-dimensional-space-battle-games",
+      "professional_roles": [
+        "Programmer"
+      ],
+      "sources": [
+        "source-item:sinclair-user:018:https-sinclairuser-com-018-3dgames-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "S Burke",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-burke",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:big-brother-eye-the:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "S Hirst",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-hirst",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:robot-hunt:annual84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "s ODE - could hardly be described as having a stereotype programming background. After attaining a First at Edinburgh University, he moved to Oxford, and took up a position as a research physicist, taking a doctorate in the subject, and staying on.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-ode-could-hardly-be-described-as-having-a-stereotype-programming-background-after-attaining-a-first-at-edinburgh-university-he-moved-to-oxford-and-took-up-a-position-as-a-research-physicist-taking-a-doctorate-in-the-subject-and-staying-on",
+      "professional_roles": [
+        "Author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:057:https-sinclairuser-com-057-mmerc-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "s. This meant that it was possible to give it the final polish that a",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-this-meant-that-it-was-possible-to-give-it-the-final-polish-that-a",
+      "professional_roles": [
+        "Author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:088:https-sinclairuser-com-088-tapeload-theory-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "'s Toolkit for the ZX-81",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:s-toolkit-for-the-zx-81",
+      "professional_roles": [
+        "Programmer"
+      ],
+      "sources": [
+        "source-item:sinclair-user:043:https-sinclairuser-com-043-htsquad-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "SA Fisk",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:sa-fisk",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tug-of-war:may83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Sam French",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:sam-french",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:mosquito:apr84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Sandra Essex",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:sandra-essex",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:database-diary:annual86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Shaun Ward",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:shaun-ward",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:killer-shark-castle-dragon-attack:sep83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Simon Hillns",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:simon-hillns",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:forester:dec83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Simon Storr (aka Symo)",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:simon-storr-aka-symo",
+      "professional_roles": [
+        "First-hand or attributed source"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:the-popular-arcade-adventure-written-by-michael-jakobsen-it"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "SJ Stearn",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:sj-stearn",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:spacman:annual83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stairway To Hell",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:stairway-to-hell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-gpartis-pic-gpartis-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stephen Hancock",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:stephen-hancock",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:home-accounts:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steve Brown.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:steve-brown",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-relatedlinks-html:sinclair-spectrum-maintained-by-steve-brown"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steve Greaves",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:steve-greaves",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:space-trader:sep85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steve Movatt",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:steve-movatt",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:top-notch:sep85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steve Siddle",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:steve-siddle",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:snooker-by-steve-siddle-players"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steve Williams",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:steve-williams",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tombs-of-qrrtal:jul85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steven Day",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:steven-day",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:megatron:sep86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Steven Spendley",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:steven-spendley",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:character-enlarger-big-print:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stewart Green",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:stewart-green",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:death-duel:apr86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stuart Box",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:stuart-box",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:text-printer:sep86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stuart Cheshire a.k.a. Delos D Harriman",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:stuart-cheshire-a-k-a-delos-d-harriman",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:or-dictator-by-stuart-cheshire-a-k-a-delos-d-harriman-go-dax"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Stuart Goodwin",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:stuart-goodwin",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-authors-gpartis-sg-partis-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Superior, although I got",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:superior-although-i-got",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:said-it-had-been-not-published-by-superior-although-i-got"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Superior, and thought I'd",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:superior-and-thought-id",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:repton-series-of-games-released-by-superior-and-thought-id"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Superior I seem",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:superior-i-seem",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:game-with-some-nice-music-and-was-considered-by-superior-i-seem"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Superior Software.",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:superior-software",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:and-was-released-by-superior-software"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Symo",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:symo",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:2-by-symo-superior"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "T Lester",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:t-lester",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:assembler:aug86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "T Sherwood",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:t-sherwood",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:manic-mechanic:nov85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tahir Abbas",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tahir-abbas",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:save-the-dam-dam-buster:jan83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Talent Computer Systems",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:talent-computer-systems",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:graphics-toolkit:annual86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tat Tang",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tat-tang",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:quadrun:annual85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Terry Braverman",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:terry-braverman",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:cat-n-mouse-paws:mar85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "that time we were beginning to fed Healthily Holy - the first of many states of painful bliss advocated by the Sisters - and so were locked in the searing insides of the steam baths along with some 40 other pilgrims. Thus, said the Sisters, we would purge our sins and cleanse our bodies for fresh triumphs against evil. Zul and Zel liked that not, having spent many months developing their distinctive smell.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:that-time-we-were-beginning-to-fed-healthily-holy-the-first-of-many-states-of-painful-bliss-advocated-by-the-sisters-and-so-were-locked-in-the-searing-insides-of-the-steam-baths-along-with-some-40-other-pilgrims-thus-said-the-sisters-we-would-purge-our-sins-and-cleanse-our-bodies-for-fresh-triumphs-against-evil-zul-and-zel-liked-that-not-having-spent-many-months-developing-their-distinctive-smell",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:044:https-sinclairuser-com-044-adventh-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "that we imply no criticism of the program. Gamers who enjoy blasting space ships, and who probably still own a copy of",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:that-we-imply-no-criticism-of-the-program-gamers-who-enjoy-blasting-space-ships-and-who-probably-still-own-a-copy-of",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:037:https-sinclairuser-com-037-sftwre-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "the time he left Sperry Gyroscope, Malcolm had already written",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:the-time-he-left-sperry-gyroscope-malcolm-had-already-written",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:030:https-sinclairuser-com-030-htsquad-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "the time the laser bolt has reached the place where you wanted it to go, the target invader has moved on. That means that a great deal of anticipation and skill is required. Graphically, the Bug Byte invaders is the best, with rows of different-colour aliens crossing the screen and large motherships moving from one side of the screen to the other at random intervals. Spectral Invaders is well-presented and costs £5.95.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:the-time-the-laser-bolt-has-reached-the-place-where-you-wanted-it-to-go-the-target-invader-has-moved-on-that-means-that-a-great-deal-of-anticipation-and-skill-is-required-graphically-the-bug-byte-invaders-is-the-best-with-rows-of-different-colour-aliens-crossing-the-screen-and-large-motherships-moving-from-one-side-of-the-screen-to-the-other-at-random-intervals-spectral-invaders-is-well-presented-and-costs-5-95",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:011:https-sinclairuser-com-011-arcade-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "the time this edition of",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:the-time-this-edition-of",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:009:https-sinclairuser-com-009-sincvoy-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "this time there were 12 employees at the King's Parade offices in Cambridge, six engineers still working at The Mill in St Ives, and Nigel Searle in Boston. To make sure that the company didn't grow too fast Sinclair had subcontracted all manufacturing. To begin with, production was done locally in St Ives by Tek Electronics. Components were generally of a much higher standard than they had been during the Black Watch fiasco, so there was less reason to manufacture products in-house. Eventually, as more and more were produced, the computers were made by Timex in Dundee; it is a testimony to all concerned that the return rate on the ZX80 was only one per cent.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:this-time-there-were-12-employees-at-the-kings-parade-offices-in-cambridge-six-engineers-still-working-at-the-mill-in-st-ives-and-nigel-searle-in-boston-to-make-sure-that-the-company-didnt-grow-too-fast-sinclair-had-subcontracted-all-manufacturing-to-begin-with-production-was-done-locally-in-st-ives-by-tek-electronics-components-were-generally-of-a-much-higher-standard-than-they-had-been-during-the-black-watch-fiasco-so-there-was-less-reason-to-manufacture-products-in-house-eventually-as-more-and-more-were-produced-the-computers-were-made-by-timex-in-dundee-it-is-a-testimony-to-all-concerned-that-the-return-rate-on-the-zx80-was-only-one-per-cent",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:046:https-sinclairuser-com-046-sstory-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tim Hartnell investigates the traditional idea of artificial intelligence. Unfortunately the book might have been better titled 'How to write strategy games or programs which will talk back to you'.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tim-hartnell-investigates-the-traditional-idea-of-artificial-intelligence-unfortunately-the-book-might-have-been-better-titled-how-to-write-strategy-games-or-programs-which-will-talk-back-to-you",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:032:https-sinclairuser-com-032-visions-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tim, Ringo",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tim-ringo",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:dam-buster:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tim Wolverson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tim-wolverson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:city-defence:nov83"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Timothy Sneath",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:timothy-sneath",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:jennifers-dolly:nov85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tom Frost",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tom-frost",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:adventure-builder:jun-jul86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tom Leinster",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:tom-leinster",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:mouse-ai:nov86"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Toni Baker and several by Ian Logan. The best, in my opinion, on the Z-80 microprocessor is",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:toni-baker-and-several-by-ian-logan-the-best-in-my-opinion-on-the-z-80-microprocessor-is",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:009:https-sinclairuser-com-009-helplne-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Toni Baker. Former owners of ZX-81s may notice that the book is an update on",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:toni-baker-former-owners-of-zx-81s-may-notice-that-the-book-is-an-update-on",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:022:https-sinclairuser-com-022-books-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tony Bartram",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:tony-bartram",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:demo-by-tony-bartram"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "Tony Sothcott",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:tony-sothcott",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:raider-by-tony-sothcott-micropower"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "TS Thomas",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:ts-thomas",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:vignere-cipher:jul85"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "?",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:unknown",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:right-stuff-the:oct84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "US Gold some two years",
+      "disambiguation_notes": "Name preserved exactly as printed; automatic alias merging is disabled.",
+      "evidence_status": "named in source",
+      "person_id": "person:us-gold-some-two-years",
+      "professional_roles": [
+        "Named game author"
+      ],
+      "sources": [
+        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:in-production-eventually-picked-up-by-us-gold-some-two-years"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "using the FREEUEF utility available from the",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:using-the-freeuef-utility-available-from-the",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:stairway:https-www-stairwaytohell-com-electron-homepage-html"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "WD Owen",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:wd-owen",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:whats-the-time-tell-the-time:sep84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "what I have asked you to send, we should be able to know everything about the version on the market. I shall hope to include portions of any routines you send, including my own, to provide a set of routines, which may, in the end, produce a chess program.",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:what-i-have-asked-you-to-send-we-should-be-able-to-know-everything-about-the-version-on-the-market-i-shall-hope-to-include-portions-of-any-routines-you-send-including-my-own-to-provide-a-set-of-routines-which-may-in-the-end-produce-a-chess-program",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:sinclair-user:001:https-sinclairuser-com-001-mindgms-htm"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "William Johnson",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:william-johnson",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:bridge-on-the-rhine:nov84"
+      ]
+    },
+    {
+      "aliases": [],
+      "biography_summary": "",
+      "canonical_name": "William Webb",
+      "disambiguation_notes": "Article author; not automatically a game contributor.",
+      "evidence_status": "named in source",
+      "person_id": "person:william-webb",
+      "professional_roles": [
+        "Article author"
+      ],
+      "sources": [
+        "source-item:globalnet-ttfn:tank-battle:jun83"
+      ]
+    }
+  ]
 }
