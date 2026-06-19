@@ -22,8 +22,32 @@ SCHEMA_DIR = DATA_DIR / "schemas"
 CACHE_DIR = ROOT / ".cache" / "magazine-ingest"
 REPORTS_DIR = ROOT / "reports"
 GENERATED_DIR = ROOT / "assets" / "data" / "generated"
+PAGE_INVENTORY = RAW_DIR / "source-page-inventory.jsonl"
 DEFAULT_ACCESSED_AT = "2026-06-18"
-DEFAULT_USER_AGENT = "VideoGameHistoryResearchBot/0.1 (+https://github.com/GMZX80/Video_Game_Info_Portal)"
+DEFAULT_USER_AGENT = "VideoGameHistoryResearchBot/0.2 (+https://github.com/GMZX80/Video_Game_Info_Portal)"
+
+BINARY_SUFFIXES = {
+    ".7z",
+    ".adf",
+    ".arc",
+    ".bin",
+    ".d64",
+    ".dsd",
+    ".gz",
+    ".img",
+    ".iso",
+    ".mp3",
+    ".ogg",
+    ".pdf",
+    ".rom",
+    ".ssd",
+    ".tap",
+    ".tar",
+    ".tzx",
+    ".uef",
+    ".wav",
+    ".zip",
+}
 
 
 def slugify(value: Any) -> str:
@@ -54,6 +78,11 @@ def canonical_url(url: str, base_url: str | None = None) -> str:
     return urlunparse((scheme, netloc, path, "", query, ""))
 
 
+def is_probably_binary_url(url: str) -> bool:
+    path = urlparse(url).path.lower()
+    return any(path.endswith(suffix) for suffix in BINARY_SUFFIXES)
+
+
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
@@ -78,6 +107,14 @@ def write_jsonl(path: Path, rows: Iterable[dict[str, Any]], *, sort_key: str | N
         for row in materialised:
             handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True))
             handle.write("\n")
+
+
+def merge_archive_inventory(archive: str, rows: Iterable[dict[str, Any]], path: Path = PAGE_INVENTORY) -> None:
+    """Replace one archive's page-inventory rows while preserving the others."""
+
+    existing = [row for row in read_jsonl(path) if row.get("archive") != archive]
+    replacement = list(rows)
+    write_jsonl(path, [*existing, *replacement], sort_key="page_id")
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -124,6 +161,7 @@ class FetchResult:
     text: str
     content_hash: str
     from_cache: bool
+    error: str = ""
 
 
 class RespectfulFetcher:
@@ -134,6 +172,7 @@ class RespectfulFetcher:
         user_agent: str = DEFAULT_USER_AGENT,
         delay_seconds: float = 1.0,
         timeout: int = 20,
+        retries: int = 3,
     ):
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
@@ -141,6 +180,7 @@ class RespectfulFetcher:
         self.user_agent = user_agent
         self.delay_seconds = delay_seconds
         self.timeout = timeout
+        self.retries = max(1, retries)
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": user_agent})
         self.last_fetch_by_host: dict[str, float] = {}
@@ -164,7 +204,7 @@ class RespectfulFetcher:
                 return None
             parser.parse(response.text.splitlines())
             self.robots[root] = parser
-        except Exception:
+        except requests.RequestException:
             self.robots[root] = None
         return self.robots[root]
 
@@ -189,19 +229,44 @@ class RespectfulFetcher:
         if resume and cache_path.exists():
             text = cache_path.read_text(encoding="utf-8", errors="replace")
             record = self.manifest.get(url) or {}
-            return FetchResult(url, record.get("canonical_url", url), record.get("status_code", 200), text, content_hash(text), True)
+            return FetchResult(
+                url,
+                record.get("canonical_url", url),
+                record.get("status_code", 200),
+                text,
+                content_hash(text),
+                True,
+                record.get("error", ""),
+            )
         if not self.allowed(url):
             digest = content_hash("")
             self.manifest.record(url, 0, digest, url, blocked_by_robots=True)
-            return FetchResult(url, url, 0, "", digest, False)
-        self._rate_limit(url)
-        response = self.session.get(url, timeout=self.timeout)
-        text = response.text
-        digest = content_hash(text)
-        if response.ok and "text/html" in response.headers.get("content-type", "text/html"):
-            cache_path.write_text(text, encoding="utf-8")
-        self.manifest.record(url, response.status_code, digest, response.url)
-        return FetchResult(url, canonical_url(response.url), response.status_code, text, digest, False)
+            return FetchResult(url, url, 0, "", digest, False, "blocked by robots.txt")
+
+        last_error = ""
+        for attempt in range(self.retries):
+            try:
+                self._rate_limit(url)
+                response = self.session.get(url, timeout=self.timeout)
+                text = response.text
+                digest = content_hash(text)
+                content_type = response.headers.get("content-type", "text/html").lower()
+                if response.ok and "text/html" in content_type:
+                    cache_path.write_text(text, encoding="utf-8")
+                self.manifest.record(url, response.status_code, digest, response.url, content_type=content_type)
+                if response.status_code == 429 or response.status_code >= 500:
+                    if attempt + 1 < self.retries:
+                        time.sleep(min(2 ** attempt, 4))
+                        continue
+                return FetchResult(url, canonical_url(response.url), response.status_code, text, digest, False)
+            except requests.RequestException as exc:
+                last_error = str(exc)
+                if attempt + 1 < self.retries:
+                    time.sleep(min(2 ** attempt, 4))
+
+        digest = content_hash("")
+        self.manifest.record(url, -1, digest, url, error=last_error)
+        return FetchResult(url, url, -1, "", digest, False, last_error)
 
 
 def add_common_arguments(parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
