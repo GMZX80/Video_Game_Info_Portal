@@ -738,6 +738,21 @@
     {
       "active_dates": "",
       "aliases": [],
+      "canonical_name": "Adventure",
+      "evidence_status": "candidate",
+      "founders": [],
+      "labels": [],
+      "legal_name": "",
+      "locations": [],
+      "organisation_id": "organisation:adventure",
+      "organisation_type": "printed company or label",
+      "sources": [
+        "source-item:sinclair-user-supplement:053:the-very-big-cave-adventure"
+      ]
+    },
+    {
+      "active_dates": "",
+      "aliases": [],
       "canonical_name": "Adventure Helpline  Sinclair Surgery Software Directory Next Month",
       "evidence_status": "candidate",
       "founders": [],
@@ -1158,7 +1173,7 @@
     {
       "active_dates": "",
       "aliases": [],
-      "canonical_name": "Alligata",
+      "canonical_name": "ALLIGATA",
       "evidence_status": "candidate",
       "founders": [],
       "labels": [],
@@ -1167,7 +1182,7 @@
       "organisation_id": "organisation:alligata",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-b-html:blagger:alligata"
+        "source-item:sinclair-user-supplement:085:superior-alligata"
       ]
     },
     {
@@ -2157,7 +2172,7 @@
       "organisation_id": "organisation:artic",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-g-html:the-great-wall:artic"
+        "source-item:sinclair-user-supplement:053:antartic"
       ]
     },
     {
@@ -2457,7 +2472,7 @@
       "organisation_id": "organisation:atlantis",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-a-html:anarchy-zone:atlantis"
+        "source-item:sinclair-user-supplement:125:indiana-jones-and-the-fate-of-atlantis"
       ]
     },
     {
@@ -5802,7 +5817,7 @@
       "organisation_id": "organisation:comsoft",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-c-html:custard-pie-fight:comsoft"
+        "source-item:sinclair-user-supplement:077:telecomsoft"
       ]
     },
     {
@@ -6717,7 +6732,7 @@
       "organisation_id": "organisation:database",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-0-html:10-of-the-best-vol-1:database"
+        "source-item:sinclair-user-supplement:055:free-text-database"
       ]
     },
     {
@@ -8907,7 +8922,7 @@
       "organisation_id": "organisation:empire",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-p-html:pipemania:empire"
+        "source-item:sinclair-user-supplement:078:vampiress-empire"
       ]
     },
     {
@@ -9687,7 +9702,7 @@
       "organisation_id": "organisation:firebird",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-0-html:3d-pool:firebird"
+        "source-item:sinclair-user-supplement:048:insight-firebird"
       ]
     },
     {
@@ -11223,7 +11238,7 @@
     {
       "active_dates": "",
       "aliases": [],
-      "canonical_name": "Gremlin",
+      "canonical_name": "GREMLIN",
       "evidence_status": "candidate",
       "founders": [],
       "labels": [],
@@ -11232,7 +11247,7 @@
       "organisation_id": "organisation:gremlin",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-f-html:footballer-of-the-year:gremlin"
+        "source-item:sinclair-user-supplement:121:first-class-gremlin"
       ]
     },
     {
@@ -15792,7 +15807,7 @@
       "organisation_id": "organisation:mad",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:zzap64:game:180"
+        "source-item:sinclair-user-supplement:048:nomad"
       ]
     },
     {
@@ -21132,7 +21147,7 @@
       "organisation_id": "organisation:plus",
       "organisation_type": "printed company or label",
       "sources": [
-        "source-item:sinclair-user:024:https-sinclairuser-com-024-sftcnta-htm"
+        "source-item:sinclair-user-supplement:057:alpha-plus"
       ]
     },
     {
@@ -26928,6 +26943,21 @@
     {
       "active_dates": "",
       "aliases": [],
+      "canonical_name": "The Edge",
+      "evidence_status": "candidate",
+      "founders": [],
+      "labels": [],
+      "legal_name": "",
+      "locations": [],
+      "organisation_id": "organisation:the-edge",
+      "organisation_type": "printed company or label",
+      "sources": [
+        "source-item:sinclair-user-supplement:042:graphics-magic-from-the-edge"
+      ]
+    },
+    {
+      "active_dates": "",
+      "aliases": [],
       "canonical_name": "The Edge (Softek)",
       "evidence_status": "candidate",
       "founders": [],
@@ -28183,411 +28213,6 @@
       "organisation_type": "printed company or label",
       "sources": [
         "source-item:globalnet-spot:challengers:ubisoft"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - #",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-0-html:electron:uef-tape-images"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - A",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-a",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-a-html:electron:uef-tape-images-a"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - B",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-b",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-b-html:electron:uef-tape-images-b"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - C",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-c",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-c-html:electron:uef-tape-images-c"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - D",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-d",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-d-html:electron:uef-tape-images-d"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - E",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-e",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-e-html:electron:uef-tape-images-e"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - F",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-f",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-f-html:electron:uef-tape-images-f"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - G",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-g",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-g-html:electron:uef-tape-images-g"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - H",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-h",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-h-html:electron:uef-tape-images-h"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - I",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-i",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-i-html:electron:uef-tape-images-i"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - J",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-j",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-j-html:electron:uef-tape-images-j"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - K",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-k",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-k-html:electron:uef-tape-images-k"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - L",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-l",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-l-html:electron:uef-tape-images-l"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - M",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-m",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-m-html:electron:uef-tape-images-m"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - N",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-n",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-n-html:electron:uef-tape-images-n"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - O",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-o",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-o-html:electron:uef-tape-images-o"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - P",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-p",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-p-html:electron:uef-tape-images-p"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - Q",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-q",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-q-html:electron:uef-tape-images-q"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - R",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-r",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-r-html:electron:uef-tape-images-r"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - S",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-s",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-s-html:electron:uef-tape-images-s"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - T",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-t",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-t-html:electron:uef-tape-images-t"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - U",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-u",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-u-html:electron:uef-tape-images-u"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - V",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-v",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-v-html:electron:uef-tape-images-v"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - W",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-w",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-w-html:electron:uef-tape-images-w"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - X",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-x",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-x-html:electron:uef-tape-images-x"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - Y",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-y",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-y-html:electron:uef-tape-images-y"
-      ]
-    },
-    {
-      "active_dates": "",
-      "aliases": [],
-      "canonical_name": "UEF TAPE IMAGES - Z",
-      "evidence_status": "candidate",
-      "founders": [],
-      "labels": [],
-      "legal_name": "",
-      "locations": [],
-      "organisation_id": "organisation:uef-tape-images-z",
-      "organisation_type": "printed company or label",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-z-html:electron:uef-tape-images-z"
       ]
     },
     {

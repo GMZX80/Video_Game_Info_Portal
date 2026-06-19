@@ -4182,26 +4182,6 @@
     },
     {
       "conversion_from": "",
-      "date": "",
-      "developer": "",
-      "developer_status": "Attribution awaiting review",
-      "evidence_status": "index-only",
-      "game_id": "game:electron",
-      "label": "UEF TAPE IMAGES - #",
-      "media": "",
-      "platform_id": "platform:acorn-electron",
-      "public_record_label": "Platform-specific release",
-      "publisher": "",
-      "publisher_status": "Attribution awaiting review",
-      "release_id": "release:electron:platform-acorn-electron",
-      "release_title": "ELECTRON",
-      "sources": [
-        "source-item:stairway-catalogue:https-www-stairwaytohell-com-electron-0-html:electron:uef-tape-images"
-      ],
-      "territory": "UK"
-    },
-    {
-      "conversion_from": "",
       "date": "Mar'85",
       "developer": "",
       "developer_status": "Attribution awaiting review",

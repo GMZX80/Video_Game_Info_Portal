@@ -320,6 +320,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "128 Ram disc",
+      "game_id": "game:128-ram-disc",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:053:128-ram-disc"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "128 software - Daley Thompson's Supertest, Neverending Story,",
       "game_id": "game:128-software-daley-thompsons-supertest-neverending-story",
       "genre": "",
@@ -3939,6 +3950,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Alpha",
+      "game_id": "game:alpha",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:057:alpha-plus"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Alpha-Beth",
       "game_id": "game:alpha-beth",
       "genre": "",
@@ -4544,6 +4566,28 @@
       "title_variants": []
     },
     {
+      "canonical_title": "and back-up QL software",
+      "game_id": "game:and-back-up-ql-software",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:and-back-up-ql-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "and enter a fishing contest in",
+      "game_id": "game:and-enter-a-fishing-contest-in",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:043:and-enter-a-fishing-contest-in"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "and I firmly believe that they have been duped",
       "game_id": "game:and-i-firmly-believe-that-they-have-been-duped",
       "genre": "",
@@ -4562,6 +4606,28 @@
       "series": "",
       "sources": [
         "source-item:sinclair-user:023:and-roll"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": ", and search for nuclear waste on the sea-bed in",
+      "game_id": "game:and-search-for-nuclear-waste-on-the-sea-bed-in",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:041:and-search-for-nuclear-waste-on-the-sea-bed-in"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "and the prize game this month, the fabulous underwater graphics",
+      "game_id": "game:and-the-prize-game-this-month-the-fabulous-underwater-graphics",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:114:and-the-prize-game-this-month-the-fabulous-underwater-graphics-adventure"
       ],
       "title_variants": []
     },
@@ -4881,6 +4947,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:answer-back-junior:kosmos-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Ant",
+      "game_id": "game:ant",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:053:antartic"
       ],
       "title_variants": []
     },
@@ -5552,6 +5629,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:argus-press-software:argus-press-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Ariol",
+      "game_id": "game:ariol",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:047:ariolasoft"
       ],
       "title_variants": []
     },
@@ -8852,6 +8940,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:big-heat-the:martin-kirkwood"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "BIG NOSE'S AMERICAN",
+      "game_id": "game:big-noses-american",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:121:big-noses-american-adventure"
       ],
       "title_variants": []
     },
@@ -13047,6 +13146,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Cash Trader makes the QL earn its keep. Add portfolio power to your Spectrum, plus a new filing system from",
+      "game_id": "game:cash-trader-makes-the-ql-earn-its-keep-add-portfolio-power-to-your-spectrum-plus-a-new-filing-system-from",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:039:cash-trader-makes-the-ql-earn-its-keep-add-portfolio-power-to-your-spectrum-plus-a-new-filing-system-from-transform"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Cashcalc",
       "game_id": "game:cashcalc",
       "genre": "",
@@ -16281,6 +16391,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Collect flowers and avoid spiders in",
+      "game_id": "game:collect-flowers-and-avoid-spiders-in",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:043:collect-flowers-and-avoid-spiders-in"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Collector's Pack",
       "game_id": "game:collectors-pack",
       "genre": "",
@@ -18723,6 +18844,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", create your own",
+      "game_id": "game:create-your-own",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:043:create-your-own"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "CREATIVE SPARKS",
       "game_id": "game:creative-sparks",
       "genre": "",
@@ -20226,6 +20358,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:darius:the-edge-softek"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "DARK",
+      "game_id": "game:dark",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:080:dark-fusion"
       ],
       "title_variants": []
     },
@@ -22254,6 +22397,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", dice with death on the streets of",
+      "game_id": "game:dice-with-death-on-the-streets-of",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:dice-with-death-on-the-streets-of"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Dick Tracy",
       "game_id": "game:dick-tracy",
       "genre": "",
@@ -22782,6 +22936,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "DIZZY'S EXCELLENT",
+      "game_id": "game:dizzys-excellent",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:119:dizzys-excellent-adventure"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Dizzy's Excellent Adventures",
       "game_id": "game:dizzys-excellent-adventures",
       "genre": "",
@@ -22943,6 +23108,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:dodge-city:phoenix-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Dodge the aliens and dynamite the mountain in",
+      "game_id": "game:dodge-the-aliens-and-dynamite-the-mountain-in",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:046:dodge-the-aliens-and-dynamite-the-mountain-in"
       ],
       "title_variants": []
     },
@@ -25191,6 +25367,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Eight days a week",
+      "game_id": "game:eight-days-a-week",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:053:eight-days-a-week"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Eights",
       "game_id": "game:eights",
       "genre": "",
@@ -26346,6 +26533,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "escape from the underworld, and shoot it out with",
+      "game_id": "game:escape-from-the-underworld-and-shoot-it-out-with",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:045:escape-from-the-underworld-and-shoot-it-out-with"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Escape-MCP",
       "game_id": "game:escape-mcp",
       "genre": "",
@@ -26815,6 +27013,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:exploding-fist:firebird-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Explore the",
+      "game_id": "game:explore-the",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:explore-the"
       ],
       "title_variants": []
     },
@@ -27985,6 +28194,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Filer",
+      "game_id": "game:filer",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:054:filer"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Filer, The",
       "game_id": "game:filer-the",
       "genre": "",
@@ -28113,6 +28333,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:financial-pack-1:hilderbay"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": ", find",
+      "game_id": "game:find",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:044:find"
       ],
       "title_variants": []
     },
@@ -29338,6 +29569,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Forest of the Long Shadows",
+      "game_id": "game:forest-of-the-long-shadows",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:055:forest-of-the-long-shadows"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Forest, The",
       "game_id": "game:forest-the",
       "genre": "",
@@ -29906,6 +30148,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:freds-fan-factory:software-supersavers-cp"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "FREE TEXT",
+      "game_id": "game:free-text",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:055:free-text-database"
       ],
       "title_variants": []
     },
@@ -33837,6 +34090,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Graphics magic from",
+      "game_id": "game:graphics-magic-from",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:042:graphics-magic-from-the-edge"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Graphics Package",
       "game_id": "game:graphics-package",
       "genre": "",
@@ -36070,6 +36334,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", help",
+      "game_id": "game:help",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:045:help"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Helpline - A simple way to save string variables on tape",
       "game_id": "game:helpline-a-simple-way-to-save-string-variables-on-tape",
       "genre": "",
@@ -37753,6 +38028,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "HOPPING",
+      "game_id": "game:hopping",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:078:hopping-mad"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Hopping Mad",
       "game_id": "game:hopping-mad",
       "genre": "",
@@ -38391,6 +38677,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "HUNCHBACK - THE",
+      "game_id": "game:hunchback-the",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:054:hunchback-the-adventure"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Hunchback - The Adventure",
       "game_id": "game:hunchback-the-adventure",
       "genre": "",
@@ -38453,6 +38750,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:hunt-for-red-october-the:grandslam-entertainments"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Hunt the Hurkel",
+      "game_id": "game:hunt-the-hurkel",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:044:hunt-the-hurkel"
       ],
       "title_variants": []
     },
@@ -39381,6 +39689,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "INDIANA JONES AND THE FATE OF",
+      "game_id": "game:indiana-jones-and-the-fate-of",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:125:indiana-jones-and-the-fate-of-atlantis"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Indiana Jones and the Fate of Atlantis",
       "game_id": "game:indiana-jones-and-the-fate-of-atlantis",
       "genre": "",
@@ -39762,6 +40081,17 @@
       "series": "",
       "sources": [
         "source-item:sinclair-user:002:inside-sinclair-timex-factory-at-dundee"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Insight/",
+      "game_id": "game:insight",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:048:insight-firebird"
       ],
       "title_variants": []
     },
@@ -40470,6 +40800,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "INVESTMENT",
+      "game_id": "game:investment",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:058:investment-monitor"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Investment Monitor",
       "game_id": "game:investment-monitor",
       "genre": "",
@@ -40609,6 +40950,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:ironman-stewarts-super-off-road-racer:virgin-games"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "is a machine code arcade game",
+      "game_id": "game:is-a-machine-code-arcade-game",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:043:is-a-machine-code-arcade-game"
       ],
       "title_variants": []
     },
@@ -41841,6 +42193,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:jump:unique-computer-services"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Jump into the ring with Body Blow",
+      "game_id": "game:jump-into-the-ring-with-body-blow",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:045:jump-into-the-ring-with-body-blow"
       ],
       "title_variants": []
     },
@@ -47455,6 +47818,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Manhattan",
+      "game_id": "game:manhattan",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:manhattan"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Manhattan Dealers",
       "game_id": "game:manhattan-dealers",
       "genre": "",
@@ -47473,6 +47847,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:manic-mechanic:t-sherwood"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Manic Mechanic, Connect 4",
+      "game_id": "game:manic-mechanic-connect-4",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:044:manic-mechanic-connect-4"
       ],
       "title_variants": []
     },
@@ -52174,6 +52559,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Mouse Al",
+      "game_id": "game:mouse-al",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:056:mouse-al"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Mouse~Cheese",
       "game_id": "game:mouse-cheese",
       "genre": "",
@@ -54418,6 +54814,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "NO",
+      "game_id": "game:no",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:048:nomad"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "No More Intelligence 2",
       "game_id": "game:no-more-intelligence-2",
       "genre": "",
@@ -55668,6 +56075,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:on-the-oche:artic-computing"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "on the QL",
+      "game_id": "game:on-the-ql",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:044:on-the-ql"
       ],
       "title_variants": []
     },
@@ -59423,6 +59841,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "Players",
+      "game_id": "game:players",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:091:players-plus"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Players Software",
       "game_id": "game:players-software",
       "genre": "",
@@ -60501,6 +60930,28 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", predict your height in",
+      "game_id": "game:predict-your-height-in",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:046:predict-your-height-in"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "PREHISTORIC",
+      "game_id": "game:prehistoric",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:058:prehistoric-adventure"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Prehistoric Adventure",
       "game_id": "game:prehistoric-adventure",
       "genre": "",
@@ -61432,6 +61883,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:program-pitstop-7-1993:your-sinclair"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "PROGRAM PRINTOUT",
+      "game_id": "game:program-printout",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:program-printout"
       ],
       "title_variants": []
     },
@@ -62565,6 +63027,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:pusher:paradise-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": ", put a spanner in the works of",
+      "game_id": "game:put-a-spanner-in-the-works-of",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:044:put-a-spanner-in-the-works-of"
       ],
       "title_variants": []
     },
@@ -72590,6 +73063,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "SOLAR",
+      "game_id": "game:solar",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:105:solar-empire"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Solar Empire",
       "game_id": "game:solar-empire",
       "genre": "",
@@ -74764,6 +75248,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:spectrum-stick:grant-design"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Spectrum turns",
+      "game_id": "game:spectrum-turns",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:041:spectrum-turns"
       ],
       "title_variants": []
     },
@@ -78222,13 +78717,13 @@
       "title_variants": []
     },
     {
-      "canonical_title": "SUPER",
+      "canonical_title": "Super",
       "game_id": "game:super",
       "genre": "",
       "initial_release_date": "",
       "series": "",
       "sources": [
-        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-indexb-html:super"
+        "source-item:sinclair-user-supplement:062:super-sparklers"
       ],
       "title_variants": []
     },
@@ -79003,13 +79498,13 @@
       "title_variants": []
     },
     {
-      "canonical_title": "(SUPERIOR)",
+      "canonical_title": "Superior/",
       "game_id": "game:superior",
       "genre": "",
       "initial_release_date": "",
       "series": "",
       "sources": [
-        "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-homepage-html:superior"
+        "source-item:sinclair-user-supplement:085:superior-alligata"
       ],
       "title_variants": []
     },
@@ -79905,6 +80400,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", take the plunge with",
+      "game_id": "game:take-the-plunge-with",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:045:take-the-plunge-with"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Take the Strain",
       "game_id": "game:take-the-strain",
       "genre": "",
@@ -80242,6 +80748,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:tapper:us-gold"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Tar",
+      "game_id": "game:tar",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:063:tartansoft"
       ],
       "title_variants": []
     },
@@ -80737,6 +81254,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:teladon:destiny-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Tele",
+      "game_id": "game:tele",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:077:telecomsoft"
       ],
       "title_variants": []
     },
@@ -82134,6 +82662,17 @@
       "series": "",
       "sources": [
         "source-item:crash:024:the-ultimate-fighting-machine"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "THE VERY BIG CAVE",
+      "game_id": "game:the-very-big-cave",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:053:the-very-big-cave-adventure"
       ],
       "title_variants": []
     },
@@ -85141,6 +85680,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": ", try your luck at the",
+      "game_id": "game:try-your-luck-at-the",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:040:try-your-luck-at-the"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "TT Racer",
       "game_id": "game:tt-racer",
       "genre": "",
@@ -85258,6 +85808,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:tuner:software-cottage"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "TURBO",
+      "game_id": "game:turbo",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:050:turbo-esprit"
       ],
       "title_variants": []
     },
@@ -86692,6 +87253,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "VAMPIRES'S",
+      "game_id": "game:vampiress",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:078:vampiress-empire"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Van Driver",
       "game_id": "game:van-driver",
       "genre": "",
@@ -87282,6 +87854,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:violent-universe:fantasy-software"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Virgin",
+      "game_id": "game:virgin",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:094:virgin-mastertronic"
       ],
       "title_variants": []
     },
@@ -89805,6 +90388,17 @@
       "title_variants": []
     },
     {
+      "canonical_title": "with",
+      "game_id": "game:with",
+      "genre": "",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-supplement:042:with-collins-soft"
+      ],
+      "title_variants": []
+    },
+    {
       "canonical_title": "Witness",
       "game_id": "game:witness",
       "genre": "",
@@ -90197,6 +90791,17 @@
       "series": "",
       "sources": [
         "source-item:globalnet-spot:word-master:cardex"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": "Word Pro Ace",
+      "game_id": "game:word-pro-ace",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:057:word-pro-ace"
       ],
       "title_variants": []
     },
@@ -90813,6 +91418,17 @@
       "series": "",
       "sources": [
         "source-item:crash:050:write-your-own-adventures"
+      ],
+      "title_variants": []
+    },
+    {
+      "canonical_title": ", write your own adventures with",
+      "game_id": "game:write-your-own-adventures-with",
+      "genre": "game or program; requires review",
+      "initial_release_date": "",
+      "series": "",
+      "sources": [
+        "source-item:sinclair-user-typein:046:write-your-own-adventures-with"
       ],
       "title_variants": []
     },
