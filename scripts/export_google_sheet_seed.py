@@ -447,26 +447,10 @@ def _build_local_credit_rows(data: DataStore) -> list[dict[str, Any]]:
 
 
 def _build_people_summary_rows(data: DataStore, local_credit_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    for row in local_credit_rows:
-        grouped[row["Person_ID"]].append(row)
-    people_by_id = {row["person_id"]: row for row in data.people}
-    rows: list[dict[str, Any]] = []
-    for person_id, credits in sorted(grouped.items(), key=lambda item: item[1][0]["Person"].casefold()):
-        person = people_by_id.get(person_id, {})
-        rows.append(
-            {
-                "Person": credits[0]["Person"],
-                "Aliases": _join(person.get("aliases", []), limit=5),
-                "Known / candidate UK studio links": "",
-                "Games currently local": _join((row["Game Title"] for row in credits if row.get("Game Title")), limit=8),
-                "Roles currently local": _join((row["Role as printed"] or row["Role"] for row in credits), limit=6),
-                "Evidence status": "Candidate / unresolved",
-                "Source URL": credits[0].get("Source URL", ""),
-                "Gap / next action": "Review person-name parsing and source context before promoting beyond candidate/local rows.",
-            }
-        )
-    return rows
+    # The current automatic person parser intentionally preserves noisy source
+    # fragments in the detailed credit table. Keep the public summary tab
+    # manual/curated until those names are reviewed.
+    return []
 
 
 def _build_studio_rows(data: DataStore) -> list[dict[str, Any]]:

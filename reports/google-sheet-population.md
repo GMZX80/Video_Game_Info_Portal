@@ -18,7 +18,7 @@ This export is designed for the live Google Sheet. It stores structured metadata
 | `repo_games_master_import chunks` | 8 |
 | `repo_games_master_import.csv` | 7419 |
 | `repo_local_credits.csv` | 80 |
-| `repo_people_credits_import.csv` | 64 |
+| `repo_people_credits_import.csv` | 0 |
 | `repo_studios_publishers_import.csv` | 2096 |
 | `source_assertions chunks` | 11 |
 | `source_assertions.csv` | 10589 |
