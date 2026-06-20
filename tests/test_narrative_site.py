@@ -88,6 +88,8 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
         "Organisation index record",
         "North East collection record",
         "MobyGames source record",
+        "External source assertion",
+        "External identifier",
     }
     assert mobygames_index["attribution"] == "Data by MobyGames.com"
     assert len(mobygames_index["records"]) == 25
@@ -99,6 +101,8 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert any(item["title"] == "Phil Scott person page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "phil scott mobygames"))
     assert any(item["title"] == "Tynesoft Computer Software company page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "tynesoft mobygames"))
     assert any(item["title"] == "Command & Conquer: Red Alert DOS credits" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "red alert mobygames"))
+    assert any(item["kind"] == "External source assertion" and item["status"] == "candidate" for item in _search_matches(public_search_index["items"], "tynesoft wikipedia"))
+    assert any(item["kind"] == "External identifier" for item in _search_matches(public_search_index["items"], "wikidata q"))
     public_index_text = json.dumps(public_search_index).lower()
     assert "private first-hand" not in public_index_text
     assert "private-phil-scott-testimony" not in public_index_text

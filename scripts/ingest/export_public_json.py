@@ -63,6 +63,8 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
     organisations = read_jsonl(curated_dir / "organisations.jsonl")
     people = read_jsonl(curated_dir / "people.jsonl")
     evidence = read_jsonl(curated_dir / "evidence.jsonl")
+    source_assertions = read_jsonl(curated_dir / "source-assertions.jsonl")
+    external_identifiers = read_jsonl(curated_dir / "external-identifiers.jsonl")
     payload = {
         "generated_at": "2026-06-18",
         "qualification": "Only verified or strongly supported connections appear in confirmed results. Publisher/index-only records are labelled as probable or candidate until record-level source inspection supports the North East claim.",
@@ -109,6 +111,65 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
     write_json(out_dir / "people-index.json", {"people": people})
     write_json(out_dir / "organisations-index.json", {"organisations": organisations})
     write_json(out_dir / "evidence-index.json", {"evidence": evidence})
+    public_assertions = [
+        {
+            "assertion_id": row["assertion_id"],
+            "source_item_id": row.get("source_item_id", ""),
+            "source_system": row.get("source_system", ""),
+            "subject_type": row.get("subject_type", ""),
+            "subject_label_as_printed": row.get("subject_label_as_printed", ""),
+            "predicate": row.get("predicate", ""),
+            "object_type": row.get("object_type", ""),
+            "object_label_as_printed": row.get("object_label_as_printed", ""),
+            "role_as_printed": row.get("role_as_printed", ""),
+            "date_as_printed": row.get("date_as_printed", ""),
+            "platform_as_printed": row.get("platform_as_printed", ""),
+            "confidence": row.get("confidence", ""),
+            "assertion_status": "candidate" if row.get("source_system") == "wikipedia" else row.get("assertion_status", ""),
+            "public_claim_status": "candidate" if row.get("source_system") == "wikipedia" else row.get("public_claim_status", ""),
+            "evidence_status": row.get("evidence_status", ""),
+            "source_url": row.get("source_url", ""),
+            "source_page_title": row.get("source_page_title", ""),
+            "revision_id": row.get("revision_id", ""),
+            "permanent_url": row.get("permanent_url", ""),
+            "license": row.get("license", ""),
+            "attribution_required": row.get("attribution_required", False),
+            "notes": row.get("notes", ""),
+        }
+        for row in source_assertions
+        if row.get("assertion_status") != "private"
+    ]
+    public_external_identifiers = [
+        {
+            "external_id_record": row["external_id_record"],
+            "entity_type": row.get("entity_type", ""),
+            "entity_id": row.get("entity_id", ""),
+            "source_system": row.get("source_system", ""),
+            "external_id": row.get("external_id", ""),
+            "external_url": row.get("external_url", ""),
+            "match_status": row.get("match_status", ""),
+            "match_confidence": row.get("match_confidence", ""),
+            "match_method": row.get("match_method", ""),
+            "source_item_ids": row.get("source_item_ids", []),
+            "notes": row.get("notes", ""),
+        }
+        for row in external_identifiers
+    ]
+    write_json(out_dir / "source-assertions-public.json", {
+        "record_scope": "Candidate source assertions. These records are not canonical facts unless a separate reviewed canonical record says so.",
+        "records": public_assertions,
+    })
+    write_json(out_dir / "external-identifiers-public.json", {
+        "record_scope": "External identifiers and candidate links for reconciliation.",
+        "records": public_external_identifiers,
+    })
+    write_json(out_dir / "games-public.json", {"games": games})
+    write_json(out_dir / "people-public.json", {"people": people})
+    write_json(out_dir / "organisations-public.json", {"organisations": organisations})
+    write_json(out_dir / "releases-public.json", {"releases": public_releases})
+    write_json(out_dir / "credits-public.json", {"credits": read_jsonl(curated_dir / "credits.jsonl")})
+    write_json(out_dir / "places-public.json", {"places": read_jsonl(curated_dir / "places.jsonl")})
+    write_json(out_dir / "source-trail-public.json", {"source_items": source_items, "evidence": evidence})
     mobygames = export_mobygames_index(CURATED_DIR.parent / "sources.json", out_dir / "mobygames-index.json")
     write_json(out_dir / "timeline-events.json", {"events": []})
     write_json(out_dir / "search-index.json", {
@@ -122,6 +183,8 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
         "probable": len(probable),
         "candidates": len(candidates),
         "mobygames": len(mobygames["records"]),
+        "source_assertions": len(public_assertions),
+        "external_identifiers": len(public_external_identifiers),
     }
 
 

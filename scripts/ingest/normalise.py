@@ -69,6 +69,66 @@ PUBLICATIONS = [
         "archive_hosts": ["Stairway To Hell"],
         "notes": "Archive host for original material and reprinted historical sources. Original magazine provenance is stored on each source item.",
     },
+    {
+        "publication_id": "publication:wikipedia",
+        "canonical_title": "Wikipedia",
+        "aliases": ["MediaWiki", "Wikipedia platform lists"],
+        "publisher": "Wikimedia Foundation / volunteer contributors",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["en.wikipedia.org"],
+        "notes": "Secondary seed metadata only. Rows carry CC BY-SA attribution metadata and are not promoted without corroboration.",
+    },
+    {
+        "publication_id": "publication:wikidata",
+        "canonical_title": "Wikidata",
+        "aliases": ["Wikidata item statements"],
+        "publisher": "Wikimedia Foundation / volunteer contributors",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["wikidata.org"],
+        "notes": "Referenced statement metadata only. Claims remain source assertions until reviewed.",
+    },
+    {
+        "publication_id": "publication:mobygames-api",
+        "canonical_title": "MobyGames API",
+        "aliases": ["MobyGames official API"],
+        "publisher": "MobyGames",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["api.mobygames.com"],
+        "notes": "Official API metadata only; no MobyGames HTML scraping.",
+    },
+    {
+        "publication_id": "publication:world-of-spectrum",
+        "canonical_title": "World of Spectrum",
+        "aliases": ["WoS", "World of Spectrum API"],
+        "publisher": "World of Spectrum",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["worldofspectrum.org"],
+        "notes": "Structured API metadata only; no game files, scans or screenshots are downloaded.",
+    },
+    {
+        "publication_id": "publication:zxdb",
+        "canonical_title": "ZXDB",
+        "aliases": ["ZX Spectrum Database"],
+        "publisher": "ZXDB project contributors",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["github.com/zxdb/ZXDB"],
+        "notes": "Structured database/export metadata only.",
+    },
+    {
+        "publication_id": "publication:zxinfo",
+        "canonical_title": "ZXInfo",
+        "aliases": ["ZXInfo API", "ZXInfo.dk"],
+        "publisher": "ZXInfo contributors",
+        "start_date": "",
+        "end_date": "",
+        "archive_hosts": ["api.zxinfo.dk"],
+        "notes": "ZXDB-backed API metadata only; binary files are out of scope.",
+    },
 ]
 
 PLACES = [
@@ -176,6 +236,8 @@ def _normalised_source_item(row: dict[str, Any]) -> dict[str, Any]:
 def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[str, int]:
     issues: list[dict[str, Any]] = []
     source_items: list[dict[str, Any]] = []
+    source_assertions: list[dict[str, Any]] = []
+    external_identifiers: list[dict[str, Any]] = []
     raw_photo_identifications: list[dict[str, Any]] = []
     raw_media_assets: list[dict[str, Any]] = []
     for archive_dir in sorted(raw_dir.glob("*")):
@@ -199,6 +261,8 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
             )
         for row in read_jsonl(archive_dir / "source-items.jsonl"):
             source_items.append(_normalised_source_item(row))
+        source_assertions.extend(read_jsonl(archive_dir / "source-assertions.jsonl"))
+        external_identifiers.extend(read_jsonl(archive_dir / "external-identifiers.jsonl"))
         raw_photo_identifications.extend(read_jsonl(archive_dir / "photo-identifications.jsonl"))
         raw_media_assets.extend(read_jsonl(archive_dir / "media-assets.jsonl"))
 
@@ -357,6 +421,8 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
     write_jsonl(curated_dir / "people.jsonl", _dedupe(people, "person_id"), sort_key="person_id")
     write_jsonl(curated_dir / "credits.jsonl", _dedupe(credits, "credit_id"), sort_key="credit_id")
     write_jsonl(curated_dir / "mentions.jsonl", _dedupe(mentions, "mention_id"), sort_key="mention_id")
+    write_jsonl(curated_dir / "source-assertions.jsonl", _dedupe(source_assertions, "assertion_id"), sort_key="assertion_id")
+    write_jsonl(curated_dir / "external-identifiers.jsonl", _dedupe(external_identifiers, "external_id_record"), sort_key="external_id_record")
     write_jsonl(
         curated_dir / "photo-identifications.jsonl",
         _dedupe(raw_photo_identifications, "photo_identification_id"),
@@ -389,6 +455,8 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
         "releases": len(_dedupe(releases, "release_id")),
         "people": len(_dedupe(people, "person_id")),
         "credits": len(_dedupe(credits, "credit_id")),
+        "source_assertions": len(_dedupe(source_assertions, "assertion_id")),
+        "external_identifiers": len(_dedupe(external_identifiers, "external_id_record")),
         "photo_identifications": len(_dedupe(raw_photo_identifications, "photo_identification_id")),
         "media_assets": len(_dedupe(raw_media_assets, "media_id")),
     }

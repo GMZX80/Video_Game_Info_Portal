@@ -500,6 +500,66 @@ def _append_mobygames_source_records(
         ))
 
 
+def _append_external_seed_records(
+    items: list[dict[str, Any]],
+    seen: set[str],
+) -> None:
+    assertions_path = GENERATED_DIR / "source-assertions-public.json"
+    identifiers_path = GENERATED_DIR / "external-identifiers-public.json"
+    if assertions_path.exists():
+        assertions = _read_json(assertions_path)
+        for row in assertions.get("records", []):
+            title = row.get("subject_label_as_printed") or row.get("object_label_as_printed", "")
+            _append_search_item(items, seen, _search_item(
+                item_id=row["assertion_id"],
+                title=title,
+                kind="External source assertion",
+                summary=(
+                    f"{row.get('source_system', '').title()} {row.get('predicate', '')} assertion. "
+                    "Candidate seed only; requires corroboration before canonical use."
+                ),
+                url=row.get("permanent_url") or row.get("source_url", ""),
+                status=row.get("public_claim_status") or row.get("assertion_status", ""),
+                labels=[
+                    row.get("source_system", ""),
+                    row.get("evidence_status", ""),
+                    row.get("platform_as_printed", ""),
+                    row.get("license", ""),
+                ],
+                search_terms=[
+                    row.get("subject_type", ""),
+                    row.get("subject_label_as_printed", ""),
+                    row.get("predicate", ""),
+                    row.get("object_type", ""),
+                    row.get("object_label_as_printed", ""),
+                    row.get("role_as_printed", ""),
+                    row.get("date_as_printed", ""),
+                    row.get("source_page_title", ""),
+                    row.get("revision_id", ""),
+                    row.get("notes", ""),
+                ],
+            ))
+    if identifiers_path.exists():
+        identifiers = _read_json(identifiers_path)
+        for row in identifiers.get("records", []):
+            _append_search_item(items, seen, _search_item(
+                item_id=row["external_id_record"],
+                title=row.get("external_id", ""),
+                kind="External identifier",
+                summary="Candidate external identifier for reconciliation.",
+                url=row.get("external_url", ""),
+                status=row.get("match_status", ""),
+                labels=[row.get("source_system", ""), row.get("entity_type", "")],
+                search_terms=[
+                    row.get("entity_id", ""),
+                    row.get("match_confidence", ""),
+                    row.get("match_method", ""),
+                    row.get("source_item_ids", []),
+                    row.get("notes", ""),
+                ],
+            ))
+
+
 def export_public_search_index(records: list[ContentRecord], out_path: Path = PUBLIC_SEARCH_INDEX) -> list[dict[str, Any]]:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, Any]] = []
@@ -528,6 +588,7 @@ def export_public_search_index(records: list[ContentRecord], out_path: Path = PU
     _append_research_people(items, seen)
     _append_research_sources(items, seen)
     _append_mobygames_source_records(items, seen)
+    _append_external_seed_records(items, seen)
 
     north_east = _read_json(GENERATED_DIR / "north-east-collection.json")
     collection_groups: dict[tuple[str, str, str, str], dict[str, Any]] = {}
