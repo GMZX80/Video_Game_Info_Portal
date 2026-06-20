@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["publication_id","canonical_title","aliases"],"properties":{"publication_id":{"type":"string","pattern":"^publication:"},"canonical_title":{"type":"string","minLength":1},"aliases":{"type":"array","items":{"type":"string"}}},"additionalProperties":true}

@@ -1143,3 +1143,112 @@ body.dialog-open { overflow: hidden; }
 .source-local { color: var(--dim); font-family: var(--mono); font-size: .65rem; }
 .footer-links { display: grid; gap: 8px; justify-items: end; }
 @media (max-width: 1100px) { .footer-links { justify-items: start; } }
+
+.collection-hero {
+  min-height: 82svh;
+}
+
+.collection-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.rule-tile {
+  display: grid;
+  gap: 0.5rem;
+  min-height: 9rem;
+  padding: 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(8, 30, 24, 0.72);
+}
+
+.rule-tile strong {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.collection-filters {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1.2fr) repeat(4, minmax(9rem, 0.7fr));
+  gap: 0.6rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.collection-filters label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.collection-filters input,
+.collection-filters select {
+  width: 100%;
+  min-height: 2.85rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(2, 8, 5, 0.68);
+  color: var(--ink);
+  padding: 0.55rem 0.7rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 22rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(160deg, rgba(10, 27, 22, 0.88), rgba(7, 18, 14, 0.88));
+}
+
+.collection-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.collection-card p {
+  margin: 0;
+}
+
+.collection-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.candidate-section {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(126, 255, 187, 0.12);
+}
+
+.compact-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.candidate-grid .collection-card {
+  border-color: rgba(255, 176, 0, 0.28);
+}
+
+@media (max-width: 980px) {
+  .collection-rule-grid,
+  .collection-filters {
+    grid-template-columns: 1fr;
+  }
+}

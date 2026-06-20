@@ -6,8 +6,10 @@ import crypto from 'node:crypto';
 const root = process.cwd();
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const html = read('index.html');
+const collectionHtml = read('north-east-collection.html');
 const css = read('assets/css/site.css');
 const siteJs = read('assets/js/site.js');
+const collectionJs = read('assets/js/north-east-collection.js');
 const workflow = read('.github/workflows/pages.yml');
 const jsonFiles = [
   'assets/data/sources.json',
@@ -24,6 +26,17 @@ const researchJsonFiles = [
   'data/sources.json',
   'data/people.json',
   'data/photo-to-game-connections.json'
+];
+const generatedJsonFiles = [
+  'assets/data/generated/north-east-collection.json',
+  'assets/data/generated/games-index.json',
+  'assets/data/generated/people-index.json',
+  'assets/data/generated/organisations-index.json',
+  'assets/data/generated/source-items-index.json',
+  'assets/data/generated/releases-index.json',
+  'assets/data/generated/timeline-events.json',
+  'assets/data/generated/evidence-index.json',
+  'assets/data/generated/search-index.json'
 ];
 const researchFiles = [
   'research/editorial-method.md',
@@ -59,12 +72,17 @@ const json = Object.fromEntries(jsonFiles.map((file) => [
   file,
   JSON.parse(read(file))
 ]));
+const generatedJson = Object.fromEntries(generatedJsonFiles.map((file) => [
+  file,
+  JSON.parse(read(file))
+]));
 const researchJson = Object.fromEntries(researchJsonFiles.map((file) => [
   file,
   JSON.parse(read(file))
 ]));
 const allJsonText = jsonFiles.map((file) => read(file)).join('\n');
-const allText = `${html}\n${css}\n${siteJs}\n${allJsonText}\n${workflow}`;
+const generatedJsonText = generatedJsonFiles.map((file) => read(file)).join('\n');
+const allText = `${html}\n${collectionHtml}\n${css}\n${siteJs}\n${collectionJs}\n${allJsonText}\n${generatedJsonText}\n${workflow}`;
 
 const sourcesData = json['assets/data/sources.json'];
 const placesData = json['assets/data/places.json'];
@@ -75,6 +93,10 @@ const eventsData = json['assets/data/events.json'];
 const relationshipsData = json['assets/data/relationships.json'];
 const claimsData = json['assets/data/claims.json'];
 const photosData = json['assets/data/photos.json'];
+const northEastCollectionData = generatedJson['assets/data/generated/north-east-collection.json'];
+const generatedSourceItemsData = generatedJson['assets/data/generated/source-items-index.json'];
+const generatedGamesData = generatedJson['assets/data/generated/games-index.json'];
+const generatedReleasesData = generatedJson['assets/data/generated/releases-index.json'];
 const researchSourcesData = researchJson['data/sources.json'];
 const tynesoftPeopleData = researchJson['data/people.json'];
 const photoGameConnectionsData = researchJson['data/photo-to-game-connections.json'];
@@ -164,6 +186,14 @@ pass(includes(html, 'id="organisation-profiles"'), 'organisation profiles sectio
 pass(includes(html, 'id="britain-network"'), 'national comparison section is missing');
 pass(includes(html, 'id="research-status"'), 'research-status section is missing');
 pass(includes(html, 'Phase 1') && includes(html, 'short preview'), 'Phase 1 must remain a restrained short preview');
+pass(includes(html, 'north-east-collection.html'), 'home page must link to North East Collection');
+pass(includes(collectionHtml, 'North East') && includes(collectionHtml, 'id="collection-results"'), 'North East Collection route is incomplete');
+pass(includes(collectionHtml, 'What qualifies for the North East Collection?'), 'North East qualification explanation is missing');
+pass(includes(collectionHtml, 'Candidates awaiting verification'), 'candidate section is missing from collection route');
+pass(includes(collectionHtml, 'Strongest at indexes, cautious on people.'), 'human history status notice is missing from collection route');
+pass(includesAll(collectionHtml, ['Magazine index entry', 'Reviewed release', 'Platform-specific release', 'Verified contributor credit', 'Publisher only', 'Developer verified', 'Attribution awaiting review']), 'public record label legend is incomplete');
+pass(includes(collectionJs, 'north-east-collection.json'), 'collection route must load generated public JSON');
+pass(includes(collectionJs, 'Record label'), 'collection cards must render public record labels');
 
 pass(includesAll(html, [
   'display',
@@ -203,10 +233,13 @@ const researchTextFiles = [
 ];
 const allAuditText = [
   'index.html',
+  'north-east-collection.html',
   'assets/css/site.css',
   'assets/js/site.js',
+  'assets/js/north-east-collection.js',
   '.github/workflows/pages.yml',
   ...jsonFiles,
+  ...generatedJsonFiles,
   ...researchTextFiles
 ].map((file) => read(file)).join('\n');
 
@@ -380,6 +413,7 @@ for (const lead of photoGameConnectionsData.source_caption_leads || []) {
 }
 
 const internalUrls = [...html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)]
+  .concat([...collectionHtml.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)])
   .map(([, url]) => url)
   .filter((url) => !/^(?:https?:|mailto:|tel:|#)/.test(url));
 for (const url of internalUrls) {
@@ -493,13 +527,40 @@ for (const claim of claimsData.claims || []) {
   pass(Boolean(claim.public_location), `claim has no public location: ${claim.id}`);
 }
 
-pass(!/\b(?:18|19|20)\d{2}\.\d+\b/.test(allText), 'decimal dates must not appear in public data or content');
+pass(!/\b(?:18|19|20)\d{2}\.\d+\b(?!\s*-)/.test(allText), 'decimal dates must not appear in public data or content');
 pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(allAuditText), 'private Google Drive URL or ID leaked');
 pass(!/student submission|student marks|assessment feedback|exam record/i.test(allAuditText), 'student/admin material appears to be exposed');
+
+pass(Array.isArray(northEastCollectionData.confirmed), 'generated North East confirmed collection is missing');
+pass(Array.isArray(northEastCollectionData.probable), 'generated North East probable collection is missing');
+pass(Array.isArray(northEastCollectionData.candidates), 'generated North East candidates collection is missing');
+pass(generatedSourceItemsData.label_rules?.review === 'Reviewed release', 'source-item public label rules are missing review label');
+pass(/Publisher only/.test(generatedSourceItemsData.field_label_rules?.printed_company || ''), 'source-item public label rules must distinguish publisher-only fields');
+pass(generatedGamesData.record_scope?.public_record_label === 'Magazine index entry', 'games index must expose its magazine-index scope');
+pass((generatedReleasesData.releases || []).every((release) => release.public_record_label === 'Platform-specific release'), 'release index must label platform-specific releases');
+const publicStatuses = new Set(['verified', 'strongly supported']);
+for (const item of northEastCollectionData.confirmed || []) {
+  pass(Boolean(item.name && item.entity_type && item.connection_type && item.why_included && item.source_url), `confirmed North East item is incomplete: ${item.id || item.name}`);
+  pass(publicStatuses.has(item.status), `confirmed North East item has non-public status: ${item.id || item.name}`);
+  pass(!/candidate|keyword only/i.test(`${item.badge} ${item.qualification}`), `confirmed North East item appears candidate-only: ${item.id || item.name}`);
+  pass(Boolean(item.record_label), `confirmed North East item is missing a public record label: ${item.id || item.name}`);
+}
+for (const item of northEastCollectionData.probable || []) {
+  pass(item.status === 'probable', `probable North East item has wrong status: ${item.id || item.name}`);
+  pass(/review|publisher only|attribution/i.test(`${item.badge} ${item.record_label} ${item.qualification}`), `probable North East item must be visibly qualified: ${item.id || item.name}`);
+}
+for (const item of northEastCollectionData.candidates || []) {
+  pass(item.status === 'candidate', `candidate North East item has wrong status: ${item.id || item.name}`);
+  pass(/Awaiting|Candidate|verification/i.test(`${item.badge} ${item.qualification}`), `candidate North East item must be visibly qualified: ${item.id || item.name}`);
+  pass(Boolean(item.record_label), `candidate North East item is missing a public record label: ${item.id || item.name}`);
+}
 
 pass(includes(workflow, 'actions/configure-pages') && includes(workflow, 'actions/deploy-pages'), 'GitHub Pages Actions workflow is missing Pages actions');
 pass(includes(workflow, 'branches: [main]'), 'GitHub Pages workflow must deploy main');
 pass(includes(workflow, 'enablement: true'), 'GitHub Pages workflow should enable Pages');
+pass(includes(workflow, 'python -m scripts.build_all --skip-fetch'), 'GitHub Pages workflow must build canonical public data before deploy');
+pass(includes(workflow, 'python -m scripts.build_dist'), 'GitHub Pages workflow must build clean dist before deploy');
+pass(includes(workflow, 'path: dist'), 'GitHub Pages workflow must upload only dist');
 
 if (failures.length) {
   console.error('Site validation failed:');
