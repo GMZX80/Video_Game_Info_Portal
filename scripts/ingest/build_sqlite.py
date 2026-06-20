@@ -40,6 +40,8 @@ def build_database(curated_dir: Path = CURATED_DIR, db_path: Path = DEFAULT_DB) 
         con.execute("CREATE TABLE photo_identifications (photo_identification_id TEXT PRIMARY KEY, photo_id TEXT, media_id TEXT REFERENCES media_assets(media_id), source_item_id TEXT NOT NULL REFERENCES source_items(source_item_id), name_as_printed TEXT, role_as_printed TEXT, verification_status TEXT, payload TEXT NOT NULL)")
         con.execute("CREATE TABLE evidence (evidence_id TEXT PRIMARY KEY, source_item_id TEXT REFERENCES source_items(source_item_id), evidence_type TEXT, payload TEXT NOT NULL)")
         con.execute("CREATE TABLE north_east_connections (connection_id TEXT PRIMARY KEY, source_item_id TEXT, entity_type TEXT, entity_id TEXT, entity_name TEXT, status TEXT, public_visibility TEXT, payload TEXT NOT NULL)")
+        con.execute("CREATE TABLE source_assertions (assertion_id TEXT PRIMARY KEY, source_item_id TEXT REFERENCES source_items(source_item_id), source_system TEXT, subject_type TEXT, subject_label_as_printed TEXT, predicate TEXT, object_type TEXT, object_label_as_printed TEXT, assertion_status TEXT, payload TEXT NOT NULL)")
+        con.execute("CREATE TABLE external_identifiers (external_id_record TEXT PRIMARY KEY, entity_type TEXT, entity_id TEXT, source_system TEXT, external_id TEXT, match_status TEXT, payload TEXT NOT NULL)")
 
         con.execute("CREATE VIRTUAL TABLE source_items_fts USING fts5(title, summary, archive_url, content='source_items', content_rowid='rowid')")
         con.execute("CREATE VIRTUAL TABLE people_fts USING fts5(canonical_name, content='people', content_rowid='rowid')")
@@ -202,11 +204,44 @@ def build_database(curated_dir: Path = CURATED_DIR, db_path: Path = DEFAULT_DB) 
                 ),
             )
 
+        for row in read_jsonl(curated_dir / "source-assertions.jsonl"):
+            con.execute(
+                "INSERT INTO source_assertions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                (
+                    row["assertion_id"],
+                    row.get("source_item_id", "") or None,
+                    row.get("source_system", ""),
+                    row.get("subject_type", ""),
+                    row.get("subject_label_as_printed", ""),
+                    row.get("predicate", ""),
+                    row.get("object_type", ""),
+                    row.get("object_label_as_printed", ""),
+                    row.get("assertion_status", ""),
+                    _json(row),
+                ),
+            )
+
+        for row in read_jsonl(curated_dir / "external-identifiers.jsonl"):
+            con.execute(
+                "INSERT INTO external_identifiers VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (
+                    row["external_id_record"],
+                    row.get("entity_type", ""),
+                    row.get("entity_id", ""),
+                    row.get("source_system", ""),
+                    row.get("external_id", ""),
+                    row.get("match_status", ""),
+                    _json(row),
+                ),
+            )
+
         con.execute("CREATE INDEX idx_source_items_publication ON source_items(publication_id)")
         con.execute("CREATE INDEX idx_credits_person ON credits(person_id)")
         con.execute("CREATE INDEX idx_credits_game ON credits(game_id)")
         con.execute("CREATE INDEX idx_photo_name ON photo_identifications(name_as_printed)")
         con.execute("CREATE INDEX idx_ne_status ON north_east_connections(status)")
+        con.execute("CREATE INDEX idx_assertions_subject ON source_assertions(subject_label_as_printed)")
+        con.execute("CREATE INDEX idx_external_identifiers_id ON external_identifiers(external_id)")
         con.commit()
     finally:
         con.close()

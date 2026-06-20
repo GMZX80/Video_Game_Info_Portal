@@ -27,6 +27,8 @@ SCHEMA_MAP = {
     "relationships.jsonl": "relationship.schema.json",
     "media-assets.jsonl": "media-asset.schema.json",
     "photo-identifications.jsonl": "photo-identification.schema.json",
+    "source-assertions.jsonl": "source-assertion.schema.json",
+    "external-identifiers.jsonl": "external-identifier.schema.json",
 }
 PRIMARY_IDS = {
     "publications.jsonl": "publication_id",
@@ -44,6 +46,8 @@ PRIMARY_IDS = {
     "relationships.jsonl": "relationship_id",
     "media-assets.jsonl": "media_id",
     "photo-identifications.jsonl": "photo_identification_id",
+    "source-assertions.jsonl": "assertion_id",
+    "external-identifiers.jsonl": "external_id_record",
 }
 PAGE_INVENTORY_SCHEMA = "page-inventory.schema.json"
 
@@ -151,6 +155,20 @@ def validate_repository(root: Path = ROOT) -> list[str]:
             failures.append(f"photograph testimony exported as verified: {photo_identification_id}")
         if row.get("public_visibility") == "public" and row.get("verification_status") != "verified":
             failures.append(f"unverified photo identification exported publicly: {photo_identification_id}")
+    for row in rows_by_file.get("source-assertions.jsonl", []):
+        assertion_id = row.get("assertion_id")
+        if row.get("source_item_id") not in source_items:
+            failures.append(f"source assertion references missing source: {assertion_id}")
+        if row.get("source_system") == "wikipedia":
+            if row.get("license") != "CC BY-SA" or row.get("attribution_required") is not True:
+                failures.append(f"Wikipedia assertion lacks CC BY-SA attribution metadata: {assertion_id}")
+            if row.get("public_claim_status") == "confirmed" or row.get("assertion_status") == "confirmed":
+                failures.append(f"Wikipedia assertion exported as confirmed fact: {assertion_id}")
+    for row in rows_by_file.get("external-identifiers.jsonl", []):
+        external_id_record = row.get("external_id_record")
+        for source_id in row.get("source_item_ids", []):
+            if source_id not in source_items:
+                failures.append(f"external identifier references missing source: {external_id_record} -> {source_id}")
     for row in rows_by_file.get("north-east-connections.jsonl", []):
         public = row.get("status") in {"verified", "strongly supported"} or row.get("public_visibility") == "public"
         if public and not row.get("evidence_ids"):

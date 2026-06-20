@@ -12,6 +12,7 @@ from scripts.ingest.common import CURATED_DIR, RAW_DIR, REPORTS_DIR, ROOT, read_
 from scripts.ingest.export_public_json import export_public_json
 from scripts.ingest.normalise import normalise
 from scripts.ingest.validate_data import validate_repository
+from scripts.reconcile_external_entities import reconcile_external_entities
 from scripts.reconcile_entities import reconcile
 
 
@@ -88,6 +89,7 @@ def build_all(skip_fetch: bool = False, resume: bool = False) -> dict[str, objec
     normalise_counts = normalise()
     classify_counts = classify()
     reconcile_counts = reconcile()
+    external_reconcile_counts = reconcile_external_entities()
     build_database(CURATED_DIR, DEFAULT_DB)
     export_counts = export_public_json()
     failures = validate_repository(ROOT)
@@ -106,6 +108,7 @@ def build_all(skip_fetch: bool = False, resume: bool = False) -> dict[str, objec
         "normalise": normalise_counts,
         "classify": classify_counts,
         "reconcile": reconcile_counts,
+        "external_reconcile": external_reconcile_counts,
         "export": export_counts,
         "sqlite_integrity": integrity,
     }
