@@ -340,6 +340,137 @@ def _reasonable_person_name(name: str) -> bool:
     return 1 <= len(words) <= 8 and len(name) <= 90 and not name.endswith(".")
 
 
+def _entity_routes(records: list[ContentRecord]) -> dict[str, str]:
+    routes: dict[str, str] = {}
+    for record in records:
+        for entity_id in record.metadata.get("linked_entity_ids", []) or []:
+            routes.setdefault(entity_id, record.url)
+    return routes
+
+
+def _public_url(row: dict[str, Any]) -> str:
+    url = row.get("url") or row.get("source_url") or row.get("archive_url") or ""
+    return url if isinstance(url, str) and url.startswith(("http://", "https://")) else ""
+
+
+def _append_public_catalogue_records(
+    items: list[dict[str, Any]],
+    seen: set[str],
+    records: list[ContentRecord],
+) -> None:
+    routes = _entity_routes(records)
+    public_specs = [
+        ("assets/data/sources.json", "sources", "Public source record", "id", "title"),
+        ("assets/data/people.json", "people", "Public person record", "id", "name"),
+        ("assets/data/organisations.json", "organisations", "Public organisation record", "id", "name"),
+        ("assets/data/games.json", "games", "Public game record", "id", "title"),
+        ("assets/data/places.json", "places", "Public place record", "id", "name"),
+        ("assets/data/events.json", "events", "Public event record", "id", "title"),
+        ("assets/data/claims.json", "claims", "Public claim record", "id", "claim"),
+        ("assets/data/relationships.json", "relationships", "Public relationship record", "id", "label"),
+        ("assets/data/photos.json", "photos", "Public photo record", "id", "caption"),
+    ]
+    for relative_path, key, kind, id_field, title_field in public_specs:
+        data = _read_json(ROOT / relative_path)
+        for row in data.get(key, []):
+            row_id = str(row.get(id_field, "")).strip()
+            if not row_id:
+                continue
+            title = row.get(title_field) or row.get("title") or row.get("name") or row_id
+            summary = row.get("summary") or row.get("detail") or row.get("notes") or row.get("role") or row.get("type", "")
+            labels = _flatten_terms(
+                row.get("type", ""),
+                row.get("category", ""),
+                row.get("evidence", ""),
+                row.get("publication", ""),
+                row.get("geography", ""),
+                row.get("region", ""),
+            )[:6]
+            _append_search_item(items, seen, _search_item(
+                item_id=f"public:{key}:{row_id}",
+                title=title,
+                kind=kind,
+                summary=summary,
+                route=routes.get(row_id, ""),
+                url=_public_url(row),
+                status=row.get("evidence") or row.get("status") or row.get("type", ""),
+                labels=labels,
+                search_terms=[
+                    row.get("id", ""),
+                    row.get("author", ""),
+                    row.get("publication", ""),
+                    row.get("date", ""),
+                    row.get("period", ""),
+                    row.get("platforms", []),
+                    row.get("filters", []),
+                    row.get("sources", []),
+                    row.get("from", ""),
+                    row.get("to", ""),
+                    row.get("subject_id", ""),
+                    row.get("contradiction_notes", ""),
+                    row.get("unresolved", ""),
+                    row.get("public_location", ""),
+                ],
+            ))
+
+
+def _append_research_people(
+    items: list[dict[str, Any]],
+    seen: set[str],
+) -> None:
+    people_data = _read_json(ROOT / "data" / "people.json")
+    for row in people_data.get("people", []):
+        name = row.get("full_name", "")
+        if not _reasonable_person_name(name):
+            continue
+        companies = row.get("companies", []) or []
+        company_terms = [
+            f"{company.get('name', '')} {company.get('relationship', '')} {company.get('status', '')}"
+            for company in companies
+        ]
+        public_source_ids = [
+            source for source in row.get("sources", [])
+            if isinstance(source, str) and "private" not in source.lower()
+        ]
+        _append_search_item(items, seen, _search_item(
+            item_id=f"research:people:{row['id']}",
+            title=name,
+            kind="Research person record",
+            summary="Research person record with cautious evidence status; public sources are linked where available.",
+            status=row.get("confidence", ""),
+            labels=row.get("roles", []),
+            search_terms=[
+                row.get("id", ""),
+                row.get("aliases", []),
+                company_terms,
+                row.get("platforms", []),
+                row.get("games", []),
+                public_source_ids,
+            ],
+        ))
+
+
+def _append_research_sources(
+    items: list[dict[str, Any]],
+    seen: set[str],
+) -> None:
+    sources_data = _read_json(ROOT / "data" / "sources.json")
+    for row in sources_data.get("sources", []):
+        url = _public_url(row)
+        if not url:
+            continue
+        _append_search_item(items, seen, _search_item(
+            item_id=f"research:sources:{row['id']}",
+            title=row.get("title", row["id"]),
+            kind="Research source record",
+            summary=row.get("notes", ""),
+            url=url,
+            status=row.get("type", ""),
+            labels=[row.get("access", ""), row.get("rights", "")],
+            search_terms=[row.get("id", ""), row.get("type", ""), row.get("access", "")],
+        ))
+
+
 def export_public_search_index(records: list[ContentRecord], out_path: Path = PUBLIC_SEARCH_INDEX) -> list[dict[str, Any]]:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, Any]] = []
@@ -363,6 +494,10 @@ def export_public_search_index(records: list[ContentRecord], out_path: Path = PU
                 record.metadata.get("linked_claim_ids", []),
             ],
         ))
+
+    _append_public_catalogue_records(items, seen, records)
+    _append_research_people(items, seen)
+    _append_research_sources(items, seen)
 
     north_east = _read_json(GENERATED_DIR / "north-east-collection.json")
     collection_groups: dict[tuple[str, str, str, str], dict[str, Any]] = {}

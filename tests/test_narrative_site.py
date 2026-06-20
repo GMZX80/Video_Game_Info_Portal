@@ -10,6 +10,26 @@ from scripts.build_narrative_site import (
 )
 
 
+def _search_matches(items: list[dict], query: str) -> list[dict]:
+    words = query.lower().split()
+    matches = []
+    for item in items:
+        haystack = " ".join(
+            str(value)
+            for value in [
+                item.get("title", ""),
+                item.get("summary", ""),
+                item.get("kind", ""),
+                item.get("status", ""),
+                item.get("labels", []),
+                item.get("search_terms", []),
+            ]
+        ).lower()
+        if all(word in haystack for word in words):
+            matches.append(item)
+    return matches
+
+
 def test_narrative_content_validates_against_public_evidence():
     records = load_content()
     failures = validate_content(records, load_evidence_context())
@@ -66,6 +86,13 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     }
     assert any("ZX Spectrum" in " ".join(item["search_terms"]) for item in public_search_index["items"])
     assert any(item["title"] == "Tynesoft" and item["kind"] == "Story" for item in public_search_index["items"])
+    assert any(item["title"] == "Phil Scott" and item["kind"] == "Research person record" for item in _search_matches(public_search_index["items"], "phil scott"))
+    assert any(item["title"] == "Eutechnyx" and item["kind"] == "Public organisation record" for item in _search_matches(public_search_index["items"], "eutechnyx"))
+    assert any(item["kind"] == "Public source record" and item["title"] == "Professor Graham Morgan staff profile" for item in _search_matches(public_search_index["items"], "graham morgan"))
+    public_index_text = json.dumps(public_search_index).lower()
+    assert "private first-hand" not in public_index_text
+    assert "private-phil-scott-testimony" not in public_index_text
+    assert "do not quote or republish" not in public_index_text
     collection_keys = [
         (item["title"], item["status"], tuple(item["labels"][:2]))
         for item in public_search_index["items"]

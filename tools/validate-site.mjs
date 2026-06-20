@@ -564,6 +564,11 @@ pass(Array.isArray(publicSearchData.items), 'public search index is missing item
 pass((publicSearchData.items || []).length > 10000, 'public search index must expose the committed public datastore');
 pass((publicSearchData.items || []).some((item) => item.kind === 'Magazine/source record' && /ZX Spectrum/i.test((item.search_terms || []).join(' '))), 'public search index is missing ZX Spectrum source records');
 pass((publicSearchData.items || []).some((item) => item.title === 'Tynesoft' && item.kind === 'Story'), 'public search index is missing the Tynesoft story/profile route');
+pass((publicSearchData.items || []).some((item) => item.title === 'Phil Scott' && item.kind === 'Research person record'), 'public search index is missing Phil Scott research person record');
+pass((publicSearchData.items || []).some((item) => item.title === 'Eutechnyx' && item.kind === 'Public organisation record'), 'public search index is missing Eutechnyx public organisation record');
+pass((publicSearchData.items || []).some((item) => item.title === 'Professor Graham Morgan staff profile' && item.kind === 'Public source record'), 'public search index is missing Graham Morgan public source record');
+const publicSearchText = JSON.stringify(publicSearchData).toLowerCase();
+pass(!/private first-hand|private-phil-scott-testimony|do not quote or republish/.test(publicSearchText), 'public search index leaks private testimony handling text');
 pass((publicSearchData.items || []).every((item) => item.id && item.title && item.kind && Array.isArray(item.search_terms)), 'public search index item is incomplete');
 const publicStatuses = new Set(['verified', 'strongly supported']);
 for (const item of northEastCollectionData.confirmed || []) {
