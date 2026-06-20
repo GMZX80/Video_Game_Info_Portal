@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from .common import CURATED_DIR, GENERATED_DIR, read_jsonl, write_json
+from .mobygames import export_mobygames_index
 
 PUBLIC_STATUSES = {"verified", "strongly supported"}
 
@@ -108,6 +109,7 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
     write_json(out_dir / "people-index.json", {"people": people})
     write_json(out_dir / "organisations-index.json", {"organisations": organisations})
     write_json(out_dir / "evidence-index.json", {"evidence": evidence})
+    mobygames = export_mobygames_index(CURATED_DIR.parent / "sources.json", out_dir / "mobygames-index.json")
     write_json(out_dir / "timeline-events.json", {"events": []})
     write_json(out_dir / "search-index.json", {
         "items": [
@@ -115,7 +117,12 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
             for row in source_items
         ]
     })
-    return {"confirmed": len(confirmed), "probable": len(probable), "candidates": len(candidates)}
+    return {
+        "confirmed": len(confirmed),
+        "probable": len(probable),
+        "candidates": len(candidates),
+        "mobygames": len(mobygames["records"]),
+    }
 
 
 def main() -> None:

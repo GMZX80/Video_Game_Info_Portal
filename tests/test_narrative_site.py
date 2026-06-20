@@ -60,8 +60,10 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
         "contribute/index.html",
         "talk/index.html",
         "search/index.html",
+        "sources/mobygames/index.html",
         "assets/data/generated/narrative-search-index.json",
         "assets/data/generated/public-search-index.json",
+        "assets/data/generated/mobygames-index.json",
     ]
     for route in required_routes:
         assert (tmp_path / route).exists(), route
@@ -69,9 +71,11 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     story_html = (tmp_path / "stories/code-through-the-letterbox/index.html").read_text(encoding="utf-8")
     homepage_html = (tmp_path / "index.html").read_text(encoding="utf-8")
     search_html = (tmp_path / "search/index.html").read_text(encoding="utf-8")
+    research_html = (tmp_path / "research/index.html").read_text(encoding="utf-8")
     game_html = (tmp_path / "games/super-gran/index.html").read_text(encoding="utf-8")
     search_index = json.loads((tmp_path / "assets/data/generated/narrative-search-index.json").read_text(encoding="utf-8"))
     public_search_index = json.loads((tmp_path / "assets/data/generated/public-search-index.json").read_text(encoding="utf-8"))
+    mobygames_index = json.loads((tmp_path / "assets/data/generated/mobygames-index.json").read_text(encoding="utf-8"))
 
     assert result["records"] == len(search_index["items"])
     assert result["public_search_items"] == len(public_search_index["items"])
@@ -83,12 +87,18 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
         "Person index record",
         "Organisation index record",
         "North East collection record",
+        "MobyGames source record",
     }
+    assert mobygames_index["attribution"] == "Data by MobyGames.com"
+    assert len(mobygames_index["records"]) == 25
     assert any("ZX Spectrum" in " ".join(item["search_terms"]) for item in public_search_index["items"])
     assert any(item["title"] == "Tynesoft" and item["kind"] == "Story" for item in public_search_index["items"])
     assert any(item["title"] == "Phil Scott" and item["kind"] == "Research person record" for item in _search_matches(public_search_index["items"], "phil scott"))
     assert any(item["title"] == "Eutechnyx" and item["kind"] == "Public organisation record" for item in _search_matches(public_search_index["items"], "eutechnyx"))
     assert any(item["kind"] == "Public source record" and item["title"] == "Professor Graham Morgan staff profile" for item in _search_matches(public_search_index["items"], "graham morgan"))
+    assert any(item["title"] == "Phil Scott person page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "phil scott mobygames"))
+    assert any(item["title"] == "Tynesoft Computer Software company page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "tynesoft mobygames"))
+    assert any(item["title"] == "Command & Conquer: Red Alert DOS credits" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "red alert mobygames"))
     public_index_text = json.dumps(public_search_index).lower()
     assert "private first-hand" not in public_index_text
     assert "private-phil-scott-testimony" not in public_index_text
@@ -109,6 +119,12 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert "Gary Partis" not in homepage_html
     assert "This searches curated public pages, not the full magazine datastore." not in search_html
     assert "Search the public archive" in search_html
+    assert "Open MobyGames index" in research_html
+    mobygames_html = (tmp_path / "sources/mobygames/index.html").read_text(encoding="utf-8")
+    assert "MobyGames evidence index" in mobygames_html
+    assert "Data by MobyGames.com" in mobygames_html
+    assert "Tynesoft Computer Software company page" in mobygames_html
+    assert "Official API or curated source register only" in mobygames_html
 
     generated_text = "\n".join(
         path.read_text(encoding="utf-8", errors="ignore")

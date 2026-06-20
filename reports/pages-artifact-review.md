@@ -13,6 +13,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/data/games.json`
 - `assets/data/generated/evidence-index.json`
 - `assets/data/generated/games-index.json`
+- `assets/data/generated/mobygames-index.json`
 - `assets/data/generated/narrative-search-index.json`
 - `assets/data/generated/north-east-collection.json`
 - `assets/data/generated/organisations-index.json`
@@ -59,6 +60,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `research/corrections/index.html`
 - `research/index.html`
 - `search/index.html`
+- `sources/mobygames/index.html`
 - `stories/code-through-the-letterbox/index.html`
 - `stories/index.html`
 - `studios/index.html`
