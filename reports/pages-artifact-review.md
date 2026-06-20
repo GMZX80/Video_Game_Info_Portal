@@ -17,6 +17,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/data/generated/north-east-collection.json`
 - `assets/data/generated/organisations-index.json`
 - `assets/data/generated/people-index.json`
+- `assets/data/generated/public-search-index.json`
 - `assets/data/generated/releases-index.json`
 - `assets/data/generated/search-index.json`
 - `assets/data/generated/source-items-index.json`

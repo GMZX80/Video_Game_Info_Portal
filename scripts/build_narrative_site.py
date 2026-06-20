@@ -18,6 +18,7 @@ CONTENT_DIR = ROOT / "content"
 TEMPLATE_DIR = ROOT / "templates" / "narrative"
 DEFAULT_DIST = ROOT / "dist"
 SEARCH_INDEX = GENERATED_DIR / "narrative-search-index.json"
+PUBLIC_SEARCH_INDEX = GENERATED_DIR / "public-search-index.json"
 
 REQUIRED_FRONT_MATTER = {
     "id",
@@ -277,6 +278,216 @@ def export_search_index(records: list[ContentRecord], out_path: Path = SEARCH_IN
     return items
 
 
+def _flatten_terms(*values: Any) -> list[str]:
+    terms: list[str] = []
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, str):
+            value = value.strip()
+            if value:
+                terms.append(value)
+        elif isinstance(value, dict):
+            terms.extend(_flatten_terms(*value.values()))
+        elif isinstance(value, (list, tuple, set)):
+            terms.extend(_flatten_terms(*value))
+        else:
+            text = str(value).strip()
+            if text:
+                terms.append(text)
+    return terms
+
+
+def _short_text(value: Any, limit: int = 220) -> str:
+    text = " ".join(str(value or "").split())
+    return text if len(text) <= limit else f"{text[:limit - 1].rstrip()}…"
+
+
+def _search_item(
+    *,
+    item_id: str,
+    title: str,
+    kind: str,
+    summary: str = "",
+    route: str = "",
+    url: str = "",
+    status: str = "",
+    labels: list[str] | None = None,
+    search_terms: list[str] | None = None,
+) -> dict[str, Any]:
+    return {
+        "id": item_id,
+        "title": _short_text(title, 120),
+        "kind": kind,
+        "summary": _short_text(summary),
+        "route": route,
+        "url": url,
+        "status": status,
+        "labels": labels or [],
+        "search_terms": _flatten_terms(title, summary, kind, status, labels or [], search_terms or []),
+    }
+
+
+def _append_search_item(items: list[dict[str, Any]], seen: set[str], item: dict[str, Any]) -> None:
+    if not item["id"] or not item["title"] or item["id"] in seen:
+        return
+    seen.add(item["id"])
+    items.append(item)
+
+
+def _reasonable_person_name(name: str) -> bool:
+    words = name.split()
+    return 1 <= len(words) <= 8 and len(name) <= 90 and not name.endswith(".")
+
+
+def export_public_search_index(records: list[ContentRecord], out_path: Path = PUBLIC_SEARCH_INDEX) -> list[dict[str, Any]]:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    items: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for record in records:
+        _append_search_item(items, seen, _search_item(
+            item_id=record.metadata["id"],
+            title=record.metadata["title"],
+            kind="Story",
+            summary=record.metadata["standfirst"],
+            route=record.url,
+            status=record.metadata["fact_check_status"],
+            labels=record.metadata.get("public_record_labels", []),
+            search_terms=[
+                record.metadata.get("mode", ""),
+                record.metadata.get("content_level", ""),
+                record.metadata.get("story_type", ""),
+                record.metadata.get("linked_entity_ids", []),
+                record.metadata.get("linked_source_ids", []),
+                record.metadata.get("linked_claim_ids", []),
+            ],
+        ))
+
+    north_east = _read_json(GENERATED_DIR / "north-east-collection.json")
+    collection_groups: dict[tuple[str, str, str, str], dict[str, Any]] = {}
+    for bucket in ["confirmed", "probable", "candidates"]:
+        for row in north_east.get(bucket, []):
+            key = (row["name"], row.get("badge", ""), row.get("record_label", ""), row.get("entity_type", ""))
+            group = collection_groups.setdefault(key, {
+                "row": row,
+                "count": 0,
+                "terms": [],
+                "connection_types": set(),
+            })
+            group["count"] += 1
+            group["terms"].extend(_flatten_terms(
+                row.get("place", ""),
+                row.get("issue", ""),
+                row.get("source_magazine", ""),
+                row.get("connection_type", ""),
+                row.get("source_url", ""),
+                bucket,
+            ))
+            group["connection_types"].add(row.get("connection_type", ""))
+
+    for (name, badge, record_label, entity_type), group in collection_groups.items():
+        row = group["row"]
+        count_note = f" {group['count']} matching collection records share this public label." if group["count"] > 1 else ""
+        slug = re.sub(r"[^a-z0-9]+", "-", f"{name}-{badge}-{record_label}-{entity_type}".casefold()).strip("-")
+        _append_search_item(items, seen, _search_item(
+            item_id=f"north-east-search:{slug}",
+            title=name,
+            kind="North East collection record",
+            summary=f"{row.get('why_included', '')}{count_note}",
+            route="north-east-collection.html",
+            url=row.get("source_url", ""),
+            status=badge,
+            labels=[record_label, entity_type, *sorted(value for value in group["connection_types"] if value)],
+            search_terms=group["terms"],
+        ))
+
+    source_items = _read_json(GENERATED_DIR / "source-items-index.json")["items"]
+    for row in source_items:
+        _append_search_item(items, seen, _search_item(
+            item_id=row["source_item_id"],
+            title=row["title"],
+            kind="Magazine/source record",
+            summary=row.get("summary", ""),
+            url=row.get("archive_url", ""),
+            status=row.get("item_type", ""),
+            labels=[row.get("original_locator", ""), row.get("printed_company", ""), row.get("machine", "")],
+            search_terms=[
+                row.get("publication_id", ""),
+                row.get("program_type", ""),
+                row.get("named_article_authors", []),
+                row.get("named_contributors", []),
+                row.get("original_author", ""),
+                row.get("subtitle", ""),
+            ],
+        ))
+
+    games = _read_json(GENERATED_DIR / "games-index.json")["games"]
+    for row in games:
+        _append_search_item(items, seen, _search_item(
+            item_id=row["game_id"],
+            title=row["canonical_title"],
+            kind="Game index record",
+            summary="Game title generated from public magazine and archive indexes. Treat as an index record until linked evidence is inspected.",
+            status="Magazine index entry",
+            labels=[row.get("genre", ""), row.get("series", "")],
+            search_terms=[row.get("title_variants", []), row.get("sources", [])],
+        ))
+
+    releases = _read_json(GENERATED_DIR / "releases-index.json")["releases"]
+    for row in releases:
+        _append_search_item(items, seen, _search_item(
+            item_id=row["release_id"],
+            title=row["release_title"],
+            kind="Platform-specific release",
+            summary="Release-level record with platform, publisher and developer evidence kept source-specific.",
+            status=row.get("evidence_status", ""),
+            labels=[row.get("public_record_label", ""), row.get("developer_status", ""), row.get("publisher_status", "")],
+            search_terms=[
+                row.get("platform_id", ""),
+                row.get("publisher", ""),
+                row.get("developer", ""),
+                row.get("label", ""),
+                row.get("territory", ""),
+                row.get("sources", []),
+            ],
+        ))
+
+    people = _read_json(GENERATED_DIR / "people-index.json")["people"]
+    for row in people:
+        name = row["canonical_name"]
+        if not _reasonable_person_name(name):
+            continue
+        _append_search_item(items, seen, _search_item(
+            item_id=row["person_id"],
+            title=name,
+            kind="Person index record",
+            summary=row.get("biography_summary") or row.get("disambiguation_notes", ""),
+            status=row.get("evidence_status", ""),
+            labels=row.get("professional_roles", []),
+            search_terms=[row.get("aliases", []), row.get("sources", [])],
+        ))
+
+    organisations = _read_json(GENERATED_DIR / "organisations-index.json")["organisations"]
+    for row in organisations:
+        _append_search_item(items, seen, _search_item(
+            item_id=row["organisation_id"],
+            title=row["canonical_name"],
+            kind="Organisation index record",
+            summary=row.get("organisation_type", ""),
+            status=row.get("evidence_status", ""),
+            labels=[row.get("organisation_type", ""), row.get("legal_name", "")],
+            search_terms=[row.get("aliases", []), row.get("locations", []), row.get("sources", [])],
+        ))
+
+    items.sort(key=lambda item: (item["kind"], item["title"].casefold(), item["id"]))
+    out_path.write_text(
+        json.dumps({"generated_at": "2026-06-20", "items": items}, separators=(",", ":"), sort_keys=True, default=str) + "\n",
+        encoding="utf-8",
+    )
+    return items
+
+
 def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool = True) -> dict[str, int]:
     records = load_content()
     context = load_evidence_context()
@@ -287,10 +498,12 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
     env = _env()
     groups = _records_by_type(records)
     search_items = export_search_index(records) if export_public_json else []
+    public_search_items = export_public_search_index(records) if export_public_json else []
     if export_public_json:
-        generated_dest = dist_dir / "assets" / "data" / "generated" / "narrative-search-index.json"
-        generated_dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(SEARCH_INDEX, generated_dest)
+        for source in [SEARCH_INDEX, PUBLIC_SEARCH_INDEX]:
+            generated_dest = dist_dir / "assets" / "data" / "generated" / source.name
+            generated_dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, generated_dest)
 
     common = {
         "records": records,
@@ -338,7 +551,12 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
         )
         _write_route(dist_dir, record.route, html)
 
-    return {"records": len(records), "routes": len(route_pages) + len(records), "search_items": len(search_items)}
+    return {
+        "records": len(records),
+        "routes": len(route_pages) + len(records),
+        "search_items": len(search_items),
+        "public_search_items": len(public_search_items),
+    }
 
 
 def main() -> None:

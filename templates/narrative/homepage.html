@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% from "_cards.html" import card %}
 {% block content %}
 <section class="narrative-hero">
   <div class="hero-bg" aria-hidden="true"></div>
@@ -35,17 +34,21 @@
   <div class="narrative-wrap">
     <div class="section-heading split-heading">
       <div>
-        <p class="section-kicker">Explore</p>
-        <h2>People, studios and games with their evidence level visible.</h2>
+        <p class="section-kicker">Find the record</p>
+        <h2>Search the public archive.</h2>
       </div>
-      <p>The first slice is intentionally small: one person, one studio, three game tiers and a collection entry.</p>
+      <p>Use the public index for game titles, magazine records, studios, people, release records and North East collection entries. Results keep their evidence label visible so a publisher mention does not become a developer claim.</p>
     </div>
-    <div class="story-grid">
-      {% for section in ["people", "studios", "games", "collections"] %}
-        {% for item in groups.get(section, [])[:3] %}
-          {{ card(item, asset_prefix) }}
-        {% endfor %}
-      {% endfor %}
+    <form class="archive-search-form" action="search/" role="search">
+      <label class="sr-only" for="home-archive-search">Search the public archive</label>
+      <input id="home-archive-search" name="q" type="search" placeholder="Search Tynesoft, ZX Spectrum, OXO, Blaydon">
+      <button class="button button-primary" type="submit">Search</button>
+    </form>
+    <div class="mode-panel-grid archive-entry-grid">
+      <a href="stories/code-through-the-letterbox/">Read the first story</a>
+      <a href="north-east-collection.html">Open the North East collection</a>
+      <a href="games/">Browse curated game examples</a>
+      <a href="search/?q=ZX%20Spectrum">Search ZX Spectrum records</a>
     </div>
   </div>
 </section>
