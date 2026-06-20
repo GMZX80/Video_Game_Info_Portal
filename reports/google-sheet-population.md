@@ -15,11 +15,14 @@ This export is designed for the live Google Sheet. It stores structured metadata
 | `platform_aliases.csv` | 10 |
 | `publisher_aliases.csv` | 0 |
 | `reconciliation_issues.csv` | 329 |
+| `repo_games_master_import chunks` | 8 |
 | `repo_games_master_import.csv` | 7419 |
 | `repo_local_credits.csv` | 80 |
 | `repo_people_credits_import.csv` | 64 |
 | `repo_studios_publishers_import.csv` | 2096 |
+| `source_assertions chunks` | 11 |
 | `source_assertions.csv` | 10589 |
+| `source_evidence chunks` | 16 |
 | `source_evidence.csv` | 15424 |
 | `wos_api_enrichment.csv` | 1 |
 

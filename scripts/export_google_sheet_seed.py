@@ -297,6 +297,23 @@ def _write_csv(path: Path, headers: list[str], rows: Iterable[dict[str, Any]]) -
     return count
 
 
+def _write_chunked_csv(path_stem: str, headers: list[str], rows: list[dict[str, Any]], *, chunk_size: int = 1000) -> int:
+    for stale in EXPORT_DIR.glob(f"{path_stem}_part_*.csv"):
+        stale.unlink()
+    header_path = EXPORT_DIR / f"{path_stem}_header.csv"
+    _write_csv(header_path, headers, [])
+    parts = 0
+    for index in range(0, len(rows), chunk_size):
+        chunk = rows[index : index + chunk_size]
+        part_path = EXPORT_DIR / f"{path_stem}_part_{parts + 1:03d}.csv"
+        with part_path.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=headers, extrasaction="ignore", lineterminator="\n")
+            for row in chunk:
+                writer.writerow({header: _text(row.get(header, "")) for header in headers})
+        parts += 1
+    return parts
+
+
 def _source_system(source: dict[str, Any] | None) -> str:
     if not source:
         return ""
@@ -727,6 +744,9 @@ def export() -> dict[str, int]:
         "wos_api_enrichment.csv": _write_csv(EXPORT_DIR / "wos_api_enrichment.csv", ENRICHMENT_HEADERS, _build_enrichment_rows(data, group="wos")),
         "magazine_evidence.csv": _write_csv(EXPORT_DIR / "magazine_evidence.csv", ENRICHMENT_HEADERS, _build_enrichment_rows(data, group="magazine")),
     }
+    counts["repo_games_master_import chunks"] = _write_chunked_csv("repo_games_master_import", GAME_HEADERS, game_rows)
+    counts["source_evidence chunks"] = _write_chunked_csv("source_evidence", SOURCE_EVIDENCE_HEADERS, source_evidence_rows)
+    counts["source_assertions chunks"] = _write_chunked_csv("source_assertions", SOURCE_ASSERTION_HEADERS, source_assertion_rows)
     _write_report(counts)
     return counts
 
