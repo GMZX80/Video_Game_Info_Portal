@@ -90,6 +90,8 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
         "MobyGames source record",
         "External source assertion",
         "External identifier",
+        "Local person credit graph",
+        "Local credit row",
     }
     assert mobygames_index["attribution"] == "Data by MobyGames.com"
     assert len(mobygames_index["records"]) == 25
@@ -99,6 +101,12 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert any(item["title"] == "Eutechnyx" and item["kind"] == "Public organisation record" for item in _search_matches(public_search_index["items"], "eutechnyx"))
     assert any(item["kind"] == "Public source record" and item["title"] == "Professor Graham Morgan staff profile" for item in _search_matches(public_search_index["items"], "graham morgan"))
     assert any(item["title"] == "Phil Scott person page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "phil scott mobygames"))
+    assert any(
+        item["title"] == "Phil Scott"
+        and item["kind"] == "Local person credit graph"
+        and "coverage incomplete" in item["summary"].lower()
+        for item in _search_matches(public_search_index["items"], "phil scott local")
+    )
     assert any(item["title"] == "Tynesoft Computer Software company page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "tynesoft mobygames"))
     assert any(item["title"] == "Command & Conquer: Red Alert DOS credits" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "red alert mobygames"))
     assert any(item["kind"] == "External source assertion" and item["status"] == "candidate" for item in _search_matches(public_search_index["items"], "tynesoft wikipedia"))

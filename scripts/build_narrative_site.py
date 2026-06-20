@@ -560,6 +560,60 @@ def _append_external_seed_records(
             ))
 
 
+def _append_local_credit_graph_records(
+    items: list[dict[str, Any]],
+    seen: set[str],
+    records: list[ContentRecord],
+) -> None:
+    people_path = GENERATED_DIR / "people-public.json"
+    if not people_path.exists():
+        return
+    routes = _entity_routes(records)
+    payload = _read_json(people_path)
+    for person in payload.get("people", []):
+        name = person.get("canonical_name", "")
+        if not name:
+            continue
+        local_count = int(person.get("local_credit_count", 0) or 0)
+        candidate_count = int(person.get("candidate_credit_count", 0) or 0)
+        warning = person.get("coverage_warning", "")
+        summary = warning or f"Local credit graph with {local_count} local credit rows and {candidate_count} candidate external credit assertions."
+        _append_search_item(items, seen, _search_item(
+            item_id=f"local-person-credit-graph:{person.get('person_id', '')}",
+            title=name,
+            kind="Local person credit graph",
+            summary=summary,
+            route=routes.get(person.get("person_id", ""), ""),
+            status=person.get("confidence", ""),
+            labels=person.get("roles", []),
+            search_terms=[
+                person.get("aliases", []),
+                person.get("companies", []),
+                person.get("platforms", []),
+                person.get("local_credits", []),
+                person.get("candidate_external_credits", []),
+                person.get("source_trail", []),
+                person.get("public_notes", ""),
+            ],
+        ))
+        for credit in person.get("local_credits", []) or []:
+            title = f"{credit.get('person_name', name)} - {credit.get('game_title', '')}"
+            _append_search_item(items, seen, _search_item(
+                item_id=credit.get("credit_id", ""),
+                title=title,
+                kind="Local credit row",
+                summary=f"{credit.get('role_as_printed', '')} on {credit.get('game_title', '')}. A credit does not establish employment.",
+                status=credit.get("evidence_status", ""),
+                labels=[credit.get("role_normalised", ""), credit.get("source_system", ""), *credit.get("platforms", [])],
+                search_terms=[
+                    credit.get("person_id", ""),
+                    credit.get("source_ids", []),
+                    credit.get("employment_status", ""),
+                    credit.get("notes", ""),
+                ],
+            ))
+
+
 def export_public_search_index(records: list[ContentRecord], out_path: Path = PUBLIC_SEARCH_INDEX) -> list[dict[str, Any]]:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, Any]] = []
@@ -589,6 +643,7 @@ def export_public_search_index(records: list[ContentRecord], out_path: Path = PU
     _append_research_sources(items, seen)
     _append_mobygames_source_records(items, seen)
     _append_external_seed_records(items, seen)
+    _append_local_credit_graph_records(items, seen, records)
 
     north_east = _read_json(GENERATED_DIR / "north-east-collection.json")
     collection_groups: dict[tuple[str, str, str, str], dict[str, Any]] = {}

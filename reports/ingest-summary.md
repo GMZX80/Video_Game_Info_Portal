@@ -6,6 +6,7 @@ Generated: 2026-06-18
 | --- | ---: | ---: | ---: |
 | crash | 98 | 1381 | 0 |
 | globalnet | 58 | 7575 | 0 |
+| mobygames | 0 | 0 | 0 |
 | sinclair-user | 133 | 1375 | 0 |
 | stairway | 0 | 801 | 0 |
 | wikipedia-platform-lists | 0 | 4178 | 0 |

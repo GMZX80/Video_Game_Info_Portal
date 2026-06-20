@@ -1119,6 +1119,846 @@
       "role": "game author",
       "role_as_printed": "Named game author",
       "source_id": "source-item:stairway-lost:https-www-stairwaytohell-com-lostandfound-relatedlinks-html:sinclair-spectrum-maintained-by-steve-brown"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:bruce-nesbit:circus-games:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "bruce-nesbit",
+      "person_name": "Bruce Nesbit",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-circus-games"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:chris-robson-dave-mann:beverly-hills-cop:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:beverly-hills-cop",
+      "game_title": "Beverly Hills Cop",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "chris-robson-dave-mann",
+      "person_name": "Chris Robson",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-beverly-hills-cop"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:chris-robson-dave-mann:circus-games:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "chris-robson-dave-mann",
+      "person_name": "Chris Robson",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-circus-games"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:chris-robson-dave-mann:summer-olympiad:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:summer-olympiad",
+      "game_title": "Summer Olympiad",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "chris-robson-dave-mann",
+      "person_name": "Chris Robson",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-summer-olympiad"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:chris-robson-dave-mann:winter-olympiad-88:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:winter-olympiad-88",
+      "game_title": "Winter Olympiad 88",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "chris-robson-dave-mann",
+      "person_name": "Chris Robson",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-winter-olympiad-88"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:david-lloyd:commonwealth-games:credited-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:commonwealth-games",
+      "game_title": "Commonwealth Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "david-lloyd",
+      "person_name": "David Lloyd",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Credited/contributor",
+      "role_normalised": "credited/contributor",
+      "source_ids": [
+        "stairway-dcroft-mini-profile",
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:david-lloyd:goal:credited-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:goal",
+      "game_title": "Goal!",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "david-lloyd",
+      "person_name": "David Lloyd",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Credited/contributor",
+      "role_normalised": "credited/contributor",
+      "source_ids": [
+        "stairway-dcroft-mini-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:david-lloyd:ian-bothams-test-match:credited-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:ian-bothams-test-match",
+      "game_title": "Ian Botham's Test Match",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "david-lloyd",
+      "person_name": "David Lloyd",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Credited/contributor",
+      "role_normalised": "credited/contributor",
+      "source_ids": [
+        "stairway-dcroft-mini-profile",
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:david-lloyd:us-drag-racing:credited-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:us-drag-racing",
+      "game_title": "US Drag Racing",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "david-lloyd",
+      "person_name": "David Lloyd",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Credited/contributor",
+      "role_normalised": "credited/contributor",
+      "source_ids": [
+        "stairway-dcroft-mini-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:david-lloyd:winter-olympics:credited-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:winter-olympics",
+      "game_title": "Winter Olympics",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "david-lloyd",
+      "person_name": "David Lloyd",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Credited/contributor",
+      "role_normalised": "credited/contributor",
+      "source_ids": [
+        "stairway-dcroft-mini-profile",
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:gary-james-gray:superman-the-man-of-steel:tynesoft-era-title-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:superman-the-man-of-steel",
+      "game_title": "Superman: The Man of Steel",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "gary-james-gray",
+      "person_name": "Gary James Gray",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Tynesoft-era title-credit lead",
+      "role_normalised": "tynesoft-era-title-credit-lead",
+      "source_ids": [
+        "mobygames-superman-amiga"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:gary-partis:doctor-who-and-the-mines-of-terror:programmer-author-credit",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:doctor-who-and-the-mines-of-terror",
+      "game_title": "Doctor Who and the Mines of Terror",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "gary-partis",
+      "person_name": "Gary Partis",
+      "platforms": [
+        "BBC Micro"
+      ],
+      "release_id": "",
+      "role_as_printed": "Programmer/author credit",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-gpartis-profile",
+        "bbcmicro-doctor-who"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:jason-sobell:space-caverns:co-author-with-kevin-blake",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:space-caverns",
+      "game_title": "Space Caverns",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "jason-sobell",
+      "person_name": "Jason Sobell",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Co-author with Kevin Blake",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio",
+        "stairway-jsobell-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:jason-sobell:vindaloo:reported-author-contributor-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:vindaloo",
+      "game_title": "Vindaloo",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "jason-sobell",
+      "person_name": "Jason Sobell",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Reported author/contributor lead",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-jsobell-portfolio",
+        "stardot-vindaloo-club"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:julian-jameson:beverly-hills-cop:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:beverly-hills-cop",
+      "game_title": "Beverly Hills Cop",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "julian-jameson",
+      "person_name": "Julian Jameson",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-beverly-hills-cop"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:caveman-capers:author-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:caveman-capers",
+      "game_title": "Caveman Capers",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Author/contributor",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:commonwealth-games:co-author-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:commonwealth-games",
+      "game_title": "Commonwealth Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Co-author/contributor",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio",
+        "stairway-dcroft-mini-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:frankenstein-2000:author-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:frankenstein-2000",
+      "game_title": "Frankenstein 2000",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Author/contributor",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:ian-bothams-test-match:co-author-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:ian-bothams-test-match",
+      "game_title": "Ian Botham's Test Match",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Co-author/contributor",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio",
+        "stairway-dcroft-mini-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:space-caverns:co-author-with-jason-sobell",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:space-caverns",
+      "game_title": "Space Caverns",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Co-author with Jason Sobell",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:spy-vs-spy:conversion-programming-work",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:spy-vs-spy",
+      "game_title": "Spy vs Spy",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Conversion/programming work",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-spy-vs-spy"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:kevin-blake:winter-olympics:co-author-contributor",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:winter-olympics",
+      "game_title": "Winter Olympics",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "kevin-blake",
+      "person_name": "Kevin Blake",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Co-author/contributor",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-kblake-portfolio",
+        "stairway-dcroft-mini-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:michael-hedley:circus-games:tynesoft-era-title-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "michael-hedley",
+      "person_name": "Michael Hedley",
+      "platforms": [
+        "Commodore 64",
+        "Amiga",
+        "Atari ST"
+      ],
+      "release_id": "",
+      "role_as_printed": "Tynesoft-era title-credit lead",
+      "role_normalised": "tynesoft-era-title-credit-lead",
+      "source_ids": [
+        "mobygames-michael-hedley",
+        "mobygames-circus-games"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:michael-hedley:rocky:later-rage-venom-era-career-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:rocky",
+      "game_title": "Rocky",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "michael-hedley",
+      "person_name": "Michael Hedley",
+      "platforms": [
+        "PlayStation 2",
+        "Xbox"
+      ],
+      "release_id": "",
+      "role_as_printed": "Later Rage/Venom-era career lead",
+      "role_normalised": "later-rage/venom-era-career-lead",
+      "source_ids": [
+        "mobygames-michael-hedley",
+        "mobygames-rocky-ps2"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:michael-landreth:circus-games:bbc-micro-credit-as-mike-landreth",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "michael-landreth",
+      "person_name": "Michael Landreth",
+      "platforms": [
+        "BBC Micro"
+      ],
+      "release_id": "",
+      "role_as_printed": "BBC Micro credit as Mike Landreth",
+      "role_normalised": "bbc-micro-credit-as-mike-landreth",
+      "source_ids": [
+        "mobygames-circus-games-bbc"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:michael-landreth:circus-games:c64-art-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "michael-landreth",
+      "person_name": "Michael Landreth",
+      "platforms": [
+        "Commodore 64"
+      ],
+      "release_id": "",
+      "role_as_printed": "C64 art credit lead",
+      "role_normalised": "graphics",
+      "source_ids": [
+        "mobygames-circus-games"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:michael-landreth:summer-challenge:graphics-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:summer-challenge",
+      "game_title": "Summer Challenge",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "michael-landreth",
+      "person_name": "Michael Landreth",
+      "platforms": [
+        "Commodore 64"
+      ],
+      "release_id": "",
+      "role_as_printed": "Graphics credit lead",
+      "role_normalised": "graphics",
+      "source_ids": [
+        "lemon64-summer-challenge"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:peter-scott:hunkidory:programmer-title-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:hunkidory",
+      "game_title": "Hunkidory",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "peter-scott",
+      "person_name": "Peter Scott",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Programmer/title credit lead",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-pscott-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:peter-scott:last-of-the-free:programmer-title-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:last-of-the-free",
+      "game_title": "Last of the Free",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "peter-scott",
+      "person_name": "Peter Scott",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Programmer/title credit lead",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-pscott-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:peter-scott:thunderstruck:programmer-title-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:thunderstruck",
+      "game_title": "ThunderStruck",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "peter-scott",
+      "person_name": "Peter Scott",
+      "platforms": [
+        "BBC Micro",
+        "Acorn Electron"
+      ],
+      "release_id": "",
+      "role_as_printed": "Programmer/title credit lead",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "stairway-pscott-profile"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:philip-nixon:oscar:flair-era-art-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:oscar",
+      "game_title": "Oscar",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "philip-nixon",
+      "person_name": "Philip Nixon",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Flair-era art/credit lead",
+      "role_normalised": "graphics",
+      "source_ids": [
+        "mobygames-philip-nixon",
+        "mobygames-oscar-amiga"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:philip-nixon:rocky:rage-era-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:rocky",
+      "game_title": "Rocky",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "philip-nixon",
+      "person_name": "Philip Nixon",
+      "platforms": [
+        "PlayStation 2",
+        "Xbox"
+      ],
+      "release_id": "",
+      "role_as_printed": "Rage-era credit lead",
+      "role_normalised": "rage-era-credit-lead",
+      "source_ids": [
+        "mobygames-philip-nixon",
+        "mobygames-rocky-ps2"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:steve-tall:beverly-hills-cop:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:beverly-hills-cop",
+      "game_title": "Beverly Hills Cop",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "steve-tall",
+      "person_name": "Steve Tall",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-beverly-hills-cop"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Probable",
+      "credit_id": "credit:research-person:steve-tall:circus-games:amiga-version-credit-lead",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Probable",
+      "game_id": "game:circus-games",
+      "game_title": "Circus Games",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "steve-tall",
+      "person_name": "Steve Tall",
+      "platforms": [
+        "Amiga"
+      ],
+      "release_id": "",
+      "role_as_printed": "Amiga version credit lead",
+      "role_normalised": "amiga-version-credit-lead",
+      "source_ids": [
+        "hol-circus-games"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
+    },
+    {
+      "confidence": "Strongly supported",
+      "credit_id": "credit:research-person:steve-tall:command-and-conquer-red-alert:lead-game-programmer",
+      "employment_status": "not inferred from credit",
+      "evidence_status": "Strongly supported",
+      "game_id": "game:command-and-conquer-red-alert",
+      "game_title": "Command & Conquer: Red Alert",
+      "notes": "Local research credit row. A credit does not establish employment.",
+      "organisation_id": "",
+      "person_id": "steve-tall",
+      "person_name": "Steve Tall",
+      "platforms": [
+        "DOS"
+      ],
+      "release_id": "",
+      "role_as_printed": "Lead game programmer",
+      "role_normalised": "programmer",
+      "source_ids": [
+        "mobygames-red-alert-credits",
+        "igdb-red-alert-credits"
+      ],
+      "source_item_id": "",
+      "source_system": "local-research"
     }
   ]
 }
