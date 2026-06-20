@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB" data-mode="story">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ title }} - narrative history for Newcastle's Video Game Technology Lab.">
+  <meta name="theme-color" content="#07110d">
+  <link rel="canonical" href="{{ canonical_base }}{% if route %}{{ route }}/{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:image" content="{{ canonical_base }}assets/images/newcastle-crt-hero.webp">
+  <title>{{ title }} - Newcastle's Video Game Technology Lab</title>
+  <link rel="icon" href="{{ asset_prefix }}assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ asset_prefix }}assets/css/site.css?v=2026-06-18">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="narrative-site {{ body_class|default('story') }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="narrative-header">
+    <a class="brand narrative-brand" href="{{ asset_prefix }}index.html" aria-label="Newcastle Video Game History home">
+      <span class="brand-mark" aria-hidden="true">NCL<span>▰</span>GAME</span>
+      <span class="brand-text">Narrative archive</span>
+    </a>
+    <nav class="narrative-nav" aria-label="Public modes">
+      <a href="{{ asset_prefix }}index.html">Story</a>
+      <a href="{{ asset_prefix }}people/">Explore</a>
+      <a href="{{ asset_prefix }}research/">Evidence</a>
+      <a href="{{ asset_prefix }}talk/">Talk</a>
+    </nav>
+    <form class="quick-search" action="{{ asset_prefix }}search/" role="search">
+      <label class="sr-only" for="quick-search-{{ route|replace('/', '-') or 'home' }}">Search</label>
+      <input id="quick-search-{{ route|replace('/', '-') or 'home' }}" name="q" type="search" placeholder="Search stories, people, games">
+    </form>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="narrative-footer">
+    <div>
+      <span class="brand-mark">NCL<span>▰</span>GAME</span>
+      <p>Narrative first; evidence always within reach.</p>
+    </div>
+    <nav aria-label="Footer links">
+      <a href="{{ asset_prefix }}phase-0/">Phase 0</a>
+      <a href="{{ asset_prefix }}collections/">Collections</a>
+      <a href="{{ asset_prefix }}research/corrections/">Corrections</a>
+      <a href="{{ asset_prefix }}contribute/">Contribute</a>
+      <a href="{{ asset_prefix }}north-east-collection.html">Legacy collection route</a>
+    </nav>
+  </footer>
+  <script src="{{ asset_prefix }}assets/js/narrative.js?v=2026-06-18"></script>
+</body>
+</html>

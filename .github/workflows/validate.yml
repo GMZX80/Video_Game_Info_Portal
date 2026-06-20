@@ -3,7 +3,7 @@ name: Validate datastore and static site
 on:
   pull_request:
   push:
-    branches: [main, codex/magazine-evidence-datastore]
+    branches: [main, codex/magazine-evidence-datastore, codex/narrative-revamp-foundation]
   workflow_dispatch:
     inputs:
       refresh_detailed_archives:

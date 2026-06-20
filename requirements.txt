@@ -3,3 +3,5 @@ beautifulsoup4>=4.12,<5
 PyYAML>=6,<7
 jsonschema>=4.22,<5
 pytest>=8,<9
+Jinja2>=3.1,<4
+Markdown>=3.6,<4

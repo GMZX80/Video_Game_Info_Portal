@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero compact-page-hero">
+  <div class="narrative-wrap">
+    <p class="eyebrow"><span>Evidence mode</span> · sources, claims, uncertainty</p>
+    <h1>What we can say, and why.</h1>
+    <p class="hero-deck">The public story is backed by source IDs, claim IDs, editorial status and open questions. Evidence is close, but it does not crowd every paragraph.</p>
+  </div>
+</section>
+<section class="narrative-band">
+  <div class="narrative-wrap evidence-principles">
+    <article><h2>Source notes</h2><p>Each generated story page has a source drawer with links and rights notes.</p></article>
+    <article><h2>Corrections</h2><p>Corrections are public, dated and routed through review.</p><a class="text-link" href="{{ asset_prefix }}research/corrections/">Open corrections log</a></article>
+    <article><h2>Contribution review</h2><p>New evidence enters through structured GitHub issue forms and never auto-publishes.</p><a class="text-link" href="{{ asset_prefix }}contribute/">Contribute evidence</a></article>
+  </div>
+</section>
+{% endblock %}

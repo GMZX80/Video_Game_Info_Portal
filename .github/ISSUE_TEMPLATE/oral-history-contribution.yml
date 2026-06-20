@@ -1,0 +1,37 @@
+name: Oral-history contribution
+description: Offer testimony, an interview lead or a correction to oral-history handling.
+title: "Oral history: "
+labels: ["oral-history", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Oral history enters review first. Private testimony and quotations need explicit permission before publication."
+  - type: input
+    id: participant
+    attributes:
+      label: Participant
+    validations:
+      required: true
+  - type: dropdown
+    id: consent
+    attributes:
+      label: Public use consent
+      options:
+        - Research lead only
+        - Summary may be public
+        - Short quotations may be public
+        - Transcript may be public
+        - Consent not yet discussed
+    validations:
+      required: true
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic or evidence offered
+      description: Do not paste private messages unless you are the author and intend them for review.
+    validations:
+      required: true
+  - type: textarea
+    id: redactions
+    attributes:
+      label: Redactions or restrictions

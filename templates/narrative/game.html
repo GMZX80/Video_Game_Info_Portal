@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="profile-page game-page">
+  <header class="page-hero compact-page-hero">
+    <div class="narrative-wrap">
+      <p class="eyebrow"><span>Game</span> · {{ record.metadata.game_tier }}</p>
+      <h1>{{ record.metadata.title }}</h1>
+      <p class="hero-deck">{{ record.metadata.standfirst }}</p>
+      <div class="record-level-banner">
+        <strong>Record level</strong>
+        <span>{{ record.metadata.record_level }}</span>
+      </div>
+      {% if record.metadata.public_record_labels %}
+      <ul class="record-label-list" aria-label="Public record labels">
+        {% for label in record.metadata.public_record_labels %}
+          <li>{{ label }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </header>
+  <div class="narrative-wrap profile-layout">
+    <div class="article-body">
+      {{ record.html|safe }}
+    </div>
+    <aside class="profile-aside">
+      <h2>Game page safeguards</h2>
+      <p>Platform versions and credits remain source-specific. This page does not merge authorship across machines without evidence.</p>
+      {% include "_evidence.html" %}
+    </aside>
+  </div>
+</article>
+{% endblock %}

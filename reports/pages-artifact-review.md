@@ -13,6 +13,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/data/games.json`
 - `assets/data/generated/evidence-index.json`
 - `assets/data/generated/games-index.json`
+- `assets/data/generated/narrative-search-index.json`
 - `assets/data/generated/north-east-collection.json`
 - `assets/data/generated/organisations-index.json`
 - `assets/data/generated/people-index.json`
@@ -34,10 +35,35 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/images/ralph-baer.webp`
 - `assets/images/tynesoft-team-group.webp`
 - `assets/images/tynesoft-team-wide.webp`
+- `assets/js/narrative.js`
 - `assets/js/north-east-collection.js`
 - `assets/js/site.js`
+- `collections/index.html`
+- `collections/north-east-collection/index.html`
+- `contribute/index.html`
+- `games/doctor-who-and-the-mines-of-terror/index.html`
+- `games/index.html`
+- `games/oxo/index.html`
+- `games/super-gran/index.html`
 - `index.html`
+- `lineages/index.html`
+- `magazines/index.html`
+- `magazines/sinclair-user/index.html`
 - `north-east-collection.html`
+- `people/gary-partis/index.html`
+- `people/index.html`
+- `phase-0/index.html`
+- `places/blaydon/index.html`
+- `places/index.html`
+- `research/corrections/index.html`
+- `research/index.html`
+- `search/index.html`
+- `stories/code-through-the-letterbox/index.html`
+- `stories/index.html`
+- `studios/index.html`
+- `studios/tynesoft/index.html`
+- `talk/index.html`
+- `timeline/index.html`
 
 ## Required Content Checks
 

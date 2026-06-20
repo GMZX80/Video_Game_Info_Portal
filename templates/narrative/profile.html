@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="profile-page">
+  <header class="page-hero compact-page-hero">
+    <div class="narrative-wrap">
+      <p class="eyebrow"><span>{{ record.metadata.profile_kind|default('profile')|title }}</span> · {{ record.metadata.content_level }}</p>
+      <h1>{{ record.metadata.title }}</h1>
+      <p class="hero-deck">{{ record.metadata.standfirst }}</p>
+    </div>
+  </header>
+  <div class="narrative-wrap profile-layout">
+    <div class="article-body">
+      {{ record.html|safe }}
+    </div>
+    <aside class="profile-aside">
+      <h2>Editorial status</h2>
+      <dl class="profile-details">
+        <div><dt>Fact check</dt><dd>{{ record.metadata.fact_check_status }}</dd></div>
+        <div><dt>Review</dt><dd>{{ record.metadata.editorial_status }}</dd></div>
+        <div><dt>Media</dt><dd>{{ record.metadata.media_permission_status }}</dd></div>
+      </dl>
+      {% include "_evidence.html" %}
+    </aside>
+  </div>
+</article>
+{% endblock %}

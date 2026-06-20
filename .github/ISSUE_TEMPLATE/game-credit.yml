@@ -1,0 +1,36 @@
+name: Game credit
+description: Submit or correct a game credit.
+title: "Game credit: "
+labels: ["game-credit", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Credits require source evidence. A credit is not employment evidence unless the source says so."
+  - type: input
+    id: game
+    attributes:
+      label: Game title
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform/version
+      description: BBC Micro, Electron, Spectrum, C64, Amiga, etc.
+    validations:
+      required: true
+  - type: input
+    id: person
+    attributes:
+      label: Person or organisation credited
+  - type: input
+    id: role
+    attributes:
+      label: Role wording from source
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide magazine issue, title screen, manual, packaging, archive or database source.
+    validations:
+      required: true
