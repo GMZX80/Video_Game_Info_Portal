@@ -13,38 +13,77 @@
     const input = $('#narrative-search');
     const results = $('#narrative-search-results');
     if (!input || !results) return;
-    const indexUrl = input.dataset.searchIndex || 'assets/data/generated/narrative-search-index.json';
+    const indexUrl = input.dataset.searchIndex || 'assets/data/generated/public-search-index.json';
+    const assetPrefix = input.dataset.assetPrefix || '';
     let items = [];
 
+    const normalise = (value) => String(value || '').trim().toLowerCase();
+    const tokens = (value) => normalise(value).split(/\s+/).filter(Boolean);
+    const haystackFor = (item) => [
+      item.title,
+      item.summary,
+      item.kind,
+      item.status,
+      ...(item.labels || []),
+      ...(item.search_terms || [])
+    ].join(' ').toLowerCase();
+
+    const score = (item, query, words) => {
+      const title = normalise(item.title);
+      const kind = normalise(item.kind);
+      let value = 0;
+      if (title === query) value += 100;
+      if (title.startsWith(query)) value += 60;
+      if (title.includes(query)) value += 30;
+      if (kind.includes('story')) value += 12;
+      if (kind.includes('north east')) value += 10;
+      if (kind.includes('game')) value += 6;
+      value += words.filter((word) => title.includes(word)).length * 8;
+      return value;
+    };
+
+    const resultUrl = (item) => {
+      if (item.route) return `${assetPrefix}${item.route}`;
+      if (item.url) return item.url;
+      return '';
+    };
+
     const render = () => {
-      const query = input.value.trim().toLowerCase();
-      const matches = items.filter((item) => {
-        const haystack = [
-          item.title,
-          item.standfirst,
-          item.mode,
-          item.content_level,
-          item.story_type,
-          item.evidence_status,
-          ...(item.entities || []),
-          ...(item.sources || []),
-          ...(item.claims || [])
-        ].join(' ').toLowerCase();
-        return !query || haystack.includes(query);
-      }).slice(0, 24);
+      const query = normalise(input.value);
+      const words = tokens(query);
+      results.replaceChildren();
+      if (!query) {
+        results.appendChild(create('p', 'empty-note', 'Search across public stories, game records, source records, people, organisations and North East collection entries.'));
+        return;
+      }
+      const matches = items
+        .filter((item) => {
+          const haystack = haystackFor(item);
+          return words.every((word) => haystack.includes(word));
+        })
+        .sort((left, right) => score(right, query, words) - score(left, query, words) || left.title.localeCompare(right.title))
+        .slice(0, 48);
 
       results.replaceChildren(...matches.map((item) => {
-        const card = create('article', 'story-card');
-        card.appendChild(create('p', 'card-kicker', item.content_level));
+        const card = create('article', 'search-result-card');
+        card.appendChild(create('p', 'card-kicker', item.kind));
         const heading = create('h3');
-        const link = create('a', '', item.title);
-        link.href = `../${item.route}`;
-        heading.appendChild(link);
+        const href = resultUrl(item);
+        if (href) {
+          const link = create('a', '', item.title);
+          link.href = href;
+          heading.appendChild(link);
+        } else {
+          heading.textContent = item.title;
+        }
         card.appendChild(heading);
-        card.appendChild(create('p', '', item.standfirst));
+        if (item.summary) card.appendChild(create('p', '', item.summary));
+        const meta = create('p', 'result-meta');
+        meta.textContent = [item.status, ...(item.labels || [])].filter(Boolean).slice(0, 4).join(' · ');
+        if (meta.textContent) card.appendChild(meta);
         return card;
       }));
-      if (!matches.length) results.appendChild(create('p', 'empty-note', 'No matching public narrative pages.'));
+      if (!matches.length) results.appendChild(create('p', 'empty-note', 'No matching public records.'));
     };
 
     fetch(indexUrl, { cache: 'no-store' })

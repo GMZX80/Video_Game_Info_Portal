@@ -91,6 +91,7 @@ def _validate_dist(dist_dir: Path) -> list[str]:
         "assets/js/north-east-collection.js",
         "assets/data/generated/north-east-collection.json",
         "assets/data/generated/narrative-search-index.json",
+        "assets/data/generated/public-search-index.json",
         "assets/images/favicon.svg",
         "assets/images/newcastle-crt-hero.webp",
     ]:

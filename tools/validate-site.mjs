@@ -37,7 +37,8 @@ const generatedJsonFiles = [
   'assets/data/generated/timeline-events.json',
   'assets/data/generated/evidence-index.json',
   'assets/data/generated/search-index.json',
-  'assets/data/generated/narrative-search-index.json'
+  'assets/data/generated/narrative-search-index.json',
+  'assets/data/generated/public-search-index.json'
 ];
 const researchFiles = [
   'research/editorial-method.md',
@@ -99,6 +100,7 @@ const generatedSourceItemsData = generatedJson['assets/data/generated/source-ite
 const generatedGamesData = generatedJson['assets/data/generated/games-index.json'];
 const generatedReleasesData = generatedJson['assets/data/generated/releases-index.json'];
 const narrativeSearchData = generatedJson['assets/data/generated/narrative-search-index.json'];
+const publicSearchData = generatedJson['assets/data/generated/public-search-index.json'];
 const researchSourcesData = researchJson['data/sources.json'];
 const tynesoftPeopleData = researchJson['data/people.json'];
 const photoGameConnectionsData = researchJson['data/photo-to-game-connections.json'];
@@ -558,6 +560,11 @@ pass(Array.isArray(narrativeSearchData.items), 'narrative search index is missin
 pass((narrativeSearchData.items || []).length >= 9 && (narrativeSearchData.items || []).length < 100, 'narrative search index must stay compact and story-led');
 pass((narrativeSearchData.items || []).some((item) => item.route === 'stories/code-through-the-letterbox/'), 'narrative search index is missing the exemplar story');
 pass((narrativeSearchData.items || []).every((item) => item.title && item.standfirst && item.route && item.evidence_status), 'narrative search index item is incomplete');
+pass(Array.isArray(publicSearchData.items), 'public search index is missing items');
+pass((publicSearchData.items || []).length > 10000, 'public search index must expose the committed public datastore');
+pass((publicSearchData.items || []).some((item) => item.kind === 'Magazine/source record' && /ZX Spectrum/i.test((item.search_terms || []).join(' '))), 'public search index is missing ZX Spectrum source records');
+pass((publicSearchData.items || []).some((item) => item.title === 'Tynesoft' && item.kind === 'Story'), 'public search index is missing the Tynesoft story/profile route');
+pass((publicSearchData.items || []).every((item) => item.id && item.title && item.kind && Array.isArray(item.search_terms)), 'public search index item is incomplete');
 const publicStatuses = new Set(['verified', 'strongly supported']);
 for (const item of northEastCollectionData.confirmed || []) {
   pass(Boolean(item.name && item.entity_type && item.connection_type && item.why_included && item.source_url), `confirmed North East item is incomplete: ${item.id || item.name}`);
@@ -619,6 +626,7 @@ if (distFiles.length > 0) {
     'assets/js/north-east-collection.js',
     'assets/data/generated/north-east-collection.json',
     'assets/data/generated/narrative-search-index.json',
+    'assets/data/generated/public-search-index.json',
     'assets/images/favicon.svg',
     'assets/images/newcastle-crt-hero.webp'
   ];
@@ -643,7 +651,9 @@ if (distFiles.length > 0) {
   pass(!/fetch\(["']\/assets\//.test(distText), 'dist contains root-relative /assets/ fetch');
   pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(distText), 'dist leaks private Google Drive material');
   pass(!/student submission|student marks|assessment feedback|exam record/i.test(distText), 'dist leaks student/admin material');
-  pass(includesAll(readDist('index.html'), ['Before the studios, there was a network.', 'Story', 'Explore', 'Evidence', 'Talk']), 'generated narrative homepage is incomplete');
+  pass(includesAll(readDist('index.html'), ['Before the studios, there was a network.', 'Search the public archive', 'Story', 'Explore', 'Evidence', 'Talk']), 'generated narrative homepage is incomplete');
+  pass(!includes(readDist('index.html'), 'Gary Partis'), 'homepage must not foreground the exemplar person profile');
+  pass(includesAll(readDist('search/index.html'), ['Search the public archive', 'public-search-index.json']), 'generated search page is not wired to the public archive index');
   pass(includesAll(readDist('stories/code-through-the-letterbox/index.html'), ['Code Through the Letterbox', 'Evidence within reach', 'evidence-drawer']), 'generated exemplar story lacks evidence drawer');
   pass(includesAll(readDist('games/oxo/index.html'), ['Full narrative', 'Platform-specific release']), 'tier 1 game page lacks public record labels');
   pass(includesAll(readDist('games/doctor-who-and-the-mines-of-terror/index.html'), ['Enriched profile', 'Verified contributor credit']), 'tier 2 game page lacks public record labels');

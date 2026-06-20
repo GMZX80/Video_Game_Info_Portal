@@ -29,7 +29,8 @@
     </nav>
     <form class="quick-search" action="{{ asset_prefix }}search/" role="search">
       <label class="sr-only" for="quick-search-{{ route|replace('/', '-') or 'home' }}">Search</label>
-      <input id="quick-search-{{ route|replace('/', '-') or 'home' }}" name="q" type="search" placeholder="Search stories, people, games">
+      <input id="quick-search-{{ route|replace('/', '-') or 'home' }}" name="q" type="search" placeholder="Search public archive" autocomplete="off">
+      <button type="submit">Search</button>
     </form>
   </header>
 
