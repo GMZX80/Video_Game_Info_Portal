@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .common import ROOT, stable_id, write_jsonl
+from .common import ROOT, content_hash, stable_id, write_jsonl
 
 COVERAGE_WARNING = "Known local coverage incomplete - MobyGames person-credit import/API reconciliation pending."
 ACCEPTABLE_MANUAL_REVIEW_STATUSES = {"approved", "accepted", "reviewed", "reviewed-candidate"}
@@ -80,9 +80,34 @@ def _role_normalised(role: str) -> str:
     return text.replace(" ", "-") or "contributor"
 
 
-def _local_credit_from_game(person: dict[str, Any], game: dict[str, Any]) -> dict[str, Any]:
+def _source_ref_from_source_id(source_id: str, sources_by_id: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    source = sources_by_id.get(source_id)
+    if not source:
+        return {"source_id": source_id, "title": source_id, "url": "", "type": ""}
+    return {
+        "source_id": source_id,
+        "title": source.get("title", source_id),
+        "url": source.get("url") or "",
+        "type": source.get("type", ""),
+        "rights": source.get("rights", ""),
+    }
+
+
+def _source_ref_from_assertion(assertion: dict[str, Any]) -> dict[str, Any]:
+    source_item_id = assertion.get("source_item_id", "")
+    return {
+        "source_id": source_item_id or assertion.get("assertion_id", ""),
+        "title": assertion.get("source_page_title") or assertion.get("source_system", "Source assertion"),
+        "url": assertion.get("permanent_url") or assertion.get("source_url", ""),
+        "type": assertion.get("source_system", ""),
+        "rights": assertion.get("license", ""),
+    }
+
+
+def _local_credit_from_game(person: dict[str, Any], game: dict[str, Any], sources_by_id: dict[str, dict[str, Any]]) -> dict[str, Any]:
     title = str(game.get("title", "")).strip()
     role = str(game.get("role", "")).strip()
+    source_ids = game.get("sources", []) or []
     return {
         "credit_id": stable_id("credit", "research-person", person.get("id", ""), title, role),
         "person_id": person.get("id", ""),
@@ -95,7 +120,8 @@ def _local_credit_from_game(person: dict[str, Any], game: dict[str, Any]) -> dic
         "role_normalised": _role_normalised(role),
         "role_as_printed": role,
         "source_item_id": "",
-        "source_ids": game.get("sources", []) or [],
+        "source_ids": source_ids,
+        "source_refs": [_source_ref_from_source_id(source_id, sources_by_id) for source_id in source_ids],
         "source_system": "local-research",
         "confidence": game.get("confidence", ""),
         "evidence_status": game.get("confidence", "candidate"),
@@ -104,9 +130,10 @@ def _local_credit_from_game(person: dict[str, Any], game: dict[str, Any]) -> dic
     }
 
 
-def _candidate_assertions_for_person(person: dict[str, Any], source_assertions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _assertion_matches_person(person: dict[str, Any], assertion: dict[str, Any]) -> bool:
     labels = {_normalise(person.get("full_name", "")), *[_normalise(alias) for alias in person.get("aliases", []) or []]}
     labels.discard("")
+
     def matches_printed_name(value: Any) -> bool:
         text = _normalise(value)
         if text in labels:
@@ -114,9 +141,13 @@ def _candidate_assertions_for_person(person: dict[str, Any], source_assertions: 
         parts = {_normalise(part) for part in str(value or "").replace("/", ",").replace("&", ",").split(",")}
         return bool(labels & parts)
 
+    return matches_printed_name(assertion.get("object_label_as_printed", "")) or matches_printed_name(assertion.get("subject_label_as_printed", ""))
+
+
+def _candidate_assertions_for_person(person: dict[str, Any], source_assertions: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
     for assertion in source_assertions:
-        if not matches_printed_name(assertion.get("object_label_as_printed", "")) and not matches_printed_name(assertion.get("subject_label_as_printed", "")):
+        if not _assertion_matches_person(person, assertion):
             continue
         rows.append({
             "assertion_id": assertion.get("assertion_id", ""),
@@ -134,6 +165,50 @@ def _candidate_assertions_for_person(person: dict[str, Any], source_assertions: 
     return rows
 
 
+def _local_credit_from_assertion(person: dict[str, Any], assertion: dict[str, Any]) -> dict[str, Any]:
+    title = str(assertion.get("subject_label_as_printed", "")).strip()
+    role = str(assertion.get("role_as_printed", "") or assertion.get("predicate", "")).strip()
+    platform = str(assertion.get("platform_as_printed", "")).strip()
+    source_id = assertion.get("source_item_id", "")
+    return {
+        "credit_id": stable_id("credit", "reviewed-source-assertion", person.get("id", ""), assertion.get("assertion_id", "")),
+        "person_id": person.get("id", ""),
+        "person_name": person.get("full_name", ""),
+        "game_id": stable_id("game", title),
+        "game_title": title,
+        "release_id": "",
+        "platforms": [platform] if platform else [],
+        "organisation_id": "",
+        "role_normalised": _role_normalised(role),
+        "role_as_printed": role,
+        "source_item_id": source_id,
+        "source_ids": [source_id] if source_id else [assertion.get("assertion_id", "")],
+        "source_refs": [_source_ref_from_assertion(assertion)],
+        "source_system": assertion.get("source_system", ""),
+        "confidence": assertion.get("confidence", ""),
+        "evidence_status": assertion.get("public_claim_status") or assertion.get("assertion_status") or "candidate",
+        "source_evidence_status": assertion.get("evidence_status", ""),
+        "employment_status": "not inferred from credit",
+        "notes": "Reviewed candidate source assertion converted to a local credit row. A credit does not establish employment.",
+    }
+
+
+def _reviewed_assertion_credit_rows(person: dict[str, Any], source_assertions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    reviewed_ids = {str(item) for item in person.get("reviewed_credit_assertion_ids", []) or [] if str(item).strip()}
+    if not reviewed_ids:
+        return []
+    rows = []
+    for assertion in source_assertions:
+        if assertion.get("assertion_id") not in reviewed_ids:
+            continue
+        if assertion.get("subject_type") != "game":
+            continue
+        if not _assertion_matches_person(person, assertion):
+            continue
+        rows.append(_local_credit_from_assertion(person, assertion))
+    return rows
+
+
 def build_people_public_records(
     people_data: dict[str, Any],
     sources_data: dict[str, Any],
@@ -144,7 +219,13 @@ def build_people_public_records(
     people = []
     for person in people_data.get("people", []):
         source_ids = list(person.get("sources", []) or [])
-        local_credits = [_local_credit_from_game(person, game) for game in person.get("games", []) or [] if game.get("title")]
+        local_credits = [
+            _local_credit_from_game(person, game, sources_by_id)
+            for game in person.get("games", []) or []
+            if game.get("title")
+        ]
+        local_credits.extend(_reviewed_assertion_credit_rows(person, source_assertions))
+        local_credits = sorted(local_credits, key=lambda row: (row.get("game_title", ""), row.get("role_as_printed", ""), row.get("credit_id", "")))
         candidate_external_credits = _candidate_assertions_for_person(person, source_assertions)
         source_trail = _public_source_trail(source_ids, sources_by_id)
         link_only_sources = [
@@ -227,6 +308,38 @@ def manual_mobygames_rows_to_assertions(path: Path, *, generated_at: str) -> lis
     return assertions
 
 
+def manual_mobygames_rows_to_source_items(path: Path, *, generated_at: str) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    source_items = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if _normalise(row.get("review_status")) not in ACCEPTABLE_MANUAL_REVIEW_STATUSES:
+                continue
+            game_title = row.get("game_title", "").strip()
+            if not game_title:
+                continue
+            source_items.append({
+                "source_item_id": stable_id("source-item", "mobygames-manual-credit", row.get("mobygames_game_id", "") or game_title),
+                "publication_id": "publication:mobygames-api",
+                "issue_id": "",
+                "item_type": "manual person-credit import",
+                "title": game_title,
+                "archive_url": row.get("source_url", ""),
+                "summary": f"Reviewed manual MobyGames credit row for {game_title}; secondary candidate metadata only.",
+                "accessed_at": row.get("source_date", generated_at),
+                "date": row.get("source_date", ""),
+                "source_status": "candidate",
+                "machine": row.get("platform", ""),
+                "printed_company": "",
+                "rights_note": "Structured manual credit row only; no MobyGames HTML copied.",
+                "extraction_status": "manual-reviewed",
+                "content_hash": content_hash(json.dumps(row, sort_keys=True)),
+                "notes": row.get("notes", ""),
+            })
+    return source_items
+
+
 def write_manual_import_template(path: Path = ROOT / "data" / "manual" / "mobygames-person-credit-import.csv") -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
@@ -246,8 +359,10 @@ def main() -> None:
     if args.manual_template:
         write_manual_import_template(Path(args.manual_import))
     assertions = manual_mobygames_rows_to_assertions(Path(args.manual_import), generated_at=args.generated_at)
+    source_items = manual_mobygames_rows_to_source_items(Path(args.manual_import), generated_at=args.generated_at)
+    write_jsonl(Path(args.out).parent / "source-items.jsonl", source_items, sort_key="source_item_id")
     write_jsonl(Path(args.out), assertions, sort_key="assertion_id")
-    print({"manual_assertions": len(assertions)})
+    print({"manual_source_items": len(source_items), "manual_assertions": len(assertions)})
 
 
 if __name__ == "__main__":

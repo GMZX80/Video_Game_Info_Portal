@@ -8,6 +8,7 @@ from scripts.ingest.local_credit_graph import (
     COVERAGE_WARNING,
     build_people_public_records,
     manual_mobygames_rows_to_assertions,
+    manual_mobygames_rows_to_source_items,
 )
 from scripts.ingest.mobygames import discover_mobygames_sources
 from scripts.ingest.mobygames_api import mobygames_credit_payload_to_assertions
@@ -115,6 +116,49 @@ def test_manual_mobygames_import_requires_acceptable_review_status(tmp_path: Pat
     assert assertions[0]["evidence_status"] == "secondary database credit"
 
 
+def test_manual_mobygames_import_writes_matching_source_items(tmp_path: Path):
+    csv_path = tmp_path / "mobygames-person-credit-import.csv"
+    with csv_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "mobygames_person_id",
+                "person_name",
+                "game_title",
+                "mobygames_game_id",
+                "platform",
+                "role_as_printed",
+                "source_url",
+                "source_date",
+                "imported_by",
+                "review_status",
+                "notes",
+            ],
+        )
+        writer.writeheader()
+        writer.writerow({
+            "mobygames_person_id": "54278",
+            "person_name": "Phil Scott",
+            "game_title": "Trolls",
+            "mobygames_game_id": "",
+            "platform": "Amiga",
+            "role_as_printed": "Graphics",
+            "source_url": "https://www.mobygames.com/game/trolls",
+            "source_date": "2026-06-20",
+            "imported_by": "Codex fixture",
+            "review_status": "reviewed-candidate",
+            "notes": "Fixture row.",
+        })
+
+    assertions = manual_mobygames_rows_to_assertions(csv_path, generated_at="2026-06-20")
+    source_items = manual_mobygames_rows_to_source_items(csv_path, generated_at="2026-06-20")
+
+    assert len(source_items) == 1
+    assert source_items[0]["source_item_id"] == assertions[0]["source_item_id"]
+    assert source_items[0]["publication_id"] == "publication:mobygames-api"
+    assert source_items[0]["rights_note"] == "Structured manual credit row only; no MobyGames HTML copied."
+
+
 def test_phil_scott_without_imported_local_credits_gets_coverage_warning():
     records = build_people_public_records(
         {
@@ -172,6 +216,89 @@ def test_phil_scott_fixture_credits_render_multiple_local_game_rows():
     assert phil["local_credit_count"] == 2
     assert [row["game_title"] for row in phil["local_credits"]] == ["Trolls", "Winter Olympiad '88"]
     assert all(row["employment_status"] == "not inferred from credit" for row in phil["local_credits"])
+
+
+def test_reviewed_candidate_assertions_become_local_credit_rows_with_source_refs():
+    records = build_people_public_records(
+        {
+            "people": [
+                {
+                    "id": "phil-scott",
+                    "full_name": "Phil Scott",
+                    "aliases": ["Philip Scott"],
+                    "companies": [],
+                    "roles": ["Contributor"],
+                    "platforms": [],
+                    "games": [],
+                    "reviewed_credit_assertion_ids": [
+                        "assertion:mobygames-manual:trolls",
+                        "assertion:wikipedia:winter-olympiad-88",
+                    ],
+                    "sources": ["mobygames-phil-scott"],
+                    "confidence": "Probable",
+                }
+            ]
+        },
+        {"sources": []},
+        [],
+        [
+            {
+                "assertion_id": "assertion:mobygames-manual:trolls",
+                "source_item_id": "source-item:mobygames-manual:trolls",
+                "source_system": "mobygames-manual-credit",
+                "subject_type": "game",
+                "subject_label_as_printed": "Trolls",
+                "predicate": "credited_as",
+                "object_type": "person",
+                "object_label_as_printed": "Phil Scott",
+                "role_as_printed": "Graphics",
+                "platform_as_printed": "Amiga",
+                "assertion_status": "candidate",
+                "public_claim_status": "candidate",
+                "evidence_status": "secondary database credit",
+                "source_url": "https://www.mobygames.com/game/trolls",
+                "source_page_title": "MobyGames manual person-credit import",
+                "notes": "Reviewed manual seed.",
+            },
+            {
+                "assertion_id": "assertion:wikipedia:winter-olympiad-88",
+                "source_item_id": "source-item:wikipedia:winter-olympiad-88",
+                "source_system": "wikipedia",
+                "subject_type": "game",
+                "subject_label_as_printed": "Winter Olympiad '88",
+                "predicate": "developer_as_printed",
+                "object_type": "organisation",
+                "object_label_as_printed": "Derek Brewster, Philip Scott",
+                "role_as_printed": "",
+                "platform_as_printed": "ZX Spectrum",
+                "assertion_status": "candidate",
+                "public_claim_status": "candidate",
+                "evidence_status": "secondary seed",
+                "permanent_url": "https://en.wikipedia.org/w/index.php?title=List_of_ZX_Spectrum_games&oldid=1359444555",
+                "source_page_title": "List of ZX Spectrum games",
+                "license": "CC BY-SA",
+                "notes": "Wikipedia-derived source assertion; do not promote without corroboration.",
+            },
+            {
+                "assertion_id": "assertion:wikipedia:not-reviewed",
+                "source_system": "wikipedia",
+                "subject_type": "game",
+                "subject_label_as_printed": "Unreviewed",
+                "predicate": "developer_as_printed",
+                "object_type": "person",
+                "object_label_as_printed": "Phil Scott",
+                "assertion_status": "candidate",
+            },
+        ],
+    )
+
+    phil = records[0]
+    assert phil["coverage_warning"] == ""
+    assert [row["game_title"] for row in phil["local_credits"]] == ["Trolls", "Winter Olympiad '88"]
+    assert {row["evidence_status"] for row in phil["local_credits"]} == {"candidate"}
+    assert all(row["source_refs"] for row in phil["local_credits"])
+    assert all(row["employment_status"] == "not inferred from credit" for row in phil["local_credits"])
+    assert all("does not establish employment" in row["notes"] for row in phil["local_credits"])
 
 
 def test_public_export_includes_research_people_credit_graph_without_private_testimony(tmp_path: Path):

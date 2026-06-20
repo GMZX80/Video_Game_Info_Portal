@@ -24,19 +24,20 @@ The previous public search was shallow for Phil Scott because the project had a 
 - Research people in `data/people.json`: 22
 - Research people with empty `games` lists: 9
 - Local explicit curated credits in `data/curated/credits.jsonl`: 80
-- Local research credit rows exported from `data/people.json`: 35
-- Public credit rows in `credits-public.json`: 115
+- Local research credit rows exported from `data/people.json`: 37
+- Public credit rows in `credits-public.json`: 117
 - Source records in `data/sources.json`: 59
 - Link-only source records with URLs: 57
 - MobyGames link-only source records: 25
-- Public search records: 39,887
+- Public search records: 39,891
 
 ## Phil Scott Findings
 
-- Local research record: `data/people.json` has `id: phil-scott`, alias `Philip Scott`, and an empty `games` list.
+- Local research record: `data/people.json` has `id: phil-scott`, alias `Philip Scott`, an empty direct `games` list, and two reviewed candidate source assertion IDs.
 - Local public person graph: `assets/data/generated/people-public.json` now includes Phil Scott.
-- Local confirmed/imported credit rows: 0.
-- Candidate external credit assertions: 1, from the Wikipedia ZX Spectrum list row for `Winter Olympiad '88`.
+- Local confirmed credit rows: 0.
+- Local candidate credit rows: 2, for `Trolls` and `Winter Olympiad '88`.
+- Candidate external credit assertions: 2, from the reviewed manual MobyGames row for `Trolls` and the Wikipedia ZX Spectrum list row for `Winter Olympiad '88`.
 - Link-only local sources: 2 public links in the person graph.
 - Public route: `people/phil-scott/`.
 
@@ -49,19 +50,21 @@ Phil Scott appeared mainly through:
 - the Trolls MobyGames link;
 - source/search terms copied from link records.
 
-Those records are useful provenance but not local imported credits. Search now also includes a `Local person credit graph` result with a coverage warning and candidate assertions kept separate.
+Those records are useful provenance but not enough for a full bibliography. Search now also includes a `Local person credit graph` result and two `Local credit row` results, all labelled as candidate/secondary rather than confirmed.
 
 ## MobyGames Status
 
 MobyGames API tooling is implemented in `scripts/ingest/mobygames_api.py`. It reads `MOBYGAMES_API_KEY` from the environment, supports cache/resume/dry-run behavior, initializes `data/raw/mobygames/`, and redacts API keys from logs.
 
-No MobyGames API key was available in this run. No MobyGames person-credit rows were imported.
+No MobyGames API key was available in this run. No API-backed MobyGames person-credit rows were imported.
 
 Manual fallback path:
 
 - `data/manual/mobygames-person-credit-import.csv`
-- reviewed rows become candidate `secondary database credit` source assertions;
+- reviewed rows become candidate `secondary database credit` source assertions and matching source items;
 - pending rows are ignored.
+
+One reviewed manual row is currently imported for Phil Scott on `Trolls`. It remains a candidate secondary database credit and does not establish employment.
 
 ## Public Search Assembly
 

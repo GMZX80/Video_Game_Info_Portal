@@ -4,7 +4,7 @@ Generated: 2026-06-20
 
 ## Current Local Person Record
 
-`data/people.json` contains `phil-scott` with alias `Philip Scott`, probable Tynesoft and later-career leads, and no local `games` rows.
+`data/people.json` contains `phil-scott` with alias `Philip Scott`, probable Tynesoft and later-career leads, no direct `games` rows, and two explicitly reviewed candidate assertion IDs.
 
 ## Current Local Sources
 
@@ -17,9 +17,10 @@ Private testimony is present only as a private research source ID in `data/peopl
 
 ## Current Local Credits
 
-- Confirmed/imported local Phil Scott credit rows: 0
-- Candidate external Phil Scott credit assertions: 1
-- Withheld from confirmation: 1 candidate Wikipedia assertion for `Winter Olympiad '88`, where the printed developer field includes `Derek Brewster, Philip Scott`
+- Confirmed local Phil Scott credit rows: 0
+- Local candidate Phil Scott credit rows: 2
+- Candidate external Phil Scott credit assertions: 2
+- Local candidate rows now displayed: `Trolls` from the reviewed manual MobyGames CSV row, and `Winter Olympiad '88` from the reviewed Wikipedia seed assertion where the printed developer field includes `Derek Brewster, Philip Scott`
 
 ## MobyGames Availability
 
@@ -27,7 +28,7 @@ The repository has MobyGames source links for Phil Scott and Trolls. These remai
 
 MobyGames API key available during this run: no.
 
-MobyGames person-credit import status: not run. The reports state the limitation and the manual import path.
+MobyGames API-backed person-credit import status: not run because no API key was available. Manual import status: one reviewed candidate row imported for `Trolls`.
 
 ## Alias Issue
 
@@ -35,7 +36,7 @@ MobyGames person-credit import status: not run. The reports state the limitation
 
 ## Public Behavior
 
-Phil Scott public search now returns 10 records, including:
+Phil Scott public search now returns 13 records, including:
 
 - `Local person credit graph`
 - `Story` route at `people/phil-scott/`
@@ -43,10 +44,9 @@ Phil Scott public search now returns 10 records, including:
 - `Research person record`
 - `MobyGames source record`
 - `External source assertion`
+- `Local credit row`
 
-The local person graph displays:
-
-> Known local coverage incomplete - MobyGames person-credit import/API reconciliation pending.
+The local person graph displays two candidate rows and no longer presents the page as link-only coverage. It still does not claim a complete Phil Scott bibliography.
 
 ## Expected But Unverified Credits
 

@@ -2,8 +2,10 @@
 
 Generated: 2026-06-20
 
-No MobyGames person-credit rows were imported in this run.
+No API-backed MobyGames person-credit rows were imported in this run.
 
-Reason: MobyGames API key missing or person-credit endpoint coverage not available to this adapter.
+Reason: `MOBYGAMES_API_KEY` was not available in the environment, so the official API path could not be exercised.
 
-Permitted fallback: populate `data/manual/mobygames-person-credit-import.csv` and keep rows as secondary database credit assertions until reviewed.
+Manual fallback: `data/manual/mobygames-person-credit-import.csv` currently contains one reviewed candidate row for Phil Scott on `Trolls`. The build converts it into one source item and one candidate `secondary database credit` source assertion.
+
+The manual row is not a complete Phil Scott bibliography and does not establish employment.

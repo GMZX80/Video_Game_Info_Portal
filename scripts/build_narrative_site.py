@@ -236,6 +236,19 @@ def _linked_claims(record: ContentRecord, context: dict[str, dict[str, Any]]) ->
     return [context["claims"][claim_id] for claim_id in record.metadata.get("linked_claim_ids", []) if claim_id in context["claims"]]
 
 
+def _local_credit_graph_for_record(record: ContentRecord) -> dict[str, Any] | None:
+    people_path = GENERATED_DIR / "people-public.json"
+    if not people_path.exists():
+        return None
+    entity_ids = set(record.metadata.get("linked_entity_ids", []) or [])
+    if not entity_ids:
+        return None
+    for person in _read_json(people_path).get("people", []):
+        if person.get("person_id") in entity_ids:
+            return person
+    return None
+
+
 def _env() -> Environment:
     return Environment(
         loader=FileSystemLoader(TEMPLATE_DIR),
@@ -834,6 +847,7 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
                 body_class=record.metadata.get("mode", "story"),
                 linked_sources=_linked_sources(record, context),
                 linked_claims=_linked_claims(record, context),
+                local_credit_graph=_local_credit_graph_for_record(record),
                 **common,
             )
         )

@@ -73,6 +73,7 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     search_html = (tmp_path / "search/index.html").read_text(encoding="utf-8")
     research_html = (tmp_path / "research/index.html").read_text(encoding="utf-8")
     game_html = (tmp_path / "games/super-gran/index.html").read_text(encoding="utf-8")
+    phil_html = (tmp_path / "people/phil-scott/index.html").read_text(encoding="utf-8")
     search_index = json.loads((tmp_path / "assets/data/generated/narrative-search-index.json").read_text(encoding="utf-8"))
     public_search_index = json.loads((tmp_path / "assets/data/generated/public-search-index.json").read_text(encoding="utf-8"))
     mobygames_index = json.loads((tmp_path / "assets/data/generated/mobygames-index.json").read_text(encoding="utf-8"))
@@ -104,8 +105,15 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert any(
         item["title"] == "Phil Scott"
         and item["kind"] == "Local person credit graph"
-        and "coverage incomplete" in item["summary"].lower()
+        and "local credit rows" in item["summary"].lower()
         for item in _search_matches(public_search_index["items"], "phil scott local")
+    )
+    assert any(
+        item["kind"] == "Local credit row"
+        and item["status"] == "candidate"
+        and "Phil Scott" in item["title"]
+        and "Trolls" in item["title"]
+        for item in _search_matches(public_search_index["items"], "phil scott trolls")
     )
     assert any(item["title"] == "Tynesoft Computer Software company page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "tynesoft mobygames"))
     assert any(item["title"] == "Command & Conquer: Red Alert DOS credits" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "red alert mobygames"))
@@ -125,6 +133,11 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert "evidence-drawer" in story_html
     assert "Magazine index entry" in game_html
     assert "Reviewed release" not in game_html
+    assert "Local credit rows" in phil_html
+    assert "Trolls" in phil_html
+    assert "Winter Olympiad &#39;88" in phil_html
+    assert "Candidate" in phil_html
+    assert "A credit does not establish employment" in phil_html
     assert "Search the public archive" in homepage_html
     assert "Search public archive" in homepage_html
     assert '<button type="submit">Search</button>' in homepage_html

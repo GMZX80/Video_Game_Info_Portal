@@ -32,7 +32,7 @@ open_questions:
 
 Phil Scott is now represented as a local credit-graph subject, not merely as a set of outbound links. The local data currently records a probable Tynesoft and later-career lead, plus public MobyGames and Stairway source links.
 
-Known local coverage incomplete - MobyGames person-credit import/API reconciliation pending.
+The local table below currently contains only reviewed secondary or candidate rows. It is deliberately small: the project has not imported a complete MobyGames person-credit list.
 
 The current public graph must keep three things apart: local credits that have been imported into structured rows, candidate external assertions that still need review, and link-only database pages. A MobyGames person page is useful provenance, but it is not itself an imported local credit list.
 

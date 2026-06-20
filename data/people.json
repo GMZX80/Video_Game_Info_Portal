@@ -1032,8 +1032,12 @@
         }
       ],
       "roles": ["Contributor"],
-      "platforms": [],
+      "platforms": ["Amiga", "ZX Spectrum"],
       "games": [],
+      "reviewed_credit_assertion_ids": [
+        "assertion:mobygames-manual-credit:54278:unknown:trolls:phil-scott:graphics",
+        "assertion:wikipedia:list-of-zx-spectrum-games:winter-olympiad-88:developer-as-printed:derek-brewster-philip-scott"
+      ],
       "career_timeline": [
         {
           "date": "1980s-1990s",
