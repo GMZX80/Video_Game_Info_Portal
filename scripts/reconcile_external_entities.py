@@ -23,6 +23,8 @@ QUEUE_FIELDS = [
     "decision",
 ]
 
+MANUAL_CREDIT_SOURCE_SYSTEMS = {"mobygames-manual-credit"}
+
 
 def normalise_label(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
@@ -97,7 +99,11 @@ def _queue_rows(
 
 
 def reconcile_external_entities(curated_dir: Path = CURATED_DIR, reports_dir: Path = REPORTS_DIR) -> dict[str, int]:
-    assertions = read_jsonl(curated_dir / "source-assertions.jsonl")
+    assertions = [
+        row
+        for row in read_jsonl(curated_dir / "source-assertions.jsonl")
+        if row.get("source_system") not in MANUAL_CREDIT_SOURCE_SYSTEMS
+    ]
     games = _entity_index(read_jsonl(curated_dir / "games.jsonl"), "game_id", "canonical_title")
     people = _entity_index(read_jsonl(curated_dir / "people.jsonl"), "person_id", "canonical_name")
     organisations = _entity_index(read_jsonl(curated_dir / "organisations.jsonl"), "organisation_id", "canonical_name")

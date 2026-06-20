@@ -29,6 +29,7 @@ SCHEMA_MAP = {
     "photo-identifications.jsonl": "photo-identification.schema.json",
     "source-assertions.jsonl": "source-assertion.schema.json",
     "external-identifiers.jsonl": "external-identifier.schema.json",
+    "entity-match-decisions.jsonl": "entity-match-decision.schema.json",
 }
 PRIMARY_IDS = {
     "publications.jsonl": "publication_id",
@@ -48,6 +49,7 @@ PRIMARY_IDS = {
     "photo-identifications.jsonl": "photo_identification_id",
     "source-assertions.jsonl": "assertion_id",
     "external-identifiers.jsonl": "external_id_record",
+    "entity-match-decisions.jsonl": "decision_id",
 }
 PAGE_INVENTORY_SCHEMA = "page-inventory.schema.json"
 

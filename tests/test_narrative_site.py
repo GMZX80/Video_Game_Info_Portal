@@ -73,6 +73,7 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     search_html = (tmp_path / "search/index.html").read_text(encoding="utf-8")
     research_html = (tmp_path / "research/index.html").read_text(encoding="utf-8")
     game_html = (tmp_path / "games/super-gran/index.html").read_text(encoding="utf-8")
+    phil_html = (tmp_path / "people/phil-scott/index.html").read_text(encoding="utf-8")
     search_index = json.loads((tmp_path / "assets/data/generated/narrative-search-index.json").read_text(encoding="utf-8"))
     public_search_index = json.loads((tmp_path / "assets/data/generated/public-search-index.json").read_text(encoding="utf-8"))
     mobygames_index = json.loads((tmp_path / "assets/data/generated/mobygames-index.json").read_text(encoding="utf-8"))
@@ -90,6 +91,8 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
         "MobyGames source record",
         "External source assertion",
         "External identifier",
+        "Local person credit graph",
+        "Local credit row",
     }
     assert mobygames_index["attribution"] == "Data by MobyGames.com"
     assert len(mobygames_index["records"]) == 25
@@ -99,6 +102,19 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert any(item["title"] == "Eutechnyx" and item["kind"] == "Public organisation record" for item in _search_matches(public_search_index["items"], "eutechnyx"))
     assert any(item["kind"] == "Public source record" and item["title"] == "Professor Graham Morgan staff profile" for item in _search_matches(public_search_index["items"], "graham morgan"))
     assert any(item["title"] == "Phil Scott person page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "phil scott mobygames"))
+    assert any(
+        item["title"] == "Phil Scott"
+        and item["kind"] == "Local person credit graph"
+        and "local credit rows" in item["summary"].lower()
+        for item in _search_matches(public_search_index["items"], "phil scott local")
+    )
+    assert any(
+        item["kind"] == "Local credit row"
+        and item["status"] == "candidate"
+        and "Phil Scott" in item["title"]
+        and "Trolls" in item["title"]
+        for item in _search_matches(public_search_index["items"], "phil scott trolls")
+    )
     assert any(item["title"] == "Tynesoft Computer Software company page" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "tynesoft mobygames"))
     assert any(item["title"] == "Command & Conquer: Red Alert DOS credits" and item["kind"] == "MobyGames source record" for item in _search_matches(public_search_index["items"], "red alert mobygames"))
     assert any(item["kind"] == "External source assertion" and item["status"] == "candidate" for item in _search_matches(public_search_index["items"], "tynesoft wikipedia"))
@@ -117,6 +133,11 @@ def test_narrative_dist_routes_and_search_index(tmp_path: Path):
     assert "evidence-drawer" in story_html
     assert "Magazine index entry" in game_html
     assert "Reviewed release" not in game_html
+    assert "Local credit rows" in phil_html
+    assert "Trolls" in phil_html
+    assert "Winter Olympiad &#39;88" in phil_html
+    assert "Candidate" in phil_html
+    assert "A credit does not establish employment" in phil_html
     assert "Search the public archive" in homepage_html
     assert "Search public archive" in homepage_html
     assert '<button type="submit">Search</button>' in homepage_html

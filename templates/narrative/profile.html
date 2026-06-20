@@ -11,6 +11,45 @@
   <div class="narrative-wrap profile-layout">
     <div class="article-body">
       {{ record.html|safe }}
+      {% if local_credit_graph and local_credit_graph.local_credits %}
+      <section class="local-credit-table" aria-labelledby="local-credit-heading">
+        <h2 id="local-credit-heading">Local credit rows</h2>
+        <p>These rows are imported into the local graph as reviewed secondary or candidate evidence. They do not establish employment or a complete bibliography.</p>
+        <div class="credit-table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Game</th>
+                <th scope="col">Role</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Status</th>
+                <th scope="col">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for credit in local_credit_graph.local_credits %}
+              <tr>
+                <td>{{ credit.game_title }}</td>
+                <td>{{ credit.role_as_printed|replace('_', ' ') }}</td>
+                <td>{{ credit.platforms|join(', ') if credit.platforms else 'Unspecified' }}</td>
+                <td><span class="credit-status">{{ credit.evidence_status|title }}</span></td>
+                <td>
+                  {% for source in credit.source_refs %}
+                    {% if source.url %}
+                    <a href="{{ source.url }}">{{ source.title }}</a>{% if not loop.last %}<br>{% endif %}
+                    {% else %}
+                    <span>{{ source.title }}</span>{% if not loop.last %}<br>{% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="credit-table-note">A credit does not establish employment. Candidate rows need corroboration before they become confirmed local facts.</p>
+      </section>
+      {% endif %}
     </div>
     <aside class="profile-aside">
       <h2>Editorial status</h2>

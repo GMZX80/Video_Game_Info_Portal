@@ -11,7 +11,7 @@ from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 import requests
 
-from .common import DEFAULT_USER_AGENT, REPORTS_DIR, ROOT, content_hash, stable_id, write_json
+from .common import DEFAULT_USER_AGENT, REPORTS_DIR, ROOT, content_hash, read_json, read_jsonl, stable_id, write_json, write_jsonl
 from .mobygames import MOBYGAMES_API_BASE, build_api_url
 
 DEFAULT_CACHE_DIR = ROOT / ".cache" / "mobygames-api"
@@ -271,7 +271,88 @@ def normalise_mobygames_platform_detail(
     }
 
 
-def write_missing_key_reports(reports_dir: Path = REPORTS_DIR, *, generated_at: str = DEFAULT_GENERATED_AT) -> None:
+def mobygames_credit_payload_to_assertions(payload: dict[str, Any], *, generated_at: str) -> list[dict[str, Any]]:
+    """Convert authorised API credit-like payloads to candidate source assertions.
+
+    The current adapter does not assume that the public API provides complete
+    person-credit lists. This helper is deliberately narrow: if a permitted API
+    response or fixture supplies credit rows, they enter the local graph as
+    secondary database assertions awaiting review.
+    """
+
+    game_id = payload.get("game_id", "")
+    title = str(payload.get("title", "")).strip()
+    platform = str(payload.get("platform", "")).strip()
+    assertions: list[dict[str, Any]] = []
+    for credit in payload.get("credits", []) or []:
+        if not isinstance(credit, dict):
+            continue
+        person_name = str(credit.get("person_name", "")).strip()
+        role = str(credit.get("role", "") or credit.get("role_as_printed", "")).strip()
+        if not title or not person_name or not role:
+            continue
+        source_url = sanitize_mobygames_url(str(credit.get("source_url", "") or payload.get("source_url", "")))
+        assertions.append({
+            "assertion_id": stable_id("assertion", "mobygames-api-credit", game_id, platform, person_name, role),
+            "source_item_id": stable_id("source-item", "mobygames-api-credit", game_id or title, platform or "all"),
+            "source_system": "mobygames-api",
+            "subject_type": "game",
+            "subject_label_as_printed": title,
+            "predicate": "credited_as",
+            "object_type": "person",
+            "object_label_as_printed": person_name,
+            "role_as_printed": role,
+            "date_as_printed": str(credit.get("date", "") or payload.get("release_date", "")),
+            "place_as_printed": "",
+            "platform_as_printed": platform,
+            "confidence": "MobyGames API credit payload; pending editorial reconciliation",
+            "assertion_status": "candidate",
+            "public_claim_status": "candidate",
+            "evidence_status": "secondary database credit",
+            "source_url": source_url,
+            "source_page_title": "MobyGames API credit payload",
+            "revision_id": "",
+            "permanent_url": "",
+            "license": "",
+            "attribution_required": False,
+            "notes": "MobyGames API-derived credit assertion; does not establish employment.",
+            "generated_at": generated_at,
+            "external_person_id": credit.get("person_id", ""),
+            "external_game_id": game_id,
+        })
+    return assertions
+
+
+def _seed_counts(
+    *,
+    sources_path: Path = ROOT / "data" / "sources.json",
+    people_path: Path = ROOT / "data" / "people.json",
+    games_path: Path = ROOT / "data" / "curated" / "games.jsonl",
+) -> dict[str, int]:
+    sources = read_json(sources_path, {"sources": []}).get("sources", [])
+    people = read_json(people_path, {"people": []}).get("people", [])
+    games = read_jsonl(games_path)
+    return {
+        "mobygames_source_links": sum(1 for row in sources if "mobygames.com" in str(row.get("url", ""))),
+        "people": len(people),
+        "games": len(games),
+    }
+
+
+def initialise_raw_dir(raw_dir: Path = ROOT / "data" / "raw" / "mobygames") -> None:
+    write_jsonl(raw_dir / "issues.jsonl", [])
+    write_jsonl(raw_dir / "source-items.jsonl", [])
+    write_jsonl(raw_dir / "source-assertions.jsonl", [])
+    write_jsonl(raw_dir / "external-identifiers.jsonl", [])
+
+
+def write_missing_key_reports(
+    reports_dir: Path = REPORTS_DIR,
+    *,
+    generated_at: str = DEFAULT_GENERATED_AT,
+    seed_counts: dict[str, int] | None = None,
+) -> None:
+    seed_counts = seed_counts or _seed_counts()
     reports_dir.mkdir(parents=True, exist_ok=True)
     (reports_dir / "mobygames-api-coverage.md").write_text(
         "\n".join([
@@ -283,7 +364,25 @@ def write_missing_key_reports(reports_dir: Path = REPORTS_DIR, *, generated_at: 
             "",
             "The adapter uses the official API only. It does not scrape MobyGames HTML pages.",
             "",
+            f"Seeded MobyGames source links available locally: {seed_counts.get('mobygames_source_links', 0)}",
+            f"People seed rows available locally: {seed_counts.get('people', 0)}",
+            f"Game title seed rows available locally: {seed_counts.get('games', 0)}",
+            "",
             "Current API documentation exposes game search and game/platform release endpoints. Person-credit import remains a limitation unless an authorised API endpoint, licensed export, or manual CSV is supplied.",
+        ]) + "\n",
+        encoding="utf-8",
+    )
+    (reports_dir / "mobygames-person-credit-coverage.md").write_text(
+        "\n".join([
+            "# MobyGames Person Credit Coverage",
+            "",
+            f"Generated: {generated_at}",
+            "",
+            "No MobyGames person-credit rows were imported in this run.",
+            "",
+            "Reason: MobyGames API key missing or person-credit endpoint coverage not available to this adapter.",
+            "",
+            "Permitted fallback: populate `data/manual/mobygames-person-credit-import.csv` and keep rows as secondary database credit assertions until reviewed.",
         ]) + "\n",
         encoding="utf-8",
     )
@@ -304,6 +403,8 @@ def write_missing_key_reports(reports_dir: Path = REPORTS_DIR, *, generated_at: 
     for filename, fieldnames, row in [
         ("mobygames-title-matches.csv", ["query_title", "moby_game_id", "title", "match_confidence", "match_reason", "match_status"], None),
         ("mobygames-unresolved-matches.csv", ["query_title", "reason"], None),
+        ("mobygames-unresolved-people.csv", ["person_name", "reason"], {"person_name": "all", "reason": "MOBYGAMES_API_KEY not set; person-credit import not run"}),
+        ("mobygames-unresolved-games.csv", ["game_title", "reason"], {"game_title": "all", "reason": "MOBYGAMES_API_KEY not set; title reconciliation not run"}),
         ("mobygames-api-failures.csv", ["endpoint", "status", "reason"], {"endpoint": "all", "status": "missing_api_key", "reason": "MOBYGAMES_API_KEY not set"}),
     ]:
         with (reports_dir / filename).open("w", encoding="utf-8", newline="") as handle:
@@ -317,12 +418,24 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run MobyGames API title discovery without scraping HTML.")
     parser.add_argument("--reports-dir", default=str(REPORTS_DIR))
     parser.add_argument("--generated-at", default=DEFAULT_GENERATED_AT)
+    parser.add_argument("--resume", action="store_true", help="Reuse cached MobyGames API responses where available.")
+    parser.add_argument("--dry-run", action="store_true", help="Report seed counts and initialise raw files without making API requests.")
+    parser.add_argument("--sources", default=str(ROOT / "data" / "sources.json"))
+    parser.add_argument("--people", default=str(ROOT / "data" / "people.json"))
+    parser.add_argument("--games", default=str(ROOT / "data" / "curated" / "games.jsonl"))
+    parser.add_argument("--raw-dir", default=str(ROOT / "data" / "raw" / "mobygames"))
     args = parser.parse_args()
+    seed_counts = _seed_counts(sources_path=Path(args.sources), people_path=Path(args.people), games_path=Path(args.games))
+    initialise_raw_dir(Path(args.raw_dir))
+    if args.dry_run:
+        write_missing_key_reports(Path(args.reports_dir), generated_at=args.generated_at, seed_counts=seed_counts)
+        print({"dry_run": True, **seed_counts})
+        return
     if not os.environ.get("MOBYGAMES_API_KEY"):
-        write_missing_key_reports(Path(args.reports_dir), generated_at=args.generated_at)
+        write_missing_key_reports(Path(args.reports_dir), generated_at=args.generated_at, seed_counts=seed_counts)
         print("MobyGames API key missing; wrote limitation reports.")
         return
-    print("MobyGames API key available. Use adapter methods from a curated seed script for live imports.")
+    print({"mobygames_api_key_available": True, "resume": args.resume, **seed_counts})
 
 
 if __name__ == "__main__":

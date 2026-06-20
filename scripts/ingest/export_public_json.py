@@ -4,7 +4,8 @@ import argparse
 from pathlib import Path
 from typing import Any
 
-from .common import CURATED_DIR, GENERATED_DIR, read_jsonl, write_json
+from .common import CURATED_DIR, GENERATED_DIR, read_json, read_jsonl, write_json
+from .local_credit_graph import build_people_public_records, public_credits_from_people
 from .mobygames import export_mobygames_index
 
 PUBLIC_STATUSES = {"verified", "strongly supported"}
@@ -63,8 +64,16 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
     organisations = read_jsonl(curated_dir / "organisations.jsonl")
     people = read_jsonl(curated_dir / "people.jsonl")
     evidence = read_jsonl(curated_dir / "evidence.jsonl")
+    credits = read_jsonl(curated_dir / "credits.jsonl")
     source_assertions = read_jsonl(curated_dir / "source-assertions.jsonl")
     external_identifiers = read_jsonl(curated_dir / "external-identifiers.jsonl")
+    research_people_public = build_people_public_records(
+        read_json(curated_dir.parent / "people.json", {"people": []}),
+        read_json(curated_dir.parent / "sources.json", {"sources": []}),
+        credits,
+        source_assertions,
+    )
+    local_research_credits = public_credits_from_people(research_people_public)
     payload = {
         "generated_at": "2026-06-18",
         "qualification": "Only verified or strongly supported connections appear in confirmed results. Publisher/index-only records are labelled as probable or candidate until record-level source inspection supports the North East claim.",
@@ -164,12 +173,16 @@ def export_public_json(curated_dir: Path = CURATED_DIR, out_dir: Path = GENERATE
         "records": public_external_identifiers,
     })
     write_json(out_dir / "games-public.json", {"games": games})
-    write_json(out_dir / "people-public.json", {"people": people})
+    write_json(out_dir / "people-public.json", {
+        "record_scope": "Local public person credit graph. Local credits and candidate external credits are labelled separately.",
+        "people": research_people_public,
+    })
     write_json(out_dir / "organisations-public.json", {"organisations": organisations})
     write_json(out_dir / "releases-public.json", {"releases": public_releases})
-    write_json(out_dir / "credits-public.json", {"credits": read_jsonl(curated_dir / "credits.jsonl")})
+    write_json(out_dir / "credits-public.json", {"credits": [*credits, *local_research_credits]})
     write_json(out_dir / "places-public.json", {"places": read_jsonl(curated_dir / "places.jsonl")})
     write_json(out_dir / "source-trail-public.json", {"source_items": source_items, "evidence": evidence})
+    write_json(out_dir / "source-trails-public.json", {"source_items": source_items, "evidence": evidence})
     mobygames = export_mobygames_index(CURATED_DIR.parent / "sources.json", out_dir / "mobygames-index.json")
     write_json(out_dir / "timeline-events.json", {"events": []})
     write_json(out_dir / "search-index.json", {

@@ -28,16 +28,16 @@ Candidate source assertions are searchable as `External source assertion`. They 
 
 After the seed import and static rebuild:
 
-- Total public search items: 39,826
-- External source assertions: 10,589
+- Total public search items: 39,891
+- External source assertions: 10,590
 - External identifiers: 1,896
-- Magazine/source records: 15,424
+- Magazine/source records: 15,425
 - Game index records: 8,467
 - Organisation index records: 2,099
 
 Example query counts:
 
-- `Phil Scott`: 6 public-search records
-- `Tynesoft`: 195 public-search records
-- `ZX Spectrum`: 12,126 public-search records
-- `Commodore 64`: 5,203 public-search records
+- `Phil Scott`: 13 public-search records
+- `Tynesoft`: 219 public-search records
+- `ZX Spectrum`: 12,132 public-search records
+- `Commodore 64`: 5,211 public-search records

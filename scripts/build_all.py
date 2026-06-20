@@ -8,8 +8,9 @@ from pathlib import Path
 from scripts.ingest import crash, globalnet, sinclair_user, zzap64
 from scripts.ingest.build_sqlite import DEFAULT_DB, build_database
 from scripts.ingest.classify_north_east import classify
-from scripts.ingest.common import CURATED_DIR, RAW_DIR, REPORTS_DIR, ROOT, read_jsonl
+from scripts.ingest.common import CURATED_DIR, RAW_DIR, REPORTS_DIR, ROOT, read_jsonl, write_jsonl
 from scripts.ingest.export_public_json import export_public_json
+from scripts.ingest.local_credit_graph import manual_mobygames_rows_to_assertions, manual_mobygames_rows_to_source_items
 from scripts.ingest.normalise import normalise
 from scripts.ingest.validate_data import validate_repository
 from scripts.reconcile_external_entities import reconcile_external_entities
@@ -72,7 +73,27 @@ def _write_reports(fetch_counts: dict[str, dict[str, int]], normalise_counts: di
     _write_empty_csv(REPORTS_DIR / "unresolved-credits.csv", ["source_item_id", "title", "reason"])
 
 
+def _build_manual_mobygames_import(generated_at: str = "2026-06-20") -> dict[str, int]:
+    assertions = manual_mobygames_rows_to_assertions(
+        ROOT / "data" / "manual" / "mobygames-person-credit-import.csv",
+        generated_at=generated_at,
+    )
+    source_items = manual_mobygames_rows_to_source_items(
+        ROOT / "data" / "manual" / "mobygames-person-credit-import.csv",
+        generated_at=generated_at,
+    )
+    raw_dir = RAW_DIR / "mobygames-manual"
+    write_jsonl(raw_dir / "source-items.jsonl", source_items, sort_key="source_item_id")
+    write_jsonl(raw_dir / "source-assertions.jsonl", assertions, sort_key="assertion_id")
+    for file_name in ["issues.jsonl", "external-identifiers.jsonl"]:
+        path = raw_dir / file_name
+        if not path.exists():
+            write_jsonl(path, [])
+    return {"source_items": len(source_items), "source_assertions": len(assertions)}
+
+
 def build_all(skip_fetch: bool = False, resume: bool = False) -> dict[str, object]:
+    manual_import_counts = _build_manual_mobygames_import()
     fetch_counts: dict[str, dict[str, int]] = {}
     if not skip_fetch:
         fetch_counts["sinclair-user"] = sinclair_user.run(indexes_only=True, resume=resume)
@@ -106,6 +127,7 @@ def build_all(skip_fetch: bool = False, resume: bool = False) -> dict[str, objec
     return {
         "fetch": fetch_counts,
         "normalise": normalise_counts,
+        "manual_mobygames_import": manual_import_counts,
         "classify": classify_counts,
         "reconcile": reconcile_counts,
         "external_reconcile": external_reconcile_counts,

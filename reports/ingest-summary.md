@@ -6,13 +6,15 @@ Generated: 2026-06-18
 | --- | ---: | ---: | ---: |
 | crash | 98 | 1381 | 0 |
 | globalnet | 58 | 7575 | 0 |
+| mobygames | 0 | 0 | 0 |
+| mobygames-manual | 0 | 1 | 0 |
 | sinclair-user | 133 | 1375 | 0 |
 | stairway | 0 | 801 | 0 |
 | wikipedia-platform-lists | 0 | 4178 | 0 |
 | zzap64 | 40 | 145 | 0 |
 
 Canonical issues: 329
-Canonical source items: 15424
+Canonical source items: 15425
 Canonical games: 8467
 Canonical releases: 715
 North East candidates: 68

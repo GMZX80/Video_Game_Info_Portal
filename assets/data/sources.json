@@ -458,6 +458,34 @@
       "notes": "Supports Zeppelin/Merit/Eutechnyx name-chain checks where record matches."
     },
     {
+      "id": "mobygames-phil-scott",
+      "title": "Phil Scott person page",
+      "author": "MobyGames",
+      "publication": "MobyGames",
+      "date": "current database record",
+      "url": "https://www.mobygames.com/person/54278/phil-scott/",
+      "type": "Credits database link",
+      "contemporaneity": "secondary database",
+      "geography": "External database",
+      "rights": "Link and paraphrase only",
+      "accessed": "2026-06-20",
+      "notes": "Link-only public provenance until an authorised API or manual credit import creates reviewed local assertions."
+    },
+    {
+      "id": "mobygames-trolls",
+      "title": "Trolls MobyGames page",
+      "author": "MobyGames",
+      "publication": "MobyGames",
+      "date": "current database record",
+      "url": "https://www.mobygames.com/game/trolls",
+      "type": "Game credits database link",
+      "contemporaneity": "secondary database",
+      "geography": "External database",
+      "rights": "Link and paraphrase only",
+      "accessed": "2026-06-20",
+      "notes": "Link-only public provenance; does not by itself create imported local credits."
+    },
+    {
       "id": "epic-pitbull",
       "title": "Epic Games is opening a studio in the UK",
       "author": "Mike Rose",

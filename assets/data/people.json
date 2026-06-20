@@ -109,6 +109,15 @@
       "sources": ["supplied-lineage-poster"]
     },
     {
+      "id": "phil-scott",
+      "name": "Phil Scott",
+      "role": "Tynesoft and later-career credit lead",
+      "summary": "Local research data links Phil Scott to Tynesoft and later secondary database credit leads, but the local credit graph remains incomplete.",
+      "practice": "Show local credits and candidate external assertions separately; do not infer employment or a complete bibliography from link-only sources.",
+      "evidence": "Provisional",
+      "sources": ["mobygames-phil-scott", "mobygames-trolls", "stairway-tynesoft-boys-club"]
+    },
+    {
       "id": "robert-troughton",
       "name": "Robert Troughton",
       "role": "founder / later Teesside line",

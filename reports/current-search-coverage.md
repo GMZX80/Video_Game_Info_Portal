@@ -4,9 +4,9 @@ Generated: 2026-06-20
 
 ## Public Search Index
 
-- Total items: 39,826
-- Magazine/source records: 15,424
-- External source assertions: 10,589
+- Total items: 39,891
+- Magazine/source records: 15,425
+- External source assertions: 10,590
 - Game index records: 8,467
 - Organisation index records: 2,099
 - External identifiers: 1,896
@@ -17,10 +17,10 @@ Generated: 2026-06-20
 
 | Query | Public-search records | Notes |
 | --- | ---: | --- |
-| Phil Scott | 6 | Includes internal research person, MobyGames curated links, and a Wikipedia seed assertion for `Winter Olympiad '88`. |
-| Tynesoft | 195 | Includes internal records, magazine/source records, releases, and 9 Wikipedia seed assertions. |
-| ZX Spectrum | 12,126 | Includes Wikipedia seed assertions plus existing magazine/source records. |
-| Commodore 64 | 5,203 | Includes Wikipedia seed assertions plus existing C64-focused records. |
+| Phil Scott | 13 | Includes internal research person, MobyGames curated links, a local person credit graph, two local candidate credit rows, and candidate source assertions. |
+| Tynesoft | 219 | Includes internal records, magazine/source records, releases, and Wikipedia seed assertions. |
+| ZX Spectrum | 12,132 | Includes Wikipedia seed assertions plus existing magazine/source records. |
+| Commodore 64 | 5,211 | Includes Wikipedia seed assertions plus existing C64-focused records. |
 
 ## Caveat
 

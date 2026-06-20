@@ -331,3 +331,50 @@ def test_external_reconciliation_queues_duplicates_without_merging(tmp_path: Pat
     assert len(rows) == 2
     assert {row["suggested_action"] for row in rows} == {"review-existing-match"}
     assert all(row["decision"] == "unresolved" for row in rows)
+
+
+def test_external_reconciliation_skips_reviewed_manual_credit_assertions(tmp_path: Path):
+    curated = tmp_path / "data" / "curated"
+    reports = tmp_path / "reports"
+    write_jsonl(curated / "games.jsonl", [
+        {"game_id": "game:trolls", "canonical_title": "Trolls", "title_variants": [], "sources": []}
+    ])
+    write_jsonl(curated / "people.jsonl", [])
+    write_jsonl(curated / "organisations.jsonl", [])
+    write_jsonl(curated / "source-assertions.jsonl", [
+        {
+            "assertion_id": "assertion:mobygames-manual-credit:phil-scott:trolls",
+            "source_item_id": "source-item:mobygames-manual-credit:trolls",
+            "source_system": "mobygames-manual-credit",
+            "subject_type": "game",
+            "subject_label_as_printed": "Trolls",
+            "predicate": "credited_as",
+            "object_type": "person",
+            "object_label_as_printed": "Phil Scott",
+            "confidence": "manual import pending editorial reconciliation",
+            "assertion_status": "candidate",
+            "public_claim_status": "candidate",
+        },
+        {
+            "assertion_id": "assertion:wikipedia:trolls:title",
+            "source_item_id": "source-item:wikipedia:trolls",
+            "source_system": "wikipedia",
+            "subject_type": "game",
+            "subject_label_as_printed": "Trolls",
+            "predicate": "title_seed",
+            "object_type": "game",
+            "object_label_as_printed": "Trolls",
+            "confidence": "secondary seed",
+            "assertion_status": "candidate",
+            "public_claim_status": "candidate",
+        },
+    ])
+    write_jsonl(curated / "external-identifiers.jsonl", [])
+
+    counts = reconcile_external_entities(curated, reports)
+
+    assert counts["game_candidates"] == 1
+    assert counts["person_candidates"] == 0
+    with (reports / "reconciliation-queue-games.csv").open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    assert [row["external_record"] for row in rows] == ["assertion:wikipedia:trolls:title"]

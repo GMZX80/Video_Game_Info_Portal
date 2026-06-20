@@ -31,6 +31,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/data/generated/source-assertions-public.json`
 - `assets/data/generated/source-items-index.json`
 - `assets/data/generated/source-trail-public.json`
+- `assets/data/generated/source-trails-public.json`
 - `assets/data/generated/timeline-events.json`
 - `assets/data/organisations.json`
 - `assets/data/people.json`
@@ -63,6 +64,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `north-east-collection.html`
 - `people/gary-partis/index.html`
 - `people/index.html`
+- `people/phil-scott/index.html`
 - `phase-0/index.html`
 - `places/blaydon/index.html`
 - `places/index.html`
