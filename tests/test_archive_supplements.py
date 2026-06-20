@@ -4,6 +4,7 @@ from scripts.ingest.sinclair_supplement import (
     parse_unlinked_software_entries,
 )
 from scripts.ingest.stairway_supplement import parse_tynesoft_group_captions
+from scripts.ingest.archive_postprocess import parse_tynesoft_caption_testimony
 
 
 def test_discover_physical_issues_preserves_second_issue_58():
@@ -85,3 +86,50 @@ def test_tynesoft_group_caption_is_recorded_as_testimony():
     assert "No visual identification" in identities[0]["notes"]
     assert len(media) == 2
     assert media[0]["permission_status"] == "not established"
+
+
+def test_tynesoft_caption_parser_handles_actual_stairway_html_structure():
+    html = """
+    <p><center><font>Tynesoft Staff: Image
+    1<br><a href="img/article-kblake/Tynesoft1.jpg">Click here for larger image</a></font></center></p>
+    <p><font>Left to right as follows ...</font></p>
+    <p><b><font>Mike Landruff</font></b><font> aka <b>Mikbox 'I have the girth'</b>
+    <i>(Artist)</i><br>Settled down now.</font></p>
+    <p><b><font>Bruce Nesbitt</font></b><font> <i>(Programmer)</i><br>
+    More recently co-authored Z.<br><br>
+    <b>Paul Drummond</b> <i>(Artist)<br></i>After Tynesoft worked for Flair.</font></p>
+    <p><b><font>Phil Scott</font></b><font> <i>(Artist/Programmer)<br></i>A mere child in this pic.</font></p>
+    <p><center><font>Tynesoft Staff: Image
+    2<br></font><a href="img/article-kblake/Tynesoft2.jpg">Click here for larger image</a></center></p>
+    <p><font>Bottom left<br></font><b><font>Brian Jobling</font></b><font>
+    <i>(Atari and other 8-bit programmer)<br></i>Went on to own Zepplin Games.<br><br>
+    </font><font>Middle Right<br></font><b><font>Julian Jameson</font></b><font>
+    <i>(C16 programmer)</i><br>Known for Cannon Fodder.</font></p>
+    """
+
+    identities, media = parse_tynesoft_caption_testimony(
+        html,
+        "https://www.stairwaytohell.com/articles/KBlake.html",
+        accessed_at="2026-06-19",
+    )
+
+    assert [row["name_as_printed"] for row in identities] == [
+        "Mike Landruff",
+        "Bruce Nesbitt",
+        "Paul Drummond",
+        "Phil Scott",
+        "Brian Jobling",
+        "Julian Jameson",
+    ]
+    assert [row["role_as_printed"] for row in identities] == [
+        "Artist",
+        "Programmer",
+        "Artist",
+        "Artist/Programmer",
+        "Atari and other 8-bit programmer",
+        "C16 programmer",
+    ]
+    assert identities[-2]["position_description"] == "Bottom left"
+    assert identities[-1]["position_description"] == "Middle Right"
+    assert identities[0]["verification_status"] == "unconfirmed pending independent corroboration"
+    assert len(media) == 2

@@ -5,9 +5,19 @@ on:
   push:
     branches: [main, codex/magazine-evidence-datastore]
   workflow_dispatch:
+    inputs:
+      refresh_detailed_archives:
+        description: Run the external detailed archive refresh and commit results to the research branch
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
+
+concurrency:
+  group: validation-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -46,9 +56,8 @@ jobs:
 
   refresh-detailed-archives:
     if: >-
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/codex/magazine-evidence-datastore' &&
-      contains(github.event.head_commit.message, '[deep-archive-refresh]')
+      github.event_name == 'workflow_dispatch' &&
+      inputs.refresh_detailed_archives == true
     runs-on: ubuntu-latest
     timeout-minutes: 180
     permissions:
@@ -72,7 +81,7 @@ jobs:
         run: python -m pytest -q
 
       - name: Capture detailed Sinclair User and Stairway metadata
-        run: python -m scripts.ingest.run_detailed --max-pages 1200 --include-catalogues
+        run: python -m scripts.ingest.run_detailed --resume --include-catalogues --accessed-date 2026-06-19
 
       - name: Build clean Pages artefact
         run: python -m scripts.build_dist

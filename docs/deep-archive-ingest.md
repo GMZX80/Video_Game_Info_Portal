@@ -166,7 +166,7 @@ After fetching, the detailed runner:
 6. reruns North East candidate classification;
 7. rebuilds SQLite and public JSON;
 8. validates the repository;
-9. writes `reports/deep-ingest-summary.md`.
+9. writes the deterministic ingest and post-processing audit reports under `reports/`.
 
 ## Review rules
 
@@ -194,4 +194,4 @@ The refresh workflow:
 - validates the static site;
 - commits changed metadata back to the research branch.
 
-The workflow must be reviewed before it is enabled on `main`, particularly its page limit, duration and permission to commit generated metadata.
+The refresh job is `workflow_dispatch` only. It runs only when the `refresh_detailed_archives` input is set, and ordinary pull-request validation continues to use committed raw records with `python -m scripts.build_all --skip-fetch`.

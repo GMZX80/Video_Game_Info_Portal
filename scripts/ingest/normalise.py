@@ -177,6 +177,7 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
     issues: list[dict[str, Any]] = []
     source_items: list[dict[str, Any]] = []
     raw_photo_identifications: list[dict[str, Any]] = []
+    raw_media_assets: list[dict[str, Any]] = []
     for archive_dir in sorted(raw_dir.glob("*")):
         if not archive_dir.is_dir():
             continue
@@ -199,6 +200,7 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
         for row in read_jsonl(archive_dir / "source-items.jsonl"):
             source_items.append(_normalised_source_item(row))
         raw_photo_identifications.extend(read_jsonl(archive_dir / "photo-identifications.jsonl"))
+        raw_media_assets.extend(read_jsonl(archive_dir / "media-assets.jsonl"))
 
     source_items = _dedupe(source_items, "source_item_id")
 
@@ -361,6 +363,11 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
         sort_key="photo_identification_id",
     )
     write_jsonl(
+        curated_dir / "media-assets.jsonl",
+        _dedupe(raw_media_assets, "media_id"),
+        sort_key="media_id",
+    )
+    write_jsonl(
         curated_dir / "platforms.jsonl",
         [{"platform_id": pid, "name": name, "aliases": aliases} for pid, name, aliases in PLATFORMS],
         sort_key="platform_id",
@@ -370,7 +377,7 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
         [{"place_id": pid, "name": name, "aliases": aliases, "region": region} for pid, name, aliases, region in PLACES],
         sort_key="place_id",
     )
-    for file_name in ["claims", "evidence", "north-east-connections", "aliases", "media-assets", "relationships"]:
+    for file_name in ["claims", "evidence", "north-east-connections", "aliases", "relationships"]:
         path = curated_dir / f"{file_name}.jsonl"
         if not path.exists():
             write_jsonl(path, [])
@@ -383,6 +390,7 @@ def normalise(raw_dir: Path = RAW_DIR, curated_dir: Path = CURATED_DIR) -> dict[
         "people": len(_dedupe(people, "person_id")),
         "credits": len(_dedupe(credits, "credit_id")),
         "photo_identifications": len(_dedupe(raw_photo_identifications, "photo_identification_id")),
+        "media_assets": len(_dedupe(raw_media_assets, "media_id")),
     }
 
 

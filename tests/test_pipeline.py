@@ -5,6 +5,7 @@ from pathlib import Path
 from scripts.ingest.build_sqlite import build_database
 from scripts.ingest.classify_north_east import classify_records
 from scripts.ingest.export_public_json import export_public_json
+from scripts.ingest.normalise import normalise
 from scripts.ingest.validate_data import validate_repository
 
 
@@ -82,3 +83,65 @@ def test_validate_repository_enforces_public_connection_evidence(tmp_path: Path)
     failures = validate_repository(tmp_path)
 
     assert any("public North East connection lacks evidence" in failure for failure in failures)
+
+
+def test_normalise_preserves_raw_media_asset_metadata(tmp_path: Path):
+    raw = tmp_path / "data" / "raw"
+    curated = tmp_path / "data" / "curated"
+    stairway = raw / "stairway"
+    write_jsonl(stairway / "issues.jsonl", [])
+    write_jsonl(stairway / "source-items.jsonl", [])
+    write_jsonl(stairway / "photo-identifications.jsonl", [])
+    write_jsonl(stairway / "media-assets.jsonl", [
+        {
+            "media_id": "media:tynesoft-staff-image-1",
+            "media_type": "photograph",
+            "title": "Tynesoft Staff Image 1",
+            "source_item_id": "source-item:stairway:kblake",
+            "source_url": "https://www.stairwaytohell.com/articles/KBlake.html",
+            "permission_status": "not established",
+            "public_use_status": "research metadata only",
+        }
+    ])
+
+    counts = normalise(raw, curated)
+    media = json.loads((curated / "media-assets.jsonl").read_text(encoding="utf-8").splitlines()[0])
+
+    assert counts["media_assets"] == 1
+    assert media["media_id"] == "media:tynesoft-staff-image-1"
+    assert media["public_use_status"] == "research metadata only"
+
+
+def test_validate_repository_enforces_media_and_photo_references(tmp_path: Path):
+    curated = tmp_path / "data" / "curated"
+    schemas = tmp_path / "data" / "schemas"
+    schemas.mkdir(parents=True)
+    write_jsonl(curated / "source-items.jsonl", [])
+    write_jsonl(curated / "media-assets.jsonl", [
+        {
+            "media_id": "media:missing-source",
+            "media_type": "photograph",
+            "title": "Missing source",
+            "source_item_id": "source-item:missing",
+            "source_url": "https://example.test/photo",
+            "permission_status": "not established",
+            "public_use_status": "research metadata only",
+        }
+    ])
+    write_jsonl(curated / "photo-identifications.jsonl", [
+        {
+            "photo_identification_id": "photo-identification:missing",
+            "media_id": "media:missing-media",
+            "source_item_id": "source-item:missing",
+            "name_as_printed": "A. Person",
+            "evidence_status": "first-person retrospective testimony",
+            "verification_status": "verified",
+            "public_visibility": "public",
+        }
+    ])
+
+    failures = validate_repository(tmp_path)
+
+    assert any("media asset references missing source" in failure for failure in failures)
+    assert any("photo identification references missing media" in failure for failure in failures)
+    assert any("photograph testimony exported as verified" in failure for failure in failures)

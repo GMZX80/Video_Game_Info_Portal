@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from bs4 import BeautifulSoup
+
 from .common import (
     CURATED_DIR,
     RAW_DIR,
@@ -26,6 +28,7 @@ IMAGE_COMBINED_RE = re.compile(r"Tynesoft\s+Staff\s*:\s*Image\s*(\d+)", re.I)
 IMAGE_ONLY_RE = re.compile(r"^Image\s*(\d+)$", re.I)
 ROLE_RE = re.compile(r"^(.+?)\s*\(([^()]{2,120})\)\s*$")
 PAREN_ROLE_RE = re.compile(r"^\(([^()]{2,120})\)\s*$")
+POSITION_LABELS = ("Bottom left", "Middle Right")
 
 
 def _clean(value: Any) -> str:
@@ -63,6 +66,40 @@ def _normalise_caption_lines(html: str) -> list[str]:
     return result
 
 
+def _role_text_after_name(name_tag: Any) -> str:
+    role_tag = name_tag.find_next("i")
+    if not role_tag or role_tag.find_parent("p") != name_tag.find_parent("p"):
+        return ""
+    return _clean(role_tag.get_text(" ", strip=True)).strip("() ")
+
+
+def _is_alias_name_tag(name_tag: Any) -> bool:
+    previous_parts: list[str] = []
+    sibling = name_tag.previous_sibling
+    while sibling is not None:
+        if getattr(sibling, "name", None) == "b":
+            break
+        if isinstance(sibling, str):
+            previous_parts.append(sibling)
+        elif hasattr(sibling, "get_text"):
+            previous_parts.append(sibling.get_text(" ", strip=True))
+        sibling = sibling.previous_sibling
+    previous = _clean(" ".join(reversed(previous_parts))).lower()
+    return previous.endswith("aka") or previous.endswith("aka:")
+
+
+def _position_before_name(paragraph_text: str, name: str, pending_position: str) -> str:
+    name_index = paragraph_text.find(name)
+    if name_index < 0:
+        return pending_position
+    candidates = [
+        label
+        for label in POSITION_LABELS
+        if (index := paragraph_text.lower().rfind(label.lower(), 0, name_index)) >= 0
+    ]
+    return candidates[-1] if candidates else pending_position
+
+
 def parse_tynesoft_caption_testimony(
     html: str,
     url: str = TYNESOFT_ARTICLE_URL,
@@ -71,7 +108,7 @@ def parse_tynesoft_caption_testimony(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """Parse printed caption testimony without identifying anyone by appearance."""
 
-    lines = _normalise_caption_lines(html)
+    soup = BeautifulSoup(html, "html.parser")
     source_item_id = stable_id("source-item", "stairway", url)
     identities: list[dict[str, Any]] = []
     media: list[dict[str, Any]] = []
@@ -79,13 +116,22 @@ def parse_tynesoft_caption_testimony(
     current_order = 0
     pending_position = ""
 
-    for line in lines:
-        image_match = IMAGE_COMBINED_RE.search(line)
+    for paragraph in soup.find_all("p"):
+        paragraph_text = _clean(paragraph.get_text(" ", strip=True))
+        image_match = IMAGE_COMBINED_RE.search(paragraph_text)
         if image_match:
             image_number = image_match.group(1)
             current_image = f"tynesoft-staff-image-{image_number}"
             current_order = 0
             pending_position = ""
+            image_link = next(
+                (
+                    canonical_url(link.get("href", ""), url)
+                    for link in paragraph.find_all("a", href=True)
+                    if "tynesoft" in link.get("href", "").lower()
+                ),
+                "",
+            )
             if not any(row["media_id"] == stable_id("media", current_image) for row in media):
                 media.append(
                     {
@@ -94,12 +140,18 @@ def parse_tynesoft_caption_testimony(
                         "title": f"Tynesoft Staff Image {image_number}",
                         "source_item_id": source_item_id,
                         "source_url": canonical_url(url),
+                        "source_page": canonical_url(url),
+                        "original_caption": f"Tynesoft Staff: Image {image_number}",
                         "original_context": "Tynesoft Boys Club Part One",
                         "date_as_reported": "c. 1987, according to Kevin Blake's retrospective caption",
                         "photographer_as_reported": "Kevin Blake recalls taking Image 1; Image 2 is not independently established",
                         "rights_holder": "unknown",
                         "permission_status": "not established",
+                        "archive_host": "Stairway To Hell",
+                        "image_url": image_link,
+                        "local_project_copy_exists": False,
                         "public_use_status": "research metadata only",
+                        "public_export_status": "withheld - rights not established",
                         "notes": "The ingest records caption evidence only and does not copy the photograph.",
                     }
                 )
@@ -107,49 +159,57 @@ def parse_tynesoft_caption_testimony(
 
         if not current_image:
             continue
-        lower = line.lower()
+        lower = paragraph_text.lower()
         if lower.startswith("follow up from david croft") or lower.startswith("photos from gary partis"):
             current_image = ""
             continue
-        if lower in {"bottom left", "middle right"}:
-            pending_position = line
-            continue
 
-        role_match = ROLE_RE.match(line)
-        if not role_match:
-            continue
-        name_as_printed = _clean(role_match.group(1))
-        role_as_printed = _clean(role_match.group(2))
-        if not name_as_printed or name_as_printed.lower().startswith("image"):
-            continue
+        for label in POSITION_LABELS:
+            if lower == label.lower():
+                pending_position = label
+                break
 
-        current_order += 1
-        identities.append(
-            {
-                "photo_identification_id": stable_id(
-                    "photo-identification",
-                    current_image,
-                    current_order,
-                    name_as_printed,
-                ),
-                "photo_id": stable_id("photo", current_image),
-                "media_id": stable_id("media", current_image),
-                "source_item_id": source_item_id,
-                "position_order": current_order,
-                "position_description": pending_position or "left-to-right order as printed by Kevin Blake",
-                "name_as_printed": name_as_printed,
-                "primary_name_as_printed": _primary_name(name_as_printed),
-                "role_as_printed": role_as_printed,
-                "identification_method": "Kevin Blake retrospective caption on Stairway To Hell",
-                "evidence_status": "first-person retrospective testimony",
-                "verification_status": "unconfirmed pending independent corroboration",
-                "public_visibility": "research-only",
-                "accessed_at": accessed_at,
-                "source_url": canonical_url(url),
-                "notes": "No visual identification, facial recognition or comparison by appearance was used.",
-            }
-        )
-        pending_position = ""
+        for name_tag in paragraph.find_all("b"):
+            if _is_alias_name_tag(name_tag):
+                continue
+            name_as_printed = _clean(name_tag.get_text(" ", strip=True))
+            role_as_printed = _role_text_after_name(name_tag)
+            if not name_as_printed or not role_as_printed:
+                continue
+            if name_as_printed.lower().startswith(("image", "click here")):
+                continue
+
+            current_order += 1
+            position = _position_before_name(paragraph_text, name_as_printed, pending_position)
+            identities.append(
+                {
+                    "photo_identification_id": stable_id(
+                        "photo-identification",
+                        current_image,
+                        current_order,
+                        name_as_printed,
+                    ),
+                    "photo_id": stable_id("photo", current_image),
+                    "media_id": stable_id("media", current_image),
+                    "source_item_id": source_item_id,
+                    "position_order": current_order,
+                    "position_description": position or "left-to-right order as printed by Kevin Blake",
+                    "name_as_printed": name_as_printed,
+                    "primary_name_as_printed": _primary_name(name_as_printed),
+                    "role_as_printed": role_as_printed,
+                    "identification_method": "Kevin Blake retrospective caption on Stairway To Hell",
+                    "evidence_status": "first-person retrospective testimony",
+                    "evidence_type": "caption testimony",
+                    "verification_status": "unconfirmed pending independent corroboration",
+                    "corroboration_status": "uncorroborated",
+                    "public_visibility": "research-only",
+                    "accessed_at": accessed_at,
+                    "source_url": canonical_url(url),
+                    "editorial_notes": "No visual identification, facial recognition or comparison by appearance was used.",
+                    "notes": "No visual identification, facial recognition or comparison by appearance was used.",
+                }
+            )
+            pending_position = ""
 
     return identities, media
 
@@ -237,7 +297,11 @@ def write_audit(
     photo_results: dict[str, int],
     sinclair_results: dict[str, int],
 ) -> None:
-    identities = read_jsonl(RAW_DIR / "stairway" / "photo-identifications.jsonl")
+    identities = sorted(
+        read_jsonl(RAW_DIR / "stairway" / "photo-identifications.jsonl"),
+        key=lambda row: (row.get("media_id", ""), int(row.get("position_order", 0) or 0), row.get("name_as_printed", "")),
+    )
+    media_assets = sorted(read_jsonl(RAW_DIR / "stairway" / "media-assets.jsonl"), key=lambda row: row.get("media_id", ""))
     lines = [
         "# Archive post-processing audit",
         "",
@@ -270,3 +334,63 @@ def write_audit(
     )
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     (REPORTS_DIR / "archive-postprocess-audit.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    photo_lines = [
+        "# Tynesoft photograph identification audit",
+        "",
+        "Generated: 2026-06-19",
+        "",
+        "Source inspected: https://www.stairwaytohell.com/articles/KBlake.html",
+        "",
+        "The parser records Kevin Blake's retrospective caption testimony only. It does not perform visual identification, facial recognition or comparison by appearance, and it does not copy or republish the photographs.",
+        "",
+        "## Photographs located",
+        "",
+        "| Media ID | Original caption | Image URL | Permission status | Public export status |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for row in media_assets:
+        photo_lines.append(
+            f"| {row.get('media_id', '')} | {row.get('original_caption', '')} | {row.get('image_url', '')} | {row.get('permission_status', '')} | {row.get('public_export_status', '')} |"
+        )
+    photo_lines.extend(
+        [
+            "",
+            "## Caption testimony records",
+            "",
+            "| Photograph | Position | Name as printed | Role as printed | Evidence status | Verification status |",
+            "| --- | ---: | --- | --- | --- | --- |",
+        ]
+    )
+    for row in identities:
+        photo_lines.append(
+            f"| {row.get('media_id', '')} | {row.get('position_description', '')} {row.get('position_order', '')} | {row.get('name_as_printed', '')} | {row.get('role_as_printed', '')} | {row.get('evidence_status', '')} | {row.get('verification_status', '')} |"
+        )
+    photo_lines.extend(
+        [
+            "",
+            "## Names requiring spelling or identity resolution",
+            "",
+            "- Stairway prints **Mike Landruff**; project testimony also records **Mike Landreth**. Do not merge without documentary confirmation.",
+            "- Stairway prints **Julian Jameson**; Julien/Julian and Jameson/Jamieson variants remain unresolved.",
+            "- Stairway prints **Bruce Nesbitt**; a one-t variant has also been reported.",
+            "- **Sparky** and **Baldrick** are caption names or nicknames and require identity resolution before any person merge.",
+            "- **Dave Mann** is printed with an alias in the caption; the primary printed name is preserved and no alias merge is automatic.",
+            "",
+            "## Corroboration and rights questions",
+            "",
+            "- Corroborated by another source: 0 records.",
+            "- Rights holder: unknown for both media records.",
+            "- Photographer: Image 1 is attributed to Kevin Blake's recollection; Image 2 is not independently established.",
+            "- Permission status: not established.",
+            "- Local project copy: none recorded by the ingest.",
+            "- Public export: all media and identification records are withheld from public export pending rights and editorial approval.",
+            "",
+            "## Records withheld from public export",
+            "",
+            f"- Media records withheld: {len(media_assets)}.",
+            f"- Photo-identification records withheld: {len(identities)}.",
+            "- Private message text is not reproduced.",
+        ]
+    )
+    (REPORTS_DIR / "tynesoft-photo-identification-audit.md").write_text("\n".join(photo_lines) + "\n", encoding="utf-8")
