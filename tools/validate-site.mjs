@@ -32,6 +32,7 @@ const generatedJsonFiles = [
   'assets/data/generated/games-index.json',
   'assets/data/generated/people-index.json',
   'assets/data/generated/organisations-index.json',
+  'assets/data/generated/mobygames-index.json',
   'assets/data/generated/source-items-index.json',
   'assets/data/generated/releases-index.json',
   'assets/data/generated/timeline-events.json',
@@ -98,6 +99,7 @@ const photosData = json['assets/data/photos.json'];
 const northEastCollectionData = generatedJson['assets/data/generated/north-east-collection.json'];
 const generatedSourceItemsData = generatedJson['assets/data/generated/source-items-index.json'];
 const generatedGamesData = generatedJson['assets/data/generated/games-index.json'];
+const mobygamesData = generatedJson['assets/data/generated/mobygames-index.json'];
 const generatedReleasesData = generatedJson['assets/data/generated/releases-index.json'];
 const narrativeSearchData = generatedJson['assets/data/generated/narrative-search-index.json'];
 const publicSearchData = generatedJson['assets/data/generated/public-search-index.json'];
@@ -555,6 +557,12 @@ pass(Array.isArray(northEastCollectionData.candidates), 'generated North East ca
 pass(generatedSourceItemsData.label_rules?.review === 'Reviewed release', 'source-item public label rules are missing review label');
 pass(/Publisher only/.test(generatedSourceItemsData.field_label_rules?.printed_company || ''), 'source-item public label rules must distinguish publisher-only fields');
 pass(generatedGamesData.record_scope?.public_record_label === 'Magazine index entry', 'games index must expose its magazine-index scope');
+pass(mobygamesData.attribution === 'Data by MobyGames.com', 'MobyGames generated index is missing attribution');
+pass(mobygamesData.source_policy === 'Official API or curated source register only; no page scraping.', 'MobyGames generated index must forbid scraping');
+pass((mobygamesData.records || []).length >= 25, 'MobyGames generated index is missing registered source links');
+pass((mobygamesData.records || []).some((record) => record.source_id === 'mobygames-tynesoft' && record.record_type === 'company'), 'MobyGames index is missing the Tynesoft company source');
+pass((mobygamesData.records || []).some((record) => record.source_id === 'mobygames-red-alert-credits' && record.record_type === 'game credits page'), 'MobyGames index is missing Red Alert credits');
+pass(!/private-phil-scott-testimony|private first-hand|sample_cover|sample_screenshots/i.test(JSON.stringify(mobygamesData)), 'MobyGames generated index leaks private or copied API body fields');
 pass((generatedReleasesData.releases || []).every((release) => release.public_record_label === 'Platform-specific release'), 'release index must label platform-specific releases');
 pass(Array.isArray(narrativeSearchData.items), 'narrative search index is missing items');
 pass((narrativeSearchData.items || []).length >= 9 && (narrativeSearchData.items || []).length < 100, 'narrative search index must stay compact and story-led');
@@ -567,6 +575,9 @@ pass((publicSearchData.items || []).some((item) => item.title === 'Tynesoft' && 
 pass((publicSearchData.items || []).some((item) => item.title === 'Phil Scott' && item.kind === 'Research person record'), 'public search index is missing Phil Scott research person record');
 pass((publicSearchData.items || []).some((item) => item.title === 'Eutechnyx' && item.kind === 'Public organisation record'), 'public search index is missing Eutechnyx public organisation record');
 pass((publicSearchData.items || []).some((item) => item.title === 'Professor Graham Morgan staff profile' && item.kind === 'Public source record'), 'public search index is missing Graham Morgan public source record');
+pass((publicSearchData.items || []).some((item) => item.title === 'Phil Scott person page' && item.kind === 'MobyGames source record'), 'public search index is missing Phil Scott MobyGames source record');
+pass((publicSearchData.items || []).some((item) => item.title === 'Tynesoft Computer Software company page' && item.kind === 'MobyGames source record'), 'public search index is missing Tynesoft MobyGames source record');
+pass((publicSearchData.items || []).some((item) => item.title === 'Command & Conquer: Red Alert DOS credits' && item.kind === 'MobyGames source record'), 'public search index is missing Red Alert MobyGames source record');
 const publicSearchText = JSON.stringify(publicSearchData).toLowerCase();
 pass(!/private first-hand|private-phil-scott-testimony|do not quote or republish/.test(publicSearchText), 'public search index leaks private testimony handling text');
 pass((publicSearchData.items || []).every((item) => item.id && item.title && item.kind && Array.isArray(item.search_terms)), 'public search index item is incomplete');
@@ -622,6 +633,7 @@ if (distFiles.length > 0) {
     'collections/north-east-collection/index.html',
     'research/index.html',
     'research/corrections/index.html',
+    'sources/mobygames/index.html',
     'contribute/index.html',
     'talk/index.html',
     'search/index.html',
@@ -630,6 +642,7 @@ if (distFiles.length > 0) {
     'assets/js/narrative.js',
     'assets/js/north-east-collection.js',
     'assets/data/generated/north-east-collection.json',
+    'assets/data/generated/mobygames-index.json',
     'assets/data/generated/narrative-search-index.json',
     'assets/data/generated/public-search-index.json',
     'assets/images/favicon.svg',
@@ -659,6 +672,7 @@ if (distFiles.length > 0) {
   pass(includesAll(readDist('index.html'), ['Before the studios, there was a network.', 'Search the public archive', 'Story', 'Explore', 'Evidence', 'Talk']), 'generated narrative homepage is incomplete');
   pass(!includes(readDist('index.html'), 'Gary Partis'), 'homepage must not foreground the exemplar person profile');
   pass(includesAll(readDist('search/index.html'), ['Search the public archive', 'public-search-index.json']), 'generated search page is not wired to the public archive index');
+  pass(includesAll(readDist('sources/mobygames/index.html'), ['MobyGames evidence index', 'Data by MobyGames.com', 'Official API or curated source register only']), 'generated MobyGames source route is incomplete');
   pass(includesAll(readDist('stories/code-through-the-letterbox/index.html'), ['Code Through the Letterbox', 'Evidence within reach', 'evidence-drawer']), 'generated exemplar story lacks evidence drawer');
   pass(includesAll(readDist('games/oxo/index.html'), ['Full narrative', 'Platform-specific release']), 'tier 1 game page lacks public record labels');
   pass(includesAll(readDist('games/doctor-who-and-the-mines-of-terror/index.html'), ['Enriched profile', 'Verified contributor credit']), 'tier 2 game page lacks public record labels');

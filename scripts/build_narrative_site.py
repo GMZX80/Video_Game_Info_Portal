@@ -13,6 +13,7 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from scripts.ingest.common import GENERATED_DIR, ROOT
+from scripts.ingest.mobygames import export_mobygames_index
 
 CONTENT_DIR = ROOT / "content"
 TEMPLATE_DIR = ROOT / "templates" / "narrative"
@@ -471,6 +472,34 @@ def _append_research_sources(
         ))
 
 
+def _append_mobygames_source_records(
+    items: list[dict[str, Any]],
+    seen: set[str],
+) -> None:
+    mobygames = _read_json(GENERATED_DIR / "mobygames-index.json")
+    for row in mobygames.get("records", []):
+        _append_search_item(items, seen, _search_item(
+            item_id=row["id"],
+            title=row["title"],
+            kind="MobyGames source record",
+            summary=f"{row.get('record_type', 'source').title()} evidence link. {row.get('notes', '')}",
+            route="sources/mobygames/",
+            url=row.get("url", ""),
+            status=row.get("record_type", ""),
+            labels=[row.get("public_record_label", ""), row.get("attribution", "")],
+            search_terms=[
+                row.get("source_id", ""),
+                row.get("source_type", ""),
+                row.get("slug", ""),
+                row.get("numeric_id", ""),
+                row.get("platform_slug", ""),
+                row.get("attribution", ""),
+                row.get("rights_note", ""),
+                row.get("search_terms", []),
+            ],
+        ))
+
+
 def export_public_search_index(records: list[ContentRecord], out_path: Path = PUBLIC_SEARCH_INDEX) -> list[dict[str, Any]]:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, Any]] = []
@@ -498,6 +527,7 @@ def export_public_search_index(records: list[ContentRecord], out_path: Path = PU
     _append_public_catalogue_records(items, seen, records)
     _append_research_people(items, seen)
     _append_research_sources(items, seen)
+    _append_mobygames_source_records(items, seen)
 
     north_east = _read_json(GENERATED_DIR / "north-east-collection.json")
     collection_groups: dict[tuple[str, str, str, str], dict[str, Any]] = {}
@@ -630,12 +660,17 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
     if failures:
         raise SystemExit("\n".join(failures))
 
+    mobygames_index = (
+        export_mobygames_index()
+        if export_public_json
+        else _read_json(GENERATED_DIR / "mobygames-index.json")
+    )
     env = _env()
     groups = _records_by_type(records)
     search_items = export_search_index(records) if export_public_json else []
     public_search_items = export_public_search_index(records) if export_public_json else []
     if export_public_json:
-        for source in [SEARCH_INDEX, PUBLIC_SEARCH_INDEX]:
+        for source in [SEARCH_INDEX, PUBLIC_SEARCH_INDEX, GENERATED_DIR / "mobygames-index.json"]:
             generated_dest = dist_dir / "assets" / "data" / "generated" / source.name
             generated_dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, generated_dest)
@@ -645,6 +680,7 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
         "groups": groups,
         "search_items": search_items,
         "collection_counts": _read_json(ROOT / "assets" / "data" / "generated" / "north-east-collection.json"),
+        "mobygames_index": mobygames_index,
     }
 
     route_pages = [
@@ -661,6 +697,7 @@ def build_narrative_site(dist_dir: Path = DEFAULT_DIST, export_public_json: bool
         ("collections", "listing.html", {"title": "Collections", "section": "collections", "body_class": "listing"}),
         ("research", "research.html", {"title": "Research", "body_class": "evidence"}),
         ("research/corrections", "corrections.html", {"title": "Corrections Log", "body_class": "evidence"}),
+        ("sources/mobygames", "mobygames.html", {"title": "MobyGames Evidence Index", "body_class": "evidence"}),
         ("contribute", "contribute.html", {"title": "Contribute", "body_class": "evidence"}),
         ("talk", "talk.html", {"title": "Talk", "body_class": "talk"}),
         ("search", "search.html", {"title": "Search", "body_class": "search"}),
