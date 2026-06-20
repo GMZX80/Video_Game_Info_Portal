@@ -1,0 +1,11 @@
+Platform_ID,Name,Alias,Notes
+platform:acorn-electron,Acorn Electron,Electron,Local platform alias.
+platform:bbc-micro,BBC Micro,BBC,Local platform alias.
+platform:commodore-64,Commodore 64,C64,Local platform alias.
+platform:sinclair-ql,Sinclair QL,QL,Local platform alias.
+platform:zx-spectrum,ZX Spectrum,Spectrum,Local platform alias.
+platform:zx-spectrum,ZX Spectrum,SP,Local platform alias.
+platform:zx80,ZX80,ZX-80,Local platform alias.
+platform:zx80,ZX80,80,Local platform alias.
+platform:zx81,ZX81,ZX-81,Local platform alias.
+platform:zx81,ZX81,81,Local platform alias.

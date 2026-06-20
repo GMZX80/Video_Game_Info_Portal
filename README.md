@@ -69,6 +69,16 @@ node tools/validate-site.mjs
 
 The script checks required Phase 0 content, relative internal asset paths, timeline source references and the GitHub Pages workflow.
 
+## Google Sheet export
+
+The live UK game-development spreadsheet can be populated from committed, source-backed CSV exports:
+
+```bash
+python3 -m scripts.export_google_sheet_seed
+```
+
+The exporter reads `data/curated/*.jsonl`, writes metadata-only CSV files to `data/google-sheet-export/`, and updates `reports/google-sheet-population.md`. It does not fetch external pages, does not scrape MobyGames HTML, and does not copy binaries, screenshots, scans or long article text. If a MobyGames person-credit import is needed, set `MOBYGAMES_API_KEY` locally for the official API route or use the reviewed template at `data/manual/mobygames-person-credit-import.csv`.
+
 ## Interaction
 
 - Filter the historical timeline by global origins, UK context, North East, sub-region, company, people, games, technology, business, confirmed and uncertain material.

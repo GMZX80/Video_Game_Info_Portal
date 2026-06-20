@@ -1,0 +1,2 @@
+Record_ID,Title,Platform,Source system,Source URL,Evidence status,Review status,Notes
+wos-api:pending,World of Spectrum API enrichment pending,ZX Spectrum,World of Spectrum / ZXDB / ZXInfo,https://worldofspectrum.org/using-the-api/software,Needs API review,Needs manual review,The live workbook contains quick-list rows; no additional WoS API rows are committed in local JSONL yet.
