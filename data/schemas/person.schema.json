@@ -1,1 +1,0 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["person_id","canonical_name","aliases","evidence_status"],"properties":{"person_id":{"type":"string","pattern":"^person:"},"canonical_name":{"type":"string"},"aliases":{"type":"array","items":{"type":"string"}},"evidence_status":{"type":"string"}},"additionalProperties":true}

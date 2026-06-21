@@ -1,7 +1,0 @@
-{"aliases": ["Electron"], "name": "Acorn Electron", "platform_id": "platform:acorn-electron"}
-{"aliases": ["BBC"], "name": "BBC Micro", "platform_id": "platform:bbc-micro"}
-{"aliases": ["C64"], "name": "Commodore 64", "platform_id": "platform:commodore-64"}
-{"aliases": ["QL"], "name": "Sinclair QL", "platform_id": "platform:sinclair-ql"}
-{"aliases": ["Spectrum", "SP"], "name": "ZX Spectrum", "platform_id": "platform:zx-spectrum"}
-{"aliases": ["ZX-80", "80"], "name": "ZX80", "platform_id": "platform:zx80"}
-{"aliases": ["ZX-81", "81"], "name": "ZX81", "platform_id": "platform:zx81"}
