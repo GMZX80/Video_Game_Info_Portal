@@ -41,6 +41,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 - `assets/images/asset-montage.jpg`
 - `assets/images/baer-patent-page.webp`
 - `assets/images/favicon.svg`
+- `assets/images/graham-morgan-speaker.jpg`
 - `assets/images/magnavox-odyssey.webp`
 - `assets/images/newcastle-crt-hero.webp`
 - `assets/images/ralph-baer.webp`
