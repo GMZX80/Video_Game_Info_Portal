@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 from pathlib import Path
 
@@ -22,6 +23,15 @@ PUBLIC_DIRS = [
     "assets/data",
 ]
 
+ALLOWED_TALK_MATERIAL_RE = re.compile(
+    r"https://docs\.google\.com/"
+    r"(?:"
+    r"presentation/d/154QbvfKc_mh-K1zHwEbyMIeHZ28M4hsKQ4y6Hia_GRo/(?:edit\?usp=sharing|export/(?:pptx|pdf))"
+    r"|"
+    r"document/d/1bfkJmsrgpgvMog3NB9gUeV9_FSe3r0g9RsaCEcqAzds/(?:edit\?usp=sharing|export\?format=(?:pdf|docx))"
+    r")"
+)
+
 BLOCKED_TOP_LEVEL = {
     ".cache",
     "build",
@@ -35,6 +45,10 @@ ALLOWED_PUBLIC_RESEARCH_ROUTES = {
     "research/index.html",
     "research/corrections/index.html",
 }
+
+
+def _strip_allowed_talk_material_links(text: str) -> str:
+    return ALLOWED_TALK_MATERIAL_RE.sub("", text)
 
 
 def _copy_file(source: Path, destination: Path) -> None:
@@ -95,6 +109,7 @@ def _validate_dist(dist_dir: Path) -> list[str]:
         "assets/data/generated/narrative-search-index.json",
         "assets/data/generated/public-search-index.json",
         "assets/images/favicon.svg",
+        "assets/images/graham-morgan-speaker.jpg",
         "assets/images/newcastle-crt-hero.webp",
     ]:
         if required not in file_set:
@@ -116,7 +131,8 @@ def _validate_dist(dist_dir: Path) -> list[str]:
     )
     if 'href="/assets/' in text or 'src="/assets/' in text or "fetch('/assets/" in text or 'fetch("/assets/' in text:
         failures.append("root-relative /assets/ path found in dist")
-    if "drive.google.com" in text or "docs.google.com" in text:
+    google_audit_text = _strip_allowed_talk_material_links(text)
+    if "drive.google.com" in google_audit_text or "docs.google.com" in google_audit_text:
         failures.append("private Google Drive URL leaked into dist")
     return failures
 
@@ -171,6 +187,7 @@ def build_dist(dist_dir: Path = DIST_DIR) -> list[str]:
         _copy_dir(ROOT / dir_name, dist_dir / dir_name)
 
     build_narrative_site(dist_dir)
+    _copy_file(ROOT / "index.html", dist_dir / "index.html")
 
     failures = _validate_dist(dist_dir)
     _write_report(dist_dir, failures)

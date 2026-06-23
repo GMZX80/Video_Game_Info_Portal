@@ -188,25 +188,74 @@ const collectDistFiles = () => {
   return walk(distRoot).sort();
 };
 const readDist = (file) => fs.readFileSync(path.join(root, 'dist', file), 'utf8');
+const stripAllowedTalkMaterialLinks = (text) => text.replace(
+  /https:\/\/docs\.google\.com\/(?:presentation\/d\/154QbvfKc_mh-K1zHwEbyMIeHZ28M4hsKQ4y6Hia_GRo\/(?:edit\?usp=sharing|export\/(?:pptx|pdf))|document\/d\/1bfkJmsrgpgvMog3NB9gUeV9_FSe3r0g9RsaCEcqAzds\/(?:edit\?usp=sharing|export\?format=(?:pdf|docx)))/g,
+  ''
+);
 
-pass(includes(html, 'Newcastle') && includes(html, 'Video Game Technology Lab'), 'hero title is missing');
-pass(includes(html, 'Phase 0') && includes(html, 'From Play to Pay'), 'hero phase label is missing');
-pass(includes(html, 'The first video game is the wrong question.'), 'opening thesis is missing');
-pass(includesAll(html, ['Act I', 'Act II', 'Act III', 'Act IV']), 'four-act structure is missing');
-pass(includes(html, 'id="north-east-timeline"') && includes(html, 'data-filter-group'), 'North East filterable timeline is missing');
-pass(includesAll(html, ['OXO', 'Tennis for Two', 'Spacewar!', 'Brown Box', 'Odyssey', 'Computer Space', 'Pong']), 'plural origins section is incomplete');
-pass(includes(html, 'pioneer patents') || includes(html, 'pioneer-patent'), 'pioneer patent lens is missing');
-pass(includesAll(html, ['ZX80', 'ZX81', 'BBC Micro', 'Acorn Electron', 'ZX Spectrum', 'Commodore 64', 'Clive Sinclair']), 'UK home-computer section is incomplete');
-pass(includes(html, 'id="code-culture"') && includes(html, 'id="basic-listing"') && includes(html, 'id="emulator-screen"'), 'Code Travels on Paper demo is missing');
-pass(includes(html, 'Businessification') && includes(html, 'id="business-pipeline"'), 'businessification pipeline is missing');
-pass((html.match(/tynesoft-team-/g) || []).length >= 2, 'both Tynesoft photographs must be retained');
-pass(includes(html, 'id="regional-map"'), 'regional schematic map is missing');
-pass(includes(html, 'id="lineage-view"'), 'lineage and staff-flow view is missing');
-pass(includes(html, 'id="organisation-profiles"'), 'organisation profiles section is missing');
-pass(includes(html, 'id="britain-network"'), 'national comparison section is missing');
-pass(includes(html, 'id="research-status"'), 'research-status section is missing');
-pass(includes(html, 'Phase 1') && includes(html, 'short preview'), 'Phase 1 must remain a restrained short preview');
-pass(includes(html, 'north-east-collection.html'), 'home page must link to North East Collection');
+pass(includesAll(html, [
+  '<title>Newcastle’s Impact on the Global Video Game Industry</title>',
+  'Public talk materials and narrative by Professor Graham Morgan on Newcastle University’s contribution to video game technology, teaching, research, and industry.',
+  'property="og:title" content="Newcastle’s Impact on the Global Video Game Industry"',
+  'name="twitter:title" content="Newcastle’s Impact on the Global Video Game Industry"'
+]), 'talk landing page metadata is incomplete');
+pass(includesAll(html, [
+  'Newcastle’s Impact on the Global Video Game Industry',
+  'Research, teaching, technology, industry collaboration, and the long path from early home computers to global games engineering.',
+  'Professor Graham Morgan',
+  'Professor of Video Game Engineering, Newcastle University'
+]), 'talk hero content is incomplete');
+pass(includesAll(html, ['href="#talk">Talk', 'href="#materials">Materials', 'href="#speaker">Speaker', 'href="#archive">Archive']), 'talk navigation is incomplete');
+const talkNavHtml = (html.match(/<nav class="talk-nav"[\s\S]*?<\/nav>/) || [''])[0];
+pass(!/(?:Phase 0|Act I|Act II|Act III|Act IV)/.test(talkNavHtml), 'act-based labels must not define the public homepage navigation');
+pass(includesAll(html, [
+  'View the talk slides',
+  'Download slides',
+  'Read the narrative',
+  'Download narrative',
+  'https://docs.google.com/presentation/d/154QbvfKc_mh-K1zHwEbyMIeHZ28M4hsKQ4y6Hia_GRo/edit?usp=sharing',
+  'https://docs.google.com/presentation/d/154QbvfKc_mh-K1zHwEbyMIeHZ28M4hsKQ4y6Hia_GRo/export/pptx',
+  'https://docs.google.com/presentation/d/154QbvfKc_mh-K1zHwEbyMIeHZ28M4hsKQ4y6Hia_GRo/export/pdf',
+  'https://docs.google.com/document/d/1bfkJmsrgpgvMog3NB9gUeV9_FSe3r0g9RsaCEcqAzds/edit?usp=sharing',
+  'https://docs.google.com/document/d/1bfkJmsrgpgvMog3NB9gUeV9_FSe3r0g9RsaCEcqAzds/export?format=pdf',
+  'https://docs.google.com/document/d/1bfkJmsrgpgvMog3NB9gUeV9_FSe3r0g9RsaCEcqAzds/export?format=docx'
+]), 'talk materials links are incomplete');
+const googleAnchors = [...html.matchAll(/<a\b[^>]+href="https:\/\/docs\.google\.com\/[^"]+"[^>]*>/g)].map(([anchor]) => anchor);
+pass(googleAnchors.length >= 10, 'expected Google talk-material links are missing');
+pass(googleAnchors.every((anchor) => /target="_blank"/.test(anchor) && /rel="noopener noreferrer"/.test(anchor)), 'Google material links must open in a new tab with noopener noreferrer');
+pass(includesAll(html, [
+  'historical account of how Newcastle University has contributed',
+  'graphics hardware and parallel computing',
+  'simulation, AI, real-time systems, and game engineering',
+  'wider digital economy'
+]), 'talk overview is incomplete');
+pass(includesAll(html, [
+  'Technology',
+  'Graphics, simulation, AI, parallel computing, game engines',
+  'People',
+  'Students, alumni, researchers',
+  'Place',
+  'Newcastle, the North East',
+  'Impact',
+  'health, education, simulation and industrial collaboration'
+]), 'why-this-matters cards are incomplete');
+pass(includesAll(html, ['Access the materials', 'View slides', 'Download slides', 'Read narrative', 'Download narrative']), 'materials section is incomplete');
+pass(includes(html, 'Public access depends on Google Drive sharing being enabled'), 'Google Drive sharing fallback text is missing');
+pass(includesAll(html, [
+  'Professor Graham Morgan is Professor of Video Game Engineering at Newcastle University',
+  'game technology, simulation, graphics, distributed systems',
+  'industry-facing computer science'
+]), 'speaker section is incomplete');
+pass(includesAll(html, [
+  'assets/images/graham-morgan-speaker.jpg',
+  'alt="Professor Graham Morgan outdoors beside the coast"'
+]) && fs.existsSync(path.join(root, 'assets/images/graham-morgan-speaker.jpg')), 'speaker photo is missing from the talk page');
+pass(includesAll(html, [
+  'Supporting research archive',
+  'research notes, source material, generated indexes',
+  'north-east-collection.html'
+]), 'supporting archive section is incomplete');
+pass(includesAll(html, ['href="phase-0/"', 'href="research/"', 'href="search/"']), 'secondary archive routes are missing from the homepage');
 pass(includes(collectionHtml, 'North East') && includes(collectionHtml, 'id="collection-results"'), 'North East Collection route is incomplete');
 pass(includes(collectionHtml, 'What qualifies for the North East Collection?'), 'North East qualification explanation is missing');
 pass(includes(collectionHtml, 'Candidates awaiting verification'), 'candidate section is missing from collection route');
@@ -215,33 +264,8 @@ pass(includesAll(collectionHtml, ['Magazine index entry', 'Reviewed release', 'P
 pass(includes(collectionJs, 'north-east-collection.json'), 'collection route must load generated public JSON');
 pass(includes(collectionJs, 'Record label'), 'collection cards must render public record labels');
 
-pass(includesAll(html, [
-  'display',
-  'interaction',
-  'access',
-  'programmability',
-  'reproduction',
-  'distribution',
-  'ownership',
-  'revenue'
-]), 'the central thresholds thesis must name all eight thresholds');
-
 pass(!/Ralph\s+Bear/.test(allText), 'Ralph Baer is misspelled as Ralph Bear');
 pass(!/Spacewar!\s+cabinet|cabinet itself as Spacewar/i.test(allText), 'Computer Space cabinet must not be labelled as Spacewar!');
-pass(includesAll(html, ['Nolan Bushnell', 'Ted Dabney', 'Nutting Associates', 'commercially derived from the ideas demonstrated by Spacewar!']), 'Soylent Green aside must distinguish Computer Space from Spacewar!');
-pass(includesAll(html, ['Ralph Baer', 'William Rusch', 'William Harrison', 'Brown Box', 'Magnavox Odyssey']), 'patent section must name Baer, Rusch, Harrison, Brown Box and Odyssey');
-pass(includesAll(html, ['raster-scan television', 'player-controlled symbols', 'hitting', 'coincidence', 'response']), 'patent section must describe raster symbols, hitting/coincidence/response mechanisms');
-
-pass(includesAll(html, ['BASIC was resident in ROM', 'PEEK', 'POKE', 'USR', 'DATA', 'CLEAR', 'SAVE CODE', 'loaders', 'assemblers']), 'Spectrum BASIC/machine-code section is missing required terminology');
-pass(includesAll(html, ['6,912 bytes', '6,144 bitmap bytes', '768 colour-attribute bytes', 'colour-attribute constraints']), 'Spectrum display architecture details are incomplete');
-
-pass(includesAll(html, ['magazines', 'books', 'newsletters', 'clubs', 'libraries', 'cassette swapping', 'friends']), 'paper-code section must name the early software-distribution network');
-pass(includesAll(html, ['software distribution', 'programming lesson', 'installation', 'debugging exercise', 'modifiable source code', 'route into game design', 'bridge from player to developer']), 'printed-listing argument is incomplete');
-
-pass(includesAll(html, ['program', 'working game', 'cassette master', 'duplication', 'packaging and artwork', 'magazine advertising and reviews', 'mail order or retail', 'ports and licences', 'support, salaries, deadlines, and company risk']), 'businessification chain is incomplete');
-
-pass(includesAll(html, ['Blaydon', 'North East', 'educational software', 'games and publishing', 'cassette duplication', 'artwork', 'retail', 'licences', 'reviews', 'multiple incompatible 8-bit computers']), 'Tynesoft case study is incomplete');
-pass(includes(html, 'Some identities are still under verification') || includes(html, 'names, dates, and detailed provenance are still being researched'), 'Tynesoft photo provenance warning must be explicit');
 
 for (const file of researchFiles) {
   pass(fs.existsSync(path.join(root, file)), `research file is missing: ${file}`);
@@ -439,7 +463,13 @@ const internalUrls = [...html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)]
 for (const url of internalUrls) {
   pass(!url.startsWith('/'), `internal URL must be relative for project Pages path: ${url}`);
   const file = url.split('#')[0].split('?')[0];
-  if (file) pass(fs.existsSync(path.join(root, file)), `internal asset is missing: ${url}`);
+  if (file) {
+    const rootPath = path.join(root, file);
+    const distRoute = file.endsWith('/')
+      ? path.join(root, 'dist', file, 'index.html')
+      : path.join(root, 'dist', file);
+    pass(fs.existsSync(rootPath) || fs.existsSync(distRoute), `internal asset is missing: ${url}`);
+  }
 }
 
 const sources = Object.fromEntries((sourcesData.sources || []).map((source) => [source.id, source]));
@@ -548,7 +578,7 @@ for (const claim of claimsData.claims || []) {
 }
 
 pass(!/\b(?:18|19|20)\d{2}\.\d+\b(?!\s*-)/.test(allText), 'decimal dates must not appear in public data or content');
-pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(allAuditText), 'private Google Drive URL or ID leaked');
+pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(stripAllowedTalkMaterialLinks(allAuditText)), 'private Google Drive URL or ID leaked');
 pass(!/student submission|student marks|assessment feedback|exam record/i.test(allAuditText), 'student/admin material appears to be exposed');
 
 pass(Array.isArray(northEastCollectionData.confirmed), 'generated North East confirmed collection is missing');
@@ -646,6 +676,7 @@ if (distFiles.length > 0) {
     'assets/data/generated/narrative-search-index.json',
     'assets/data/generated/public-search-index.json',
     'assets/images/favicon.svg',
+    'assets/images/graham-morgan-speaker.jpg',
     'assets/images/newcastle-crt-hero.webp'
   ];
   for (const requiredFile of requiredDistFiles) {
@@ -667,9 +698,17 @@ if (distFiles.length > 0) {
     .join('\n');
   pass(!/(?:href|src)=["']\/assets\//.test(distText), 'dist contains root-relative /assets/ URL');
   pass(!/fetch\(["']\/assets\//.test(distText), 'dist contains root-relative /assets/ fetch');
-  pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(distText), 'dist leaks private Google Drive material');
+  pass(!/(?:drive\.google\.com|docs\.google\.com|1YL4Kg6Bd797QOPTH9Oo0Phc-gUc5Y4RT)/i.test(stripAllowedTalkMaterialLinks(distText)), 'dist leaks private Google Drive material');
   pass(!/student submission|student marks|assessment feedback|exam record/i.test(distText), 'dist leaks student/admin material');
-  pass(includesAll(readDist('index.html'), ['Before the studios, there was a network.', 'Search the public archive', 'Story', 'Explore', 'Evidence', 'Talk']), 'generated narrative homepage is incomplete');
+  pass(includesAll(readDist('index.html'), [
+    'Newcastle’s Impact on the Global Video Game Industry',
+    'View the talk slides',
+    'Access the materials',
+    'Professor Graham Morgan',
+    'Supporting research archive',
+    'north-east-collection.html'
+  ]), 'generated talk homepage is incomplete');
+  pass(includesAll(readDist('index.html'), ['href="phase-0/"', 'href="research/"', 'href="search/"']), 'generated talk homepage does not link to secondary archive routes');
   pass(!includes(readDist('index.html'), 'Gary Partis'), 'homepage must not foreground the exemplar person profile');
   pass(includesAll(readDist('search/index.html'), ['Search the public archive', 'public-search-index.json']), 'generated search page is not wired to the public archive index');
   pass(includesAll(readDist('sources/mobygames/index.html'), ['MobyGames evidence index', 'Data by MobyGames.com', 'Official API or curated source register only']), 'generated MobyGames source route is incomplete');
