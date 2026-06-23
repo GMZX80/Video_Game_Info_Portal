@@ -7,6 +7,7 @@ The production GitHub Pages artefact is built from `dist/` only.
 ## Included Files
 
 - `.nojekyll`
+- `assets/audio/how-newcastle-bedroom-coders-changed-global-technology.m4a`
 - `assets/css/site.css`
 - `assets/data/claims.json`
 - `assets/data/events.json`

@@ -2206,6 +2206,71 @@ body.talk-portal *::after {
   background: #06120f;
 }
 
+.talk-podcast {
+  border-top: 1px solid rgba(170, 214, 199, 0.12);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(116, 215, 255, 0.08), transparent 28rem),
+    linear-gradient(180deg, #071815, #05120f);
+}
+
+.podcast-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
+  gap: clamp(30px, 6vw, 76px);
+  align-items: center;
+}
+
+.podcast-layout .talk-section-heading {
+  margin-bottom: 0;
+}
+
+.podcast-panel {
+  border: 1px solid rgba(245, 184, 75, 0.28);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 30px);
+  background:
+    linear-gradient(135deg, rgba(245, 184, 75, 0.1), rgba(116, 215, 255, 0.05)),
+    rgba(8, 27, 23, 0.82);
+  box-shadow: var(--talk-shadow);
+}
+
+.podcast-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  color: var(--talk-muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.podcast-meta span {
+  color: var(--talk-gold);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.podcast-meta strong {
+  color: var(--talk-soft);
+}
+
+.podcast-panel audio {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  accent-color: var(--talk-gold);
+}
+
+.podcast-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .matter-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2400,7 +2465,8 @@ body.talk-portal *::after {
 @media (max-width: 1020px) {
   .talk-hero-inner,
   .talk-section-grid,
-  .archive-layout {
+  .archive-layout,
+  .podcast-layout {
     grid-template-columns: 1fr;
   }
 

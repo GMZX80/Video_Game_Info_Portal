@@ -17,6 +17,7 @@ PUBLIC_FILES = [
 ]
 
 PUBLIC_DIRS = [
+    "assets/audio",
     "assets/css",
     "assets/js",
     "assets/images",
@@ -101,6 +102,7 @@ def _validate_dist(dist_dir: Path) -> list[str]:
         "talk/index.html",
         "search/index.html",
         "assets/css/site.css",
+        "assets/audio/how-newcastle-bedroom-coders-changed-global-technology.m4a",
         "assets/js/site.js",
         "assets/js/narrative.js",
         "assets/js/north-east-collection.js",

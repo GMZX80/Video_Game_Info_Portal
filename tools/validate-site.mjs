@@ -19,6 +19,7 @@ const validateTalkHomepage = (html, label) => {
   pass(html.includes('Research, teaching, technology, industry collaboration'), `${label}: subtitle is missing`);
 
   pass(html.includes('href="#talk">Talk'), `${label}: Talk nav link is missing`);
+  pass(html.includes('href="#podcast">Podcast'), `${label}: Podcast nav link is missing`);
   pass(html.includes('href="#materials">Materials'), `${label}: Materials nav link is missing`);
   pass(html.includes('href="#speaker">Speaker'), `${label}: Speaker nav link is missing`);
   pass(!html.includes('href="#archive"'), `${label}: Archive nav link must not appear on the public homepage`);
@@ -33,8 +34,15 @@ const validateTalkHomepage = (html, label) => {
   pass(html.includes('Public access depends on Google Drive sharing being enabled'), `${label}: Drive sharing note is missing`);
 
   pass(html.includes('id="talk"'), `${label}: talk section is missing`);
+  pass(html.includes('id="podcast"'), `${label}: podcast section is missing`);
   pass(html.includes('id="materials"'), `${label}: materials section is missing`);
   pass(html.includes('id="speaker"'), `${label}: speaker section is missing`);
+
+  pass(html.includes('How Newcastle bedroom coders changed global technology.'), `${label}: podcast title is missing`);
+  pass(html.includes('assets/audio/how-newcastle-bedroom-coders-changed-global-technology.m4a'), `${label}: podcast audio link is missing`);
+  pass(html.includes('Podcast: How Newcastle bedroom coders changed global technology'), `${label}: podcast audio label is missing`);
+  pass(html.includes('Download podcast'), `${label}: podcast download link is missing`);
+  pass(html.includes('36 min 34 sec'), `${label}: podcast duration is missing`);
 
   pass(!html.includes('Supporting research archive'), `${label}: Supporting research archive block must not appear`);
   pass(!html.includes('Phase 0 narrative archive'), `${label}: Phase 0 archive link must not appear`);
@@ -52,6 +60,7 @@ const html = read('index.html');
 validateTalkHomepage(html, 'index.html');
 
 pass(exists('assets/css/site.css'), 'site CSS is missing');
+pass(exists('assets/audio/how-newcastle-bedroom-coders-changed-global-technology.m4a'), 'podcast audio is missing');
 pass(exists('assets/images/newcastle-crt-hero.webp'), 'hero image is missing');
 pass(exists('assets/images/graham-morgan-speaker.jpg'), 'speaker image is missing');
 pass(exists('.github/workflows/pages.yml'), 'GitHub Pages workflow is missing');
@@ -65,10 +74,16 @@ if (exists('dist/index.html')) {
   validateTalkHomepage(read('dist/index.html'), 'dist/index.html');
 }
 
+if (exists('dist/assets/audio/how-newcastle-bedroom-coders-changed-global-technology.m4a')) {
+  pass(true, 'dist podcast audio exists');
+} else if (exists('dist/index.html')) {
+  failures.push('dist podcast audio is missing');
+}
+
 if (failures.length > 0) {
   console.error('Site validation failed:');
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log('Site validation passed: public homepage is talk-only.');
+console.log('Site validation passed: public homepage is talk-only with podcast.');
