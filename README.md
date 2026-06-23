@@ -85,6 +85,18 @@ The opening patent argument draws particularly on Graham Morgan and Jeffrey K. L
 
 The public page includes a full source catalogue. Material taken from private teaching documents is labelled as author archive material rather than given a public link. The `research/` directory records source provenance, claim status and unresolved historical questions.
 
+## Database export handoff
+
+`GMZX80/video-game-history-db` is the source-of-truth data-engineering repo. This portal must consume its `curated-export-v1` public export contract, including `public_export_manifest.json`, rather than raw Google Sheet snapshots, staging tables or candidate queues.
+
+Use:
+
+```bash
+python -m scripts.ingest.curated_export_contract --export-dir path/to/curated-export-v1
+```
+
+The loader rejects missing or wrong schema manifests, raw snapshot directories and candidate/staging files. Public claim rows keep either an `evidence_id` or a `provisional_label` so the UI can identify provisional material.
+
 ## Image provenance
 
 - Newcastle CRT hero: project artwork created for this history.
